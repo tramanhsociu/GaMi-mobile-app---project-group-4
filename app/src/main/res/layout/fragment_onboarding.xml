@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".onboardingFragment">
+
+    <ImageView
+        android:id="@+id/imvCircle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/circle"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="170dp"/>
+
+    <ImageView
+        android:id="@+id/imvDog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="230dp"
+        android:layout_marginLeft="203dp"
+        android:src="@drawable/dog"/>
+
+    <ImageView
+        android:id="@+id/imvCat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/cat"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="310dp"/>
+    <TextView
+        android:id="@+id/txtDescription1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_feature"
+        android:textSize="24sp"
+        android:textColor="#93766E"
+        android:layout_marginTop="600dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="25dp"/>
+</FrameLayout>

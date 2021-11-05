@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">onboarding</string>
+    <string name="app_feature">Tụi mình có bán đồ ăn cho chó mèo, không bán chó mèo!</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="app_feature1">Tụi mình còn có đa dạng sản phẩm phục vụ các nhu cầu khác nhau</string>
+    <string name="Register">TẠO TÀI KHOẢN</string>
+    <string name="name">Tên</string>
+    <string name="email">Email</string>
+    <string name="acc_already">Đã có tài khoản?</string>
+    <string name="log">
+        <u>Đăng nhập</u></string>
+    <string name="logn">ĐĂNG NHẬP</string>
+    <string name="forgotpass">
+        <u>Quên mật khẩu</u></string>
+    <string name="description">Nhập email của bạn bên dưới để thực hiện xác nhận, chúng tôi sẽ gửi mã xác nhận qua email của bạn.</string>
+    <string name="cont">TIẾP TỤC</string>
+    <string name="verify">Nhập mã xác nhận mà bạn được gửi qua email.</string>
+    <string name="reset_pass">Đặt lại mật khẩu</string>
+    <string name="description_reset">Đặt lại mật khẩu mới cho tài khoản của bạn để bạn có thể đăng nhập và trải nghiệm các chức năng.</string>
+    <string name="mk">Mật khẩu</string>
+    <string name="retype_pass">Nhập lại mật khẩu</string>
+    <string name="remember">Ghi nhớ cho lần đăng nhập sau</string>
+    <string name="congrats">Chúc mừng</string>
+    <string name="success">Bạn đã tạo tài khoản thành công</string>
+    <string name="start">Giờ thì bạn đã có thể bắt đầu trải nghiệm rồi</string>
+</resources>

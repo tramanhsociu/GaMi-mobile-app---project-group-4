@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".onboardingFragment">
+
+    <ImageView
+        android:id="@+id/imvCircle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/circle"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="170dp"/>
+
+    <ImageView
+        android:id="@+id/imvPetshop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/animate"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="180dp"/>
+    <FrameLayout
+        android:id="@+id/btnRegis"
+        android:layout_width="342dp"
+        android:layout_height="44dp"
+        android:background="@drawable/regis_button"
+        android:elevation="25dp"
+        android:layout_marginTop="570dp"
+        android:layout_gravity="center_horizontal">
+        <TextView
+            android:id="@+id/txtRegis"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/Register"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center"/>
+    </FrameLayout>
+    <FrameLayout
+        android:id="@+id/btnLogin"
+        android:layout_width="342dp"
+        android:layout_height="44dp"
+        android:background="@drawable/round_button"
+        android:elevation="25dp"
+        android:layout_marginTop="640dp"
+        android:layout_gravity="center_horizontal">
+        <TextView
+            android:id="@+id/txtLog"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/logn"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center"/>
+    </FrameLayout>
+
+</FrameLayout>

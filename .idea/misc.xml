@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/3rdyr1stsem/mobile/onboarding/app/src/main/res/drawable/chkbox.xml" value="0.2703125" />
+        <entry key="..\:/3rdyr1stsem/mobile/onboarding/app/src/main/res/drawable/cirlce.xml" value="0.1" />
+        <entry key="..\:/3rdyr1stsem/mobile/onboarding/app/src/main/res/drawable/fill_in.xml" value="0.2703125" />
+        <entry key="..\:/3rdyr1stsem/mobile/onboarding/app/src/main/res/drawable/forgot_pass.xml" value="0.2" />
+        <entry key="..\:/3rdyr1stsem/mobile/onboarding/app/src/main/res/drawable/ic_baseline_check_box_24.xml" value="0.2703125" />
+        <entry key="..\:/3rdyr1stsem/mobile/onboarding/app/src/main/res/drawable/ic_baseline_check_box_outline_blank_24.xml" value="0.2703125" />
+        <entry key="..\:/3rdyr1stsem/mobile/onboarding/app/src/main/res/drawable/onclick1.xml" value="0.2703125" />
+        <entry key="..\:/3rdyr1stsem/mobile/onboarding/app/src/main/res/drawable/regis_button.xml" value="0.2703125" />
+        <entry key="..\:/3rdyr1stsem/mobile/onboarding/app/src/main/res/drawable/round_btn.xml" value="0.2703125" />
+        <entry key="..\:/3rdyr1stsem/mobile/onboarding/app/src/main/res/drawable/round_button.xml" value="0.2703125" />
+        <entry key="..\:/3rdyr1stsem/mobile/onboarding/app/src/main/res/drawable/verify_code.xml" value="0.2703125" />
+        <entry key="..\:/3rdyr1stsem/mobile/onboarding/app/src/main/res/layout/activity_login.xml" value="0.2" />
+        <entry key="..\:/3rdyr1stsem/mobile/onboarding/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/3rdyr1stsem/mobile/onboarding/app/src/main/res/layout/activity_regis_sucess.xml" value="0.25416666666666665" />
+        <entry key="..\:/3rdyr1stsem/mobile/onboarding/app/src/main/res/layout/activity_register.xml" value="0.264" />
+        <entry key="..\:/3rdyr1stsem/mobile/onboarding/app/src/main/res/layout/fragment_onboarding.xml" value="0.264" />
+        <entry key="..\:/3rdyr1stsem/mobile/onboarding/app/src/main/res/layout/fragment_onboarding1.xml" value="0.25416666666666665" />
+        <entry key="..\:/3rdyr1stsem/mobile/onboarding/app/src/main/res/layout/fragment_onboarding2.xml" value="0.1" />
+        <entry key="..\:/3rdyr1stsem/mobile/onboarding/app/src/main/res/layout/fragment_onboarding3.xml" value="0.25416666666666665" />
+        <entry key="..\:/3rdyr1stsem/mobile/onboarding/app/src/main/res/layout/layout_dialog_forgotpass.xml" value="0.4" />
+        <entry key="..\:/3rdyr1stsem/mobile/onboarding/app/src/main/res/layout/layout_dialog_resetpass.xml" value="0.4" />
+        <entry key="..\:/3rdyr1stsem/mobile/onboarding/app/src/main/res/layout/layout_dialog_verify.xml" value="0.4" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
