@@ -25,6 +25,13 @@
         <entry key="..\:/3rdyr1stsem/mobile/onboarding/app/src/main/res/layout/layout_dialog_forgotpass.xml" value="0.4" />
         <entry key="..\:/3rdyr1stsem/mobile/onboarding/app/src/main/res/layout/layout_dialog_resetpass.xml" value="0.4" />
         <entry key="..\:/3rdyr1stsem/mobile/onboarding/app/src/main/res/layout/layout_dialog_verify.xml" value="0.4" />
+        <entry key="..\:/GitHub/GaMi-mobile-app---project-group-4/app/src/main/res/drawable/background_cricle.xml" value="0.1" />
+        <entry key="..\:/GitHub/GaMi-mobile-app---project-group-4/app/src/main/res/drawable/background_popular.xml" value="0.14629629629629629" />
+        <entry key="..\:/GitHub/GaMi-mobile-app---project-group-4/app/src/main/res/drawable/custom_search.xml" value="0.1" />
+        <entry key="..\:/GitHub/GaMi-mobile-app---project-group-4/app/src/main/res/layout/activity_home.xml" value="0.22" />
+        <entry key="..\:/GitHub/GaMi-mobile-app---project-group-4/app/src/main/res/layout/item_banner.xml" value="0.1" />
+        <entry key="..\:/GitHub/GaMi-mobile-app---project-group-4/app/src/main/res/layout/item_category_layout.xml" value="0.1" />
+        <entry key="..\:/GitHub/GaMi-mobile-app---project-group-4/app/src/main/res/layout/item_popular_layout.xml" value="0.6" />
       </map>
     </option>
   </component>

@@ -17,5 +17,10 @@
     <color name="den">#323232</color>
     <color name="press_login">#DFB297</color>
     <color name="press_regis">#779A99</color>
+    <color name="nen">#F6F2F1</color>
+    <color name="xamnhat">#E5E5E5</color>
+    <color name="chu">#DE816F</color>
+    <color name="dodam">#E24E31</color>
+    <color name="hongnhat">#F4E8E2</color>
 
 </resources>
