@@ -32,8 +32,9 @@
         <entry key="..\:/GitHub/GaMi-mobile-app---project-group-4/app/src/main/res/layout/item_banner.xml" value="0.1" />
         <entry key="..\:/GitHub/GaMi-mobile-app---project-group-4/app/src/main/res/layout/item_category_layout.xml" value="0.1" />
         <entry key="..\:/GitHub/GaMi-mobile-app---project-group-4/app/src/main/res/layout/item_popular_layout.xml" value="0.6" />
-        <entry key="..\:/HOC/NAM-3/Androi/THUC-HANH/GaMi-mobile-app---project-group-4/app/src/main/res/drawable-v24/shape.xml" value="0.2703125" />
-        <entry key="..\:/HOC/NAM-3/Androi/THUC-HANH/GaMi-mobile-app---project-group-4/app/src/main/res/layout/activity_notification.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/GaMi-mobile-app---project-group-4/app/src/main/res/layout/activity_blog.xml" value="0.72" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/GaMi-mobile-app---project-group-4/app/src/main/res/layout/activity_notification.xml" value="0.1" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/GaMi-mobile-app---project-group-4/app/src/main/res/layout/item_blog.xml" value="0.1" />
       </map>
     </option>
   </component>
