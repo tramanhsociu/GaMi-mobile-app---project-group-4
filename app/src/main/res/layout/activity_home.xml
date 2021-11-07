@@ -8,9 +8,13 @@
     android:background="@color/nen"
     android:focusable="true"
     android:focusableInTouchMode="true">
+
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="205dp"
+        tools:layout_editor_absoluteY="-28dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -70,6 +74,7 @@
                 </ImageButton>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -78,12 +83,11 @@
                 <androidx.viewpager2.widget.ViewPager2
                     android:id="@+id/view_page2"
                     android:layout_width="match_parent"
-                    android:layout_height="160dp"
+                    android:layout_height="180dp"
 
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
-                </androidx.viewpager2.widget.ViewPager2>
+                    app:layout_constraintTop_toTopOf="parent"></androidx.viewpager2.widget.ViewPager2>
 
                 <me.relex.circleindicator.CircleIndicator3
                     android:id="@+id/cricle_indicator"
@@ -97,6 +101,7 @@
 
                 </me.relex.circleindicator.CircleIndicator3>
             </androidx.constraintlayout.widget.ConstraintLayout>
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -112,8 +117,7 @@
                     android:textColor="@color/chu"
                     android:textSize="18sp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
-                </TextView>
+                    app:layout_constraintTop_toTopOf="parent"></TextView>
 
                 <GridView
                     android:id="@+id/gvCategory"
@@ -126,9 +130,11 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView">
 
+
                 </GridView>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -136,7 +142,7 @@
                 <TextView
                     android:id="@+id/textView2"
                     android:layout_width="wrap_content"
-                    android:layout_height="22dp"
+                    android:layout_height="0dp"
                     android:layout_marginTop="16dp"
                     android:fontFamily="@font/sourcesanspro_regular"
                     android:gravity="center"
@@ -144,8 +150,7 @@
                     android:textColor="@color/chu"
                     android:textSize="18sp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
-                </TextView>
+                    app:layout_constraintTop_toTopOf="parent"></TextView>
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rcvPopular"
@@ -153,6 +158,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView2">
 
@@ -164,6 +170,35 @@
         </LinearLayout>
 
     </ScrollView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_page_menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/menu_navigation" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/menu_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_taskbar"
+            app:itemIconTint="@color/color_navigation"
+            app:itemTextColor="@color/gami2"
+            app:menu="@menu/menu">
+
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+    </RelativeLayout>
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

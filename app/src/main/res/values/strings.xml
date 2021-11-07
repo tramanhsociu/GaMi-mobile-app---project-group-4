@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">onboarding</string>
+    <string name="app_name">Gami</string>
     <string name="app_feature">Tụi mình có bán đồ ăn cho chó mèo, không bán chó mèo!</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

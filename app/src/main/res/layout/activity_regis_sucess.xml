@@ -114,8 +114,9 @@
 
     <ImageView
         android:id="@+id/imvPaw2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:layout_width="10dp"
+        android:layout_height="20dp"
         android:src="@drawable/paw2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"

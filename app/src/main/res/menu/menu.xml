@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_trangchu" android:title="Trang chủ" android:icon="@drawable/bowl" >
+
+    </item>
+    <item android:id="@+id/menu_blog" android:title="Blogs" android:icon="@drawable/blog" >
+
+    </item>
+    <item android:id="@+id/menu_noti" android:title="Thông báo" android:icon="@drawable/noti" >
+
+    </item>
+    <item android:id="@+id/menu_toi"
+
+        android:title="Tôi" android:icon="@drawable/toi" >
+
+    </item>
+
+
+</menu>

@@ -54,7 +54,7 @@ public class HomeActivity extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_home);
         linkViews();
         // banner
         initData();
@@ -69,13 +69,17 @@ public class HomeActivity extends AppCompatActivity{
 
     private void initDataPopular() {
         popular = new ArrayList<>();
-        popular.add(new Popular(R.drawable.dochoi_1,"name","20000","200000",20.000));
-        popular.add(new Popular(R.drawable.dochoi_1,"name","20000","200000",20.000));
+        popular.add(new Popular(R.drawable.dochoi_1,"name","Đồ chơi dành cho chó và mèo ","200000",20.000));
+        popular.add(new Popular(R.drawable.dochoi_2,"name","20000","30000",40.000));
+        popular.add(new Popular(R.drawable.dochoi_3,"name","20000","200000",20.000));
+        popular.add(new Popular(R.drawable.dochoi_4,"name","20000","200000",30.000));
+        popular.add(new Popular(R.drawable.dochoi_1,"name","20000","200000",50.000));
         popularAdapter = new PopularAdapter(HomeActivity.this,popular);
         rcvPopular.setAdapter(popularAdapter);
     }
 
     private void recyclerViewPopular() {
+
         LinearLayoutManager layoutManager = new LinearLayoutManager(this,RecyclerView.HORIZONTAL,false);
         rcvPopular.setLayoutManager(layoutManager);
         DividerItemDecoration decoration = new DividerItemDecoration(rcvPopular.getContext(),layoutManager.getOrientation());
@@ -108,15 +112,18 @@ public class HomeActivity extends AppCompatActivity{
             public void onPageSelected(int position) {
                 super.onPageSelected(position);
                 handler.removeCallbacks(runnable);
-                handler.postDelayed(runnable,1000);
+                handler.postDelayed(runnable,3000);
             }
         });
     }
     private List<Banner> initData() {
         List<Banner> list = new ArrayList<>();
-        list.add(new Banner(R.drawable.banner));
-        list.add(new Banner(R.drawable.bannerhai));
-        list.add(new Banner(R.drawable.bannerba));
+        list.add(new Banner(R.drawable.banner_1));
+        list.add(new Banner(R.drawable.banner_2));
+        list.add(new Banner(R.drawable.banner_3));
+        list.add(new Banner(R.drawable.banner_4));
+        list.add(new Banner(R.drawable.banner_5));
+        list.add(new Banner(R.drawable.banner_6));
         return list;
     }
 
@@ -127,7 +134,6 @@ public class HomeActivity extends AppCompatActivity{
         gvCategory = findViewById(R.id.gvCategory);
 
         rcvPopular = findViewById(R.id.rcvPopular);
-
 
     }
 
@@ -140,6 +146,6 @@ public class HomeActivity extends AppCompatActivity{
     @Override
     protected void onResume() {
         super.onResume();
-        handler.postDelayed(runnable,1000);
+        handler.postDelayed(runnable,3000);
     }
 }
