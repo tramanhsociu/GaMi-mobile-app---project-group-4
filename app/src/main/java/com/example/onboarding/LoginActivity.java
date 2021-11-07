@@ -23,6 +23,7 @@ import com.google.android.material.textfield.TextInputLayout;
 public class LoginActivity extends AppCompatActivity {
     ImageView imvBack;
     TextView txtForgotPass;
+    FrameLayout btnLogin;
 //    TextInputLayout edtEmail, edtMk;
 
     @Override
@@ -31,6 +32,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
     imvBack=findViewById(R.id.imvBack);
     txtForgotPass=findViewById(R.id.txtForgotPass);
+//    btnLogin=findViewById(R.id.btnLogin);
 //    edtEmail=findViewById(R.id.edtEmail);
 //    edtMk=findViewById(R.id.edtMk);
         imvBack.setOnClickListener(new View.OnClickListener() {
@@ -46,6 +48,13 @@ public class LoginActivity extends AppCompatActivity {
                 openForgotPassDialog(Gravity.BOTTOM);
             }
         });
+//        btnLogin.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                startActivity(new Intent(LoginActivity.this,HomeActivity.class));
+//            }
+//        });
+
     }
     private void openForgotPassDialog(int gravity){
         final Dialog dialog = new Dialog(this);

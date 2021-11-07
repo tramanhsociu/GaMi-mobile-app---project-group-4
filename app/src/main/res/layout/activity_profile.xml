@@ -71,7 +71,7 @@
                     app:srcCompat="@drawable/giohang" />
 
                 <ImageButton
-                    android:id="@+id/imageButton3"
+                    android:id="@+id/imbSetting"
                     android:layout_width="25dp"
                     android:layout_height="25dp"
                     android:layout_marginEnd="16dp"

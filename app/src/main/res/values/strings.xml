@@ -24,4 +24,14 @@
     <string name="congrats">Chúc mừng</string>
     <string name="success">Bạn đã tạo tài khoản thành công</string>
     <string name="start">Giờ thì bạn đã có thể bắt đầu trải nghiệm rồi</string>
+    <string name="setting">Cài đặt</string>
+    <string name="logout">ĐĂNG XUẤT</string>
+    <string name="keyword">Nhập từ khóa...</string>
+    <string name="sp1">Làm sao để mua hàng/ Đặt hàng trên ứng dụng GaMi?</string>
+    <string name="sp2">Quy trình trả hàng hoàn tiền của GaMi</string>
+    <string name="sp3">Cách theo dõi tình trạng vận chuyển của đơn hàng</string>
+    <string name="sp4">Hướng dẫn sử dụng mã miễn phí vận chuyển</string>
+    <string name="sp5">Tôi có thể hủy đơn hàng không?</string>
+    <string name="sp6">Tại sao tài khoản GaMi của tôi bị khóa/ bị giới hạn?</string>
+
 </resources>
