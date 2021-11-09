@@ -82,8 +82,6 @@ public class HomeActivity extends AppCompatActivity{
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(this,RecyclerView.HORIZONTAL,false);
         rcvPopular.setLayoutManager(layoutManager);
-        DividerItemDecoration decoration = new DividerItemDecoration(rcvPopular.getContext(),layoutManager.getOrientation());
-        rcvPopular.addItemDecoration(decoration);
     }
 
 
@@ -94,7 +92,7 @@ public class HomeActivity extends AppCompatActivity{
 
     private void initDataCategory() {
         category = new ArrayList<Category>();
-        category.add(new Category(R.drawable.food,"Đồ ăn"));
+        category.add(new Category(R.drawable.ic_doan,"Đồ ăn"));
         category.add(new Category(R.drawable.yte,"Thuốc"));
         category.add(new Category(R.drawable.daugoi,"Tắm gội"));
         category.add(new Category(R.drawable.dodung,"Đồ dùng"));

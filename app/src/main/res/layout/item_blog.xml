@@ -19,7 +19,7 @@
 
         <ImageView
             android:id="@+id/imvLogo"
-            android:src="@drawable/logo"
+            android:src="@drawable/ic_logo"
             android:layout_width="30dp"
             android:layout_height="match_parent"
             android:scaleType="fitCenter"
