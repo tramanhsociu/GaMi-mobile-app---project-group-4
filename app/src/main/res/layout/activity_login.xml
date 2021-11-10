@@ -29,10 +29,8 @@
 
         <TextView
             android:id="@+id/txtHeaderRegis"
-            android:scaleType="fitXY"
-
-            android:layout_width="10dp"
-            android:layout_height="20dp"
+            android:layout_width="150dp"
+            android:layout_height="33dp"
             android:gravity="center"
             android:text="@string/logn"
             android:textColor="@color/gami3"
@@ -44,14 +42,14 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/LinearLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
-        android:layout_marginTop="50dp"
-        android:orientation="vertical"
+        android:layout_marginTop="48dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/header">
 
@@ -60,88 +58,85 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/email"
-            android:layout_marginLeft="10dp"
             android:textColor="@color/gami3"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/edtEmail"
-            app:boxStrokeWidth="0dp"
-            app:boxStrokeWidthFocused="0dp"
-            android:layout_width="335dp"
+            android:layout_width="337dp"
             android:layout_height="48dp"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            app:hintEnabled="false">
+            android:layout_marginRight="16dp"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:hintEnabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtName"
+            app:passwordToggleTint="@color/gami4">
+
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:background="@drawable/fill_in"
                 android:inputType="textEmailAddress"
+                android:paddingTop="8dp"
                 android:textColor="@color/gami4"
-                android:textSize="15sp"
-                android:paddingTop="8dp"/>
+                android:textSize="15sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
-            android:id="@+id/txtEmail"
+            android:id="@+id/txtPass"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="@string/mk"
-            android:layout_marginLeft="10dp"
             android:textColor="@color/gami3"
-            android:textSize="14dp" />
-
+            android:textSize="14dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edtEmail" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/edtPass"
-            app:passwordToggleEnabled="true"
-            app:passwordToggleTint="@color/gami4"
-            app:boxStrokeWidth="0dp"
-            app:boxStrokeWidthFocused="0dp"
-            android:layout_width="335dp"
+            android:layout_width="337dp"
             android:layout_height="48dp"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
+            android:layout_marginRight="16dp"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
             app:hintEnabled="false"
-            >
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edtMk"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:background="@drawable/fill_in"
-            android:inputType="textPassword"
-            android:textColor="@color/gami4"
-            android:textSize="15sp"
-            android:paddingTop="8dp"
-            app:hintTextAppearance="@style/TextAppearance.AppCompat.Body1"
-            />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtPass"
+            app:passwordToggleTint="@color/gami4">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/fill_in"
+                android:inputType="textEmailAddress"
+                android:paddingTop="8dp"
+                android:textColor="@color/gami4"
+                android:textSize="15sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
-<!--        <EditText-->
-<!--            android:layout_width="335dp"-->
-<!--            android:layout_height="40dp"-->
-<!--            android:layout_gravity="center"-->
-<!--            android:layout_marginTop="10dp"-->
-<!--            android:background="@drawable/fill_in"-->
-<!--            android:textColor="@color/gami4"-->
-<!--            android:drawableRight="@drawable/eye"-->
-<!--            android:padding="20dp"-->
-<!--            android:drawablePadding="20dp"-->
-<!--            app:passwordToggleEnabled="true"/>-->
         <CheckBox
             android:id="@+id/chkRemember"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
             android:text="@string/remember"
             android:textColor="#4A000000"
-            android:layout_marginLeft="10dp"
             android:textSize="11sp"
-            />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginRight="170dp"
+            app:layout_constraintTop_toBottomOf="@id/edtPass" />
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/LinearSocial"
@@ -155,7 +150,7 @@
             android:id="@+id/imageView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/gg"
+            android:src="@drawable/ic_gg"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginLeft="128dp"/>
@@ -164,7 +159,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="128dp"
-            android:src="@drawable/fb"
+            android:src="@drawable/ic_fb"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -192,7 +187,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtForgotPass"
         android:layout_marginTop="20dp"
-        android:elevation="25dp">
+        android:elevation="20dp">
 
         <TextView
             android:layout_width="match_parent"
@@ -208,7 +203,7 @@
         android:id="@+id/imvPaw2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/paw2"
+        android:src="@drawable/ic_paw2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -220,12 +215,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/imvPaw2"
-        android:src="@drawable/paw1"
+        android:src="@drawable/ic_paw1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="490dp"/>
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

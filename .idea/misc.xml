@@ -3,6 +3,23 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/3rdyr1stsem/mobile/Project/app/src/main/res/drawable/logout_button.xml" value="0.1" />
+        <entry key="..\:/3rdyr1stsem/mobile/Project/app/src/main/res/drawable/search_bar.xml" value="0.14629629629629629" />
+        <entry key="..\:/3rdyr1stsem/mobile/Project/app/src/main/res/drawable/tron.xml" value="0.26666666666666666" />
+        <entry key="..\:/3rdyr1stsem/mobile/Project/app/src/main/res/layout/activity_home.xml" value="0.25416666666666665" />
+        <entry key="..\:/3rdyr1stsem/mobile/Project/app/src/main/res/layout/activity_login.xml" value="0.2" />
+        <entry key="..\:/3rdyr1stsem/mobile/Project/app/src/main/res/layout/activity_main.xml" value="0.25052083333333336" />
+        <entry key="..\:/3rdyr1stsem/mobile/Project/app/src/main/res/layout/activity_profile.xml" value="0.25416666666666665" />
+        <entry key="..\:/3rdyr1stsem/mobile/Project/app/src/main/res/layout/activity_regis_sucess.xml" value="0.4" />
+        <entry key="..\:/3rdyr1stsem/mobile/Project/app/src/main/res/layout/activity_register.xml" value="0.4" />
+        <entry key="..\:/3rdyr1stsem/mobile/Project/app/src/main/res/layout/activity_setting.xml" value="0.2578125" />
+        <entry key="..\:/3rdyr1stsem/mobile/Project/app/src/main/res/layout/activity_setting_notification.xml" value="0.264" />
+        <entry key="..\:/3rdyr1stsem/mobile/Project/app/src/main/res/layout/activity_setting_payment.xml" value="0.14907407407407408" />
+        <entry key="..\:/3rdyr1stsem/mobile/Project/app/src/main/res/layout/activity_setting_support.xml" value="0.4" />
+        <entry key="..\:/3rdyr1stsem/mobile/Project/app/src/main/res/layout/fragment_onboarding.xml" value="0.25052083333333336" />
+        <entry key="..\:/3rdyr1stsem/mobile/Project/app/src/main/res/layout/fragment_onboarding1.xml" value="0.25052083333333336" />
+        <entry key="..\:/3rdyr1stsem/mobile/Project/app/src/main/res/layout/fragment_onboarding2.xml" value="0.25052083333333336" />
+        <entry key="..\:/3rdyr1stsem/mobile/Project/app/src/main/res/layout/setting_layout.xml" value="0.536" />
         <entry key="..\:/3rdyr1stsem/mobile/onboarding/app/src/main/res/drawable/chkbox.xml" value="0.2703125" />
         <entry key="..\:/3rdyr1stsem/mobile/onboarding/app/src/main/res/drawable/cirlce.xml" value="0.1" />
         <entry key="..\:/3rdyr1stsem/mobile/onboarding/app/src/main/res/drawable/fill_in.xml" value="0.2703125" />
@@ -25,34 +42,6 @@
         <entry key="..\:/3rdyr1stsem/mobile/onboarding/app/src/main/res/layout/layout_dialog_forgotpass.xml" value="0.4" />
         <entry key="..\:/3rdyr1stsem/mobile/onboarding/app/src/main/res/layout/layout_dialog_resetpass.xml" value="0.4" />
         <entry key="..\:/3rdyr1stsem/mobile/onboarding/app/src/main/res/layout/layout_dialog_verify.xml" value="0.4" />
-        <entry key="..\:/GaMi-mobile-app---project-group-4/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.14444444444444443" />
-        <entry key="..\:/GaMi-mobile-app---project-group-4/app/src/main/res/drawable/background_cricle.xml" value="0.1" />
-        <entry key="..\:/GaMi-mobile-app---project-group-4/app/src/main/res/drawable/background_popular.xml" value="0.1" />
-        <entry key="..\:/GaMi-mobile-app---project-group-4/app/src/main/res/drawable/background_taskbar.xml" value="0.18518518518518517" />
-        <entry key="..\:/GaMi-mobile-app---project-group-4/app/src/main/res/drawable/custom_search.xml" value="0.1" />
-        <entry key="..\:/GaMi-mobile-app---project-group-4/app/src/main/res/drawable/fill_in.xml" value="0.14444444444444443" />
-        <entry key="..\:/GaMi-mobile-app---project-group-4/app/src/main/res/drawable/forgot_pass.xml" value="0.1" />
-        <entry key="..\:/GaMi-mobile-app---project-group-4/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.14444444444444443" />
-        <entry key="..\:/GaMi-mobile-app---project-group-4/app/src/main/res/drawable/ic_bat.xml" value="0.14131944444444444" />
-        <entry key="..\:/GaMi-mobile-app---project-group-4/app/src/main/res/drawable/ic_launcher_background.xml" value="0.14444444444444443" />
-        <entry key="..\:/GaMi-mobile-app---project-group-4/app/src/main/res/layout/activity_blog.xml" value="0.16666666666666666" />
-        <entry key="..\:/GaMi-mobile-app---project-group-4/app/src/main/res/layout/activity_home.xml" value="0.22" />
-        <entry key="..\:/GaMi-mobile-app---project-group-4/app/src/main/res/layout/activity_item_sale.xml" value="0.1" />
-        <entry key="..\:/GaMi-mobile-app---project-group-4/app/src/main/res/layout/activity_login.xml" value="0.14666666666666667" />
-        <entry key="..\:/GaMi-mobile-app---project-group-4/app/src/main/res/layout/activity_main.xml" value="0.13055555555555556" />
-        <entry key="..\:/GaMi-mobile-app---project-group-4/app/src/main/res/layout/activity_notification.xml" value="0.13055555555555556" />
-        <entry key="..\:/GaMi-mobile-app---project-group-4/app/src/main/res/layout/activity_profile.xml" value="0.13055555555555556" />
-        <entry key="..\:/GaMi-mobile-app---project-group-4/app/src/main/res/layout/activity_regis_sucess.xml" value="0.22" />
-        <entry key="..\:/GaMi-mobile-app---project-group-4/app/src/main/res/layout/activity_register.xml" value="0.12" />
-        <entry key="..\:/GaMi-mobile-app---project-group-4/app/src/main/res/layout/fragment_onboarding.xml" value="0.12920962199312716" />
-        <entry key="..\:/GaMi-mobile-app---project-group-4/app/src/main/res/layout/item_banner.xml" value="0.10666666666666667" />
-        <entry key="..\:/GaMi-mobile-app---project-group-4/app/src/main/res/layout/item_blog.xml" value="0.4466666666666667" />
-        <entry key="..\:/GaMi-mobile-app---project-group-4/app/src/main/res/layout/item_category_layout.xml" value="0.13055555555555556" />
-        <entry key="..\:/GaMi-mobile-app---project-group-4/app/src/main/res/layout/item_popular_layout.xml" value="0.5" />
-        <entry key="..\:/GaMi-mobile-app---project-group-4/app/src/main/res/layout/layout_popular.xml" value="0.6" />
-        <entry key="..\:/GaMi-mobile-app---project-group-4/app/src/main/res/menu/menu.xml" value="0.16666666666666666" />
-        <entry key="..\:/GaMi-mobile-app---project-group-4/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.14131944444444444" />
-        <entry key="..\:/GaMi-mobile-app---project-group-4/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.14131944444444444" />
         <entry key="..\:/GitHub/GaMi-mobile-app---project-group-4/app/src/main/res/drawable/background_cricle.xml" value="0.1" />
         <entry key="..\:/GitHub/GaMi-mobile-app---project-group-4/app/src/main/res/drawable/background_popular.xml" value="0.14629629629629629" />
         <entry key="..\:/GitHub/GaMi-mobile-app---project-group-4/app/src/main/res/drawable/custom_search.xml" value="0.1" />
@@ -60,6 +49,8 @@
         <entry key="..\:/GitHub/GaMi-mobile-app---project-group-4/app/src/main/res/layout/item_banner.xml" value="0.1" />
         <entry key="..\:/GitHub/GaMi-mobile-app---project-group-4/app/src/main/res/layout/item_category_layout.xml" value="0.1" />
         <entry key="..\:/GitHub/GaMi-mobile-app---project-group-4/app/src/main/res/layout/item_popular_layout.xml" value="0.6" />
+        <entry key="..\:/HOC/NAM-3/Androi/Project/GaMi-mobile-app---project-group-4/app/src/main/res/layout/activity_item_sale.xml" value="0.24010416666666667" />
+        <entry key="..\:/HOC/NAM-3/Androi/Project/GaMi-mobile-app---project-group-4/app/src/main/res/layout/item_khuyenmai.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>
