@@ -10,15 +10,29 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Onboarding">
         <activity
-            android:name=".ProfileActivity"
-            android:exported="false" />
+            android:name=".SettingPaymentActivity"
+            android:exported="true" />
         <activity
-            android:name=".BlogActivity"
-            android:exported="true">
+            android:name=".SettingSupportActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SettingNotificationActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SettingActivity"
+            android:exported="true" >
 
         </activity>
         <activity
-            android:name=".NotificationActivity"
+            android:name=".ItemSale"
+            android:exported="true" />
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="true" >
+
+        </activity>
+        <activity
+            android:name=".BlogActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,19 +41,26 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".HomeActivity"
+            android:name=".NotificationActivity"
             android:exported="true">
 
         </activity>
+        <activity
+            android:name=".HomeActivity"
+            android:exported="true" />
         <activity
             android:name=".RegisSucessActivity"
             android:exported="true" />
         <activity
             android:name=".LoginActivity"
-            android:exported="true" />
+            android:exported="true" >
+
+        </activity>
         <activity
             android:name=".RegisterActivity"
-            android:exported="true" />
+            android:exported="true" >
+
+        </activity>
         <activity
             android:name=".MainActivity"
             android:exported="true" />
