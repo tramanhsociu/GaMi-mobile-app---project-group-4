@@ -1,0 +1,111 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.fragment.SettingFragment"
+    android:background="@color/kem">
+
+    <TextView
+        android:id="@+id/txtCommonQuestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Làm sao để mua hàng/ Đặt hàng trên ứng dụng GaMi"
+        android:textColor="@color/gami3"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imvLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_line"
+        android:layout_marginTop="13.5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtCommonQuestion" />
+    <TextView
+        android:id="@+id/txtInstruction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GaMi chỉ hỗ trợ đặt và giao hàng cho những người mua có địa chỉ tại Việt Nam."
+        android:textColor="@color/gami2"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="22dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imvLine" />
+
+    <TextView
+        android:id="@+id/txtRefund"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Trước tiên, bạn cần xác minh số điện thoại cho tài khoản của mình để có thể đặt hàng thành công."
+        android:textColor="@color/gami3"
+        android:textSize="14sp"
+        android:layout_marginTop="19dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtInstruction" />
+
+    <TextView
+        android:id="@+id/txtStep1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bước 1: Tìm kiếm sản phẩm bạn cần mua bằng một trong những cách sau:"
+        android:textColor="@color/gami3"
+        android:textSize="14sp"
+        android:layout_marginTop="16dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtRefund" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="19dp"
+        android:layout_marginStart="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtStep1">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_lookup" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gõ từ khóa"
+            android:textColor="@color/gami4"
+            android:layout_marginTop="6dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="87dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:orientation="vertical"
+        android:layout_marginEnd="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtStep1">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_danh_s_ch" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Các mục hiển thị tại trang mua sắm"
+            android:textColor="@color/gami4"
+            android:layout_marginTop="6dp"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
