@@ -9,7 +9,7 @@
         android:id="@+id/imvCircle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/circle"
+        android:src="@drawable/ic_circle"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="170dp"/>
 
@@ -17,7 +17,7 @@
         android:id="@+id/imvPetshop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/animate"
+        android:src="@drawable/ic_animate"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="180dp"/>
     <FrameLayout

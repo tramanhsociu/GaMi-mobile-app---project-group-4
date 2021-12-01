@@ -9,7 +9,7 @@
         android:id="@+id/imvCircle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/circle"
+        android:src="@drawable/ic_circle"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="170dp"/>
 
@@ -19,13 +19,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="230dp"
         android:layout_marginLeft="203dp"
-        android:src="@drawable/dog"/>
+        android:src="@drawable/ic_dog"/>
 
     <ImageView
         android:id="@+id/imvCat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/cat"
+        android:src="@drawable/ic_cat"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="310dp"/>
     <TextView
