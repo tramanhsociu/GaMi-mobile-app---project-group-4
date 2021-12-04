@@ -17,11 +17,11 @@ import com.example.onboarding.R;
 import java.util.List;
 
 public class CategoryAdapter extends BaseAdapter{
-    Activity context;
+    Context context;
     int item_layout;
     List<Category> categoryList;
 
-    public CategoryAdapter(Activity context, int item_layout, List<Category> categoryList) {
+    public CategoryAdapter(Context context, int item_layout, List<Category> categoryList) {
         this.context = context;
         this.item_layout = item_layout;
         this.categoryList = categoryList;
