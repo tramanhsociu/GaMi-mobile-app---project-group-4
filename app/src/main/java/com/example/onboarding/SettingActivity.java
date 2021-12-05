@@ -21,7 +21,7 @@ public class SettingActivity extends AppCompatActivity {
     ArrayList<Section> listData;
     SectionAdapter adapter;
     ImageView imvBack;
-//    FrameLayout btnLogout;
+    FrameLayout btnLogout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +36,7 @@ public class SettingActivity extends AppCompatActivity {
     private void linkViews() {
         lvSetting=findViewById(R.id.lvSetting);
         imvBack=findViewById(R.id.imvBack);
+        btnLogout=findViewById(R.id.btnLogout);
     }
 
     private void initData() {
@@ -73,11 +74,11 @@ public class SettingActivity extends AppCompatActivity {
                 startActivity(new Intent(SettingActivity.this, ProfileActivity.class));
             }
         });
-//        btnLogout.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                startActivity(new Intent(SettingActivity.this, LoginActivity.class));
-//            }
-//        });
+        btnLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(SettingActivity.this, LoginActivity.class));
+            }
+        });
     }
 }

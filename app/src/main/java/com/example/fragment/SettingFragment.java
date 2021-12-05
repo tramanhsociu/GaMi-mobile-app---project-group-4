@@ -31,7 +31,6 @@ public class SettingFragment extends Fragment {
         btnLike = view.findViewById(R.id.btnLike);
         btnUnlike=view.findViewById(R.id.btnUnlike);
 
-
         btnLike.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -66,6 +65,7 @@ public class SettingFragment extends Fragment {
         windowAttributes.gravity = gravity;
         window.setAttributes(windowAttributes);
         dialog.setCancelable(true);
+
         ImageView imvTurnoff=dialog.findViewById(R.id.imvTurnoff);
         imvTurnoff.setOnClickListener(new View.OnClickListener() {
             @Override
