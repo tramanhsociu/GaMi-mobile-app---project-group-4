@@ -12,7 +12,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.example.Adapter.SectionAdapter;
-import com.example.SettingTitle.Section;
+import com.example.model.Section;
 
 import java.util.ArrayList;
 

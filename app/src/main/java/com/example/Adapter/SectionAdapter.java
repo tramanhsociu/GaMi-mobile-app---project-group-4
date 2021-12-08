@@ -9,9 +9,10 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.SettingTitle.Section;
+import com.example.model.Section;
 import com.example.onboarding.R;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class SectionAdapter extends BaseAdapter {
@@ -19,7 +20,7 @@ public class SectionAdapter extends BaseAdapter {
     int setting_layout;
     List<Section> listData;
 
-    public SectionAdapter(Activity context, int setting_layout, List<Section> listData) {
+    public SectionAdapter(Activity context, int setting_layout, ArrayList<Section> listData) {
         this.context = context;
         this.setting_layout = setting_layout;
         this.listData = listData;
