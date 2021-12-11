@@ -13,14 +13,18 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.example.onboarding.AccountDB;
+
 public class onboardingFragment2 extends Fragment {
     FrameLayout btnRegis, btnLogin;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_onboarding2,container,false);
        btnRegis=view.findViewById(R.id.btnRegis);
        btnLogin=view.findViewById(R.id.btnLogin);
+
 
        btnRegis.setOnClickListener(new View.OnClickListener() {
            @Override

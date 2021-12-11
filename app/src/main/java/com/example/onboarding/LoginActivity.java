@@ -19,16 +19,18 @@ import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.fragment.SettingFragment;
+import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
 public class LoginActivity extends AppCompatActivity {
     ImageView imvBack;
     TextView txtForgotPass;
     FrameLayout btnLogin;
-
-//    TextInputLayout edtEmail, edtMk;
+    AccountDB DB;
+    TextInputEditText edtEmail, edtPass;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,16 +41,31 @@ public class LoginActivity extends AppCompatActivity {
         txtForgotPass = findViewById(R.id.txtForgotPass);
         btnLogin = findViewById(R.id.btnLogin);
 
+        edtEmail = findViewById(R.id.edtEmail);
+        edtPass = findViewById(R.id.edtPass);
 
-//    edtEmail=findViewById(R.id.edtEmail);
-//    edtMk=findViewById(R.id.edtMk);
+        DB = new AccountDB(this);
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 //                replaceFragment(new HomeFragment());
-                Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
-                startActivity(intent);
+                String email=edtEmail.getText().toString();
+                String pass=edtPass.getText().toString();
+
+                if(email.equals("")||pass.equals(""))
+                    Toast.makeText(LoginActivity.this, "Bạn hãy điền đầy đủ thông tin", Toast.LENGTH_SHORT).show();
+                else{
+                    boolean checkemailpass = DB.checkemailpassword(email, pass);
+                    if(checkemailpass==true){
+                        Toast.makeText(LoginActivity.this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                        startActivity(intent);
+                    }else{
+                        Toast.makeText(LoginActivity.this, "Đăng nhập không thành công", Toast.LENGTH_SHORT).show();
+                    }
+                }
+
             }
         });
         imvBack.setOnClickListener(new View.OnClickListener() {
