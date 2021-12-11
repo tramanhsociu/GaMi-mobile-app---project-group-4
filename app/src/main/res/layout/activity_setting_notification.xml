@@ -28,10 +28,10 @@
 <!--            Nút back-->
             <ImageView
                 android:id="@+id/imvBack"
-                android:layout_width="7dp"
-                android:layout_height="14dp"
+                android:layout_width="15dp"
+                android:layout_height="30dp"
                 android:layout_marginLeft="30dp"
-                android:src="@drawable/back"
+                android:src="@drawable/ic_back"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />

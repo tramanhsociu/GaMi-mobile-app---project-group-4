@@ -33,7 +33,7 @@ public class HomeFragment extends Fragment{
 
     BannerAdapter bannerAdapter;
 
-    RecyclerView rcvPopular;
+    RecyclerView rcvPopular,rcvPopular2;
     PopularAdapter popularAdapter;
     ArrayList<Popular> popular;
 
@@ -67,6 +67,7 @@ public class HomeFragment extends Fragment{
         popular.add(new Popular(R.drawable.dochoi_1,"name","20000","200000",50.000));
         popularAdapter = new PopularAdapter(getContext(),popular);
         rcvPopular.setAdapter(popularAdapter);
+        rcvPopular2.setAdapter(popularAdapter);
     }
 
     private void recyclerViewPopular() {
@@ -128,6 +129,7 @@ public class HomeFragment extends Fragment{
         gvCategory = view.findViewById(R.id.gvCategory);
 
         rcvPopular = view.findViewById(R.id.rcvPopular);
+        rcvPopular2 = view.findViewById(R.id.rcvPopular2);
         // banner
         initData();
         initAdapter();
