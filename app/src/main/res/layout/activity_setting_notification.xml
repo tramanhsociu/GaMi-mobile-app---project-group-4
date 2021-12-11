@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SettingNotificationActivity"
-    android:background="@color/background_setting_noti">
+    android:background="@color/background_setting_noti"
+    >
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/Thongbao"
         android:layout_width="match_parent"
@@ -71,76 +72,50 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="37dp"
-                android:checked="true"
+                android:checked="false"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                />
+                android:thumbTint="@drawable/switch_thumb"
+                android:trackTint="@drawable/switch_track"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/Chuong"
-            android:layout_width="match_parent"
-            android:layout_height="84dp"
-            android:background="@color/kem"
-            android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/Thongbao"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:elevation="8dp">
-<!--            Chuông thông báo-->
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/NotiBell"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Chuông thông báo"
-                    android:textColor="@color/gami3"
-                    android:textSize="18sp"
-                    android:layout_marginStart="42dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"/>
-                <Switch
-                    android:id="@+id/swtBell"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="37dp"
-                    android:checked="true"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#12000000"
-                android:layout_marginTop="5dp"
-                app:layout_constraintTop_toBottomOf="@+id/NotiBell"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"/>
-<!--            Nhạc chuông-->
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/ChooseBell"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/NotiBell" >
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Nhạc chuông"
-                    android:textColor="@color/gami3"
-                    android:textSize="18sp"
-                    android:layout_marginStart="42dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"/>
+<!--    layout-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/On"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        app:layout_constraintTop_toBottomOf="@+id/Thongbao"
+        app:layout_constraintEnd_toEndOf="parent">
+<!--    Chuông-->
+<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--            android:id="@+id/Chuong"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="84dp"-->
+<!--            android:background="@color/kem"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/On"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            android:elevation="8dp">-->
+<!--&lt;!&ndash;            Chuông thông báo&ndash;&gt;-->
+<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                android:id="@+id/NotiBell"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent">-->
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Chuông thông báo"-->
+<!--                    android:textColor="@color/gami3"-->
+<!--                    android:textSize="18sp"-->
+<!--                    android:layout_marginStart="42dp"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent"/>-->
 <!--                <Switch-->
-
+<!--                    android:id="@+id/swtBell"-->
 <!--                    android:layout_width="wrap_content"-->
 <!--                    android:layout_height="wrap_content"-->
 <!--                    android:layout_marginRight="37dp"-->
@@ -148,162 +123,198 @@
 <!--                    app:layout_constraintEnd_toEndOf="parent"-->
 <!--                    app:layout_constraintTop_toTopOf="parent"-->
 <!--                    />-->
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.constraintlayout.widget.ConstraintLayout>
+<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:background="#12000000"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/NotiBell"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"/>-->
+<!--&lt;!&ndash;            Nhạc chuông&ndash;&gt;-->
+<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                android:id="@+id/ChooseBell"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/NotiBell" >-->
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Nhạc chuông"-->
+<!--                    android:textColor="@color/gami3"-->
+<!--                    android:textSize="18sp"-->
+<!--                    android:layout_marginStart="42dp"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent"/>-->
+<!--&lt;!&ndash;                <Switch&ndash;&gt;-->
 
-        <TextView
-            android:id="@+id/txtMyNoti"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Thông báo của tôi"
-            android:textColor="#38000000"
-            android:textSize="13sp"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="42dp"
-            app:layout_constraintTop_toBottomOf="@+id/Chuong"
-            app:layout_constraintStart_toStartOf="parent"/>
+<!--&lt;!&ndash;                    android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_marginRight="37dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:checked="true"&ndash;&gt;-->
+<!--&lt;!&ndash;                    app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                    app:layout_constraintTop_toTopOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                    />&ndash;&gt;-->
+<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/MyNoti"
-            android:layout_width="match_parent"
-            android:layout_height="160dp"
-            android:layout_marginTop="10dp"
-            app:layout_constraintTop_toBottomOf="@+id/txtMyNoti"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:background="@color/kem"
-            android:elevation="8dp">
-<!--            Cập nhật-->
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/Update"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Cập nhật đơn hàng"
-                    android:textColor="@color/gami3"
-                    android:textSize="18sp"
-                    android:layout_marginStart="42dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"/>
-                <Switch
-                    android:id="@+id/swtUdt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="37dp"
-                    android:checked="true"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#12000000"
-                android:layout_marginTop="5dp"
-                app:layout_constraintTop_toBottomOf="@+id/Update"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"/>
-<!--            Tin nhắn-->
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/Chat"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/Update"
-                android:layout_marginTop="10dp">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Tin nhắn"
-                    android:textColor="@color/gami3"
-                    android:textSize="18sp"
-                    android:layout_marginStart="42dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"/>
-                <Switch
-                    android:id="@+id/swtChat"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="37dp"
-                    android:checked="true"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#12000000"
-                android:layout_marginTop="5dp"
-                app:layout_constraintTop_toBottomOf="@+id/Chat"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"/>
-<!--            Khuyến mãi-->
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/Sale"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/Chat"
-                android:layout_marginTop="10dp">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Khuyến mãi GaMi"
-                    android:textColor="@color/gami3"
-                    android:textSize="18sp"
-                    android:layout_marginStart="42dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"/>
-                <Switch
-                    android:id="@+id/swtSale"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="37dp"
-                    android:checked="true"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#12000000"
-                android:layout_marginTop="5dp"
-                app:layout_constraintTop_toBottomOf="@+id/Sale"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"/>
-<!--            Bài viết-->
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/Blog"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/Sale"
-                android:layout_marginTop="10dp">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Bài viết"
-                    android:textColor="@color/gami3"
-                    android:textSize="18sp"
-                    android:layout_marginStart="42dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"/>
-                <Switch
-                    android:id="@+id/swtBlog"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="37dp"
-                    android:checked="true"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    />
-            </androidx.constraintlayout.widget.ConstraintLayout>
+<!--        <TextView-->
+<!--            android:id="@+id/txtMyNoti"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Thông báo của tôi"-->
+<!--            android:textColor="#38000000"-->
+<!--            android:textSize="13sp"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_marginStart="42dp"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/Chuong"-->
+<!--            app:layout_constraintStart_toStartOf="parent"/>-->
+<!--&lt;!&ndash;        Thông báo của tôi&ndash;&gt;-->
+<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--            android:id="@+id/MyNoti"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="160dp"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/txtMyNoti"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            android:background="@color/kem"-->
+<!--            android:elevation="8dp">-->
+<!--&lt;!&ndash;            Cập nhật&ndash;&gt;-->
+<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                android:id="@+id/Update"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent">-->
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Cập nhật đơn hàng"-->
+<!--                    android:textColor="@color/gami3"-->
+<!--                    android:textSize="18sp"-->
+<!--                    android:layout_marginStart="42dp"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent"/>-->
+<!--                <Switch-->
+<!--                    android:id="@+id/swtUdt"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginRight="37dp"-->
+<!--                    android:checked="true"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent"-->
+<!--                    />-->
+<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:background="#12000000"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/Update"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"/>-->
+<!--&lt;!&ndash;            Tin nhắn&ndash;&gt;-->
+<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                android:id="@+id/Chat"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/Update"-->
+<!--                android:layout_marginTop="10dp">-->
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Tin nhắn"-->
+<!--                    android:textColor="@color/gami3"-->
+<!--                    android:textSize="18sp"-->
+<!--                    android:layout_marginStart="42dp"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent"/>-->
+<!--                <Switch-->
+<!--                    android:id="@+id/swtChat"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginRight="37dp"-->
+<!--                    android:checked="true"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent"-->
+<!--                    />-->
+<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:background="#12000000"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/Chat"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"/>-->
+<!--&lt;!&ndash;            Khuyến mãi&ndash;&gt;-->
+<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                android:id="@+id/Sale"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/Chat"-->
+<!--                android:layout_marginTop="10dp">-->
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Khuyến mãi GaMi"-->
+<!--                    android:textColor="@color/gami3"-->
+<!--                    android:textSize="18sp"-->
+<!--                    android:layout_marginStart="42dp"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent"/>-->
+<!--                <Switch-->
+<!--                    android:id="@+id/swtSale"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginRight="37dp"-->
+<!--                    android:checked="true"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent"-->
+<!--                    />-->
+<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:background="#12000000"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/Sale"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"/>-->
+<!--&lt;!&ndash;            Bài viết&ndash;&gt;-->
+<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                android:id="@+id/Blog"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/Sale"-->
+<!--                android:layout_marginTop="10dp">-->
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Bài viết"-->
+<!--                    android:textColor="@color/gami3"-->
+<!--                    android:textSize="18sp"-->
+<!--                    android:layout_marginStart="42dp"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent"/>-->
+<!--                <Switch-->
+<!--                    android:id="@+id/swtBlog"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginRight="37dp"-->
+<!--                    android:checked="true"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent"-->
+<!--                    />-->
+<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
         </androidx.constraintlayout.widget.ConstraintLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
