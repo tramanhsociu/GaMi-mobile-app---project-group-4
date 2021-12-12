@@ -1,4 +1,4 @@
-package com.example.onboarding;
+package com.example.database;
 
 import android.content.ContentValues;
 
@@ -30,6 +30,7 @@ public class AccountDB extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase MyDB, int i, int i1) {
         MyDB.execSQL("drop Table if exists users");
     }
+
     public boolean insertData(String username, String email, String password){
         SQLiteDatabase MyDB=this.getWritableDatabase();
         ContentValues contentValues=new ContentValues();
@@ -42,8 +43,20 @@ public class AccountDB extends SQLiteOpenHelper {
         else{
             return true;}
 
+    }
+
+    public boolean updatepassword(String email, String password){
+        SQLiteDatabase MyDB=this.getWritableDatabase();
+        ContentValues contentValues=new ContentValues();
+        contentValues.put("password",password);
+        long result = MyDB.update("users",  contentValues,"email = ?", new String[] {email});
+        if(result==-1){
+            return false;}
+        else{
+            return true;}
 
     }
+
     public boolean checkemail(String email){
         SQLiteDatabase MyDB = this.getWritableDatabase();
         Cursor cursor = MyDB.rawQuery("Select * from users where email = ?", new String[] {email});
