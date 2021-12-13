@@ -3,6 +3,7 @@ package com.example.onboarding;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -77,6 +78,13 @@ public class SettingActivity extends AppCompatActivity {
         btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                SharedPreferences preferences = getSharedPreferences("checkbox", MODE_PRIVATE);
+                SharedPreferences.Editor editor = preferences.edit();
+                editor.putString("remember", "false");
+                editor.apply();
+
+                finish();
                 startActivity(new Intent(SettingActivity.this, LoginActivity.class));
             }
         });

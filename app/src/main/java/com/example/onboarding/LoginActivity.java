@@ -1,9 +1,12 @@
 package com.example.onboarding;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.app.Dialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.inputmethodservice.ExtractEditText;
@@ -12,6 +15,8 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
@@ -27,6 +32,7 @@ public class LoginActivity extends AppCompatActivity {
     FrameLayout btnLogin;
     AccountDB DB;
     TextInputEditText edtEmail, edtPass;
+    CheckBox chkRemember;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,11 +42,26 @@ public class LoginActivity extends AppCompatActivity {
         imvBack = findViewById(R.id.imvBack);
         txtForgotPass = findViewById(R.id.txtForgotPass);
         btnLogin = findViewById(R.id.btnLogin);
-
+        chkRemember=findViewById(R.id.chkRemember);
         edtEmail = findViewById(R.id.edtEmail);
         edtPass = findViewById(R.id.edtPass);
 
         DB = new AccountDB(this);
+
+        SharedPreferences preferences = getSharedPreferences("checkbox", MODE_PRIVATE);
+        String checkbox = preferences.getString("remember", "");
+        if (checkbox.equals("true")){
+
+//            FragmentManager manager = getSupportFragmentManager();
+//            FragmentTransaction transaction = manager.beginTransaction();
+//            transaction.replace(R.id.Login, new HomeFragment());
+//            transaction.commit();
+
+            Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+            startActivity(intent);
+        }else if(checkbox.equals("false")){
+            Toast.makeText(LoginActivity.this, "Hãy đăng nhập", Toast.LENGTH_SHORT).show();
+        }
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,6 +76,12 @@ public class LoginActivity extends AppCompatActivity {
                     boolean checkemailpass = DB.checkemailpassword(email, pass);
                     if(checkemailpass==true){
                         Toast.makeText(LoginActivity.this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
+                            //nhúng fragment home
+                            FragmentManager manager = getSupportFragmentManager();
+                            FragmentTransaction transaction = manager.beginTransaction();
+                            transaction.replace(R.id.Login, new HomeFragment());
+                            transaction.commit();
+
                         Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
                         startActivity(intent);
                     }else{
@@ -64,6 +91,25 @@ public class LoginActivity extends AppCompatActivity {
 
             }
         });
+
+        chkRemember.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if(compoundButton.isChecked()){
+                    SharedPreferences preferences = getSharedPreferences("checkbox", MODE_PRIVATE);
+                    SharedPreferences.Editor editor = preferences.edit();
+                    editor.putString("remember", "true");
+                    editor.apply();
+                }else if(!compoundButton.isChecked()){
+                    SharedPreferences preferences = getSharedPreferences("checkbox", MODE_PRIVATE);
+                    SharedPreferences.Editor editor = preferences.edit();
+                    editor.putString("remember", "false");
+                    editor.apply();
+                }
+
+            }
+        });
+
         imvBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -91,9 +137,6 @@ public class LoginActivity extends AppCompatActivity {
 
     private void openForgotPassDialog(int gravity) {
         final Dialog dialog = new Dialog(this);
-
-
-
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(R.layout.layout_dialog_forgotpass);
 

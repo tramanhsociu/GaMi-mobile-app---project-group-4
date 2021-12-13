@@ -29,6 +29,8 @@ public class ProfileFragment extends Fragment{
             @Override
             public void onClick(View view) {
 //                startActivity(new Intent(ProfileFragment, SettingActivity.class));
+                Intent intent = new Intent(getActivity(),SettingActivity.class);
+                getActivity().startActivity(intent);
             }
         });
     }
