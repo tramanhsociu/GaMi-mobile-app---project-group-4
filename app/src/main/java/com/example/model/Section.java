@@ -1,4 +1,4 @@
-package com.example.SettingTitle;
+package com.example.model;
 
 public class Section {
     private String settingTitle;

@@ -38,6 +38,7 @@
         android:layout_marginLeft="35dp"
         app:hintEnabled="false">
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtEmailVerify"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:background="@drawable/fill_in"

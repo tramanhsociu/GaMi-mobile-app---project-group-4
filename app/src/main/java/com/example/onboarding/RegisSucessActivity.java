@@ -33,11 +33,11 @@ public class RegisSucessActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-//        btnGetStart.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                startActivity(new Intent(RegisSucessActivity.this, HomeActivity.class));
-//            }
-//        });
+        btnGetStart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(RegisSucessActivity.this, HomeActivity.class));
+            }
+        });
     }
 }

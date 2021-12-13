@@ -48,7 +48,7 @@
         android:id="@+id/LinearRegis"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="30dp"
+        android:layout_marginHorizontal="20dp"
         android:layout_marginTop="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -59,13 +59,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/name"
+            android:layout_marginStart="10dp"
             android:textColor="@color/gami3"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/edtName"
+            android:id="@+id/Name"
             android:layout_width="337dp"
             android:layout_height="48dp"
             android:layout_gravity="center"
@@ -77,9 +78,10 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/txtName"
             app:passwordToggleTint="@color/gami4"
-            android:layout_marginRight="16dp">
+            >
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtName"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:background="@drawable/fill_in"
@@ -97,11 +99,12 @@
             android:text="@string/email"
             android:textColor="@color/gami3"
             android:textSize="14dp"
+            android:layout_marginStart="10dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/edtName" />
+            app:layout_constraintTop_toBottomOf="@id/Name" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/edtEmail"
+            android:id="@+id/Email"
             android:layout_width="337dp"
             android:layout_height="48dp"
             android:layout_gravity="center"
@@ -113,9 +116,10 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/txtEmail"
             app:passwordToggleTint="@color/gami4"
-            android:layout_marginRight="16dp">
+            >
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtEmail"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:background="@drawable/fill_in"
@@ -130,14 +134,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
             android:text="Mật khẩu"
             android:textColor="@color/gami3"
             android:textSize="14dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/edtEmail" />
+            app:layout_constraintTop_toBottomOf="@id/Email" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/edtPass"
+            android:id="@+id/Pass"
             android:layout_width="337dp"
             android:layout_height="48dp"
             android:layout_gravity="center"
@@ -150,10 +155,10 @@
             app:layout_constraintTop_toBottomOf="@id/txtPass"
             app:passwordToggleEnabled="true"
             app:passwordToggleTint="@color/gami4"
-            android:layout_marginRight="16dp">
+            >
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edtMk"
+                android:id="@+id/edtPass"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:background="@drawable/fill_in"
@@ -168,14 +173,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
             android:text="Nhập lại mật khẩu"
             android:textColor="@color/gami3"
             android:textSize="14dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/edtPass" />
+            app:layout_constraintTop_toBottomOf="@id/Pass" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/edtPassAgain"
+            android:id="@+id/PassAgain"
             android:layout_width="337dp"
             android:layout_height="48dp"
             android:layout_gravity="center"
@@ -188,9 +194,10 @@
             app:layout_constraintTop_toBottomOf="@id/txtPassAgain"
             app:passwordToggleEnabled="true"
             app:passwordToggleTint="@color/gami4"
-            android:layout_marginRight="16dp">
+            >
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtPassAgain"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:background="@drawable/fill_in"
@@ -241,7 +248,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/LinearSocial"
         android:layout_marginTop="30dp"
-        android:elevation="20dp">
+        android:elevation="5dp">
 
         <TextView
             android:layout_width="match_parent"
@@ -265,9 +272,10 @@
             android:id="@+id/txtAlreadyAccount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="116dp"
+            android:layout_marginLeft="110dp"
             android:text="@string/acc_already"
             android:textColor="@color/gami1"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -276,11 +284,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
+            android:layout_marginRight="110dp"
             android:text="@string/log"
             android:textColor="@color/gami3"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/txtAlreadyAccount"
-            android:layout_marginRight="126dp"/>
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageView

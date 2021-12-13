@@ -4,172 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@color/nen"
+    tools:context=".HomeActivity"
+    android:id="@+id/layout_container"
     android:focusable="true"
     android:focusableInTouchMode="true">
 
-    <ScrollView
-        android:id="@+id/scrollView2"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:id="@+id/edtSearch"
-                android:layout_width="250dp"
-                android:layout_height="30dp"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp"
-                android:background="@drawable/custom_search"
-                android:drawableStart="@drawable/ic_baseline_search_24"
-                android:drawablePadding="10dp"
-                android:elevation="3dp"
-                android:fontFamily="@font/sourcesanspro_regular"
-                android:hint="Bạn muốn tìm gì ?"
-                android:textSize="15sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-            </EditText>
-
-
-            <ImageButton
-                android:id="@+id/btnCard"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_marginEnd="16dp"
-                android:background="#00000000"
-                android:scaleType="fitXY"
-                android:src="@drawable/ic_giohang"
-                app:layout_constraintBottom_toBottomOf="@+id/btnChat"
-                app:layout_constraintEnd_toStartOf="@+id/btnChat"
-                app:layout_constraintTop_toTopOf="@+id/btnChat">
-
-            </ImageButton>
-
-            <ImageButton
-                android:id="@+id/btnChat"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="8dp"
-                android:background="#00000000"
-                android:scaleType="fitXY"
-                android:src="@drawable/ic_chat"
-                app:layout_constraintBottom_toBottomOf="@+id/edtSearch"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-            </ImageButton>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/banner"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/edtSearch">
-
-                <androidx.viewpager2.widget.ViewPager2
-                    android:id="@+id/view_page2"
-                    android:layout_width="match_parent"
-                    android:layout_height="180dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginEnd="8dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
-
-                </androidx.viewpager2.widget.ViewPager2>
-
-                <me.relex.circleindicator.CircleIndicator3
-                    android:id="@+id/cricle_indicator"
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    app:ci_drawable="@drawable/background_cricle"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@+id/view_page2"
-                    app:layout_constraintStart_toStartOf="parent">
-
-                </me.relex.circleindicator.CircleIndicator3>
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="22dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:fontFamily="@font/sourcesanspro_regular"
-                android:gravity="center"
-                android:text="Danh mục sản phẩm "
-                android:textColor="@color/chu"
-                android:textSize="18sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/banner">
-
-            </TextView>
-
-            <GridView
-                android:id="@+id/gvCategory"
-                android:layout_width="match_parent"
-                android:layout_height="176dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:listSelector="#F8E8DF"
-                android:numColumns="3"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView">
-
-            </GridView>
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:fontFamily="@font/sourcesanspro_regular"
-                android:gravity="center"
-                android:text="Sản phẩm bán chạy"
-                android:textColor="@color/chu"
-                android:textSize="18sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/gvCategory">
-
-            </TextView>
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rcvPopular"
-                android:layout_width="match_parent"
-                android:layout_height="160dp"
-                android:layout_marginTop="16dp"
-                android:clipToPadding="false"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView2">
-
-            </androidx.recyclerview.widget.RecyclerView>
-
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-    </ScrollView>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/menu_navigation"
@@ -186,9 +25,6 @@
         app:menu="@menu/menu">
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
-
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

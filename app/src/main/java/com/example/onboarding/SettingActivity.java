@@ -3,6 +3,7 @@ package com.example.onboarding;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -12,7 +13,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.example.Adapter.SectionAdapter;
-import com.example.SettingTitle.Section;
+import com.example.model.Section;
 
 import java.util.ArrayList;
 
@@ -21,7 +22,7 @@ public class SettingActivity extends AppCompatActivity {
     ArrayList<Section> listData;
     SectionAdapter adapter;
     ImageView imvBack;
-//    FrameLayout btnLogout;
+    FrameLayout btnLogout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +37,7 @@ public class SettingActivity extends AppCompatActivity {
     private void linkViews() {
         lvSetting=findViewById(R.id.lvSetting);
         imvBack=findViewById(R.id.imvBack);
+        btnLogout=findViewById(R.id.btnLogout);
     }
 
     private void initData() {
@@ -73,11 +75,18 @@ public class SettingActivity extends AppCompatActivity {
                 startActivity(new Intent(SettingActivity.this, ProfileActivity.class));
             }
         });
-//        btnLogout.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                startActivity(new Intent(SettingActivity.this, LoginActivity.class));
-//            }
-//        });
+        btnLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                SharedPreferences preferences = getSharedPreferences("checkbox", MODE_PRIVATE);
+                SharedPreferences.Editor editor = preferences.edit();
+                editor.putString("remember", "false");
+                editor.apply();
+
+                finish();
+                startActivity(new Intent(SettingActivity.this, LoginActivity.class));
+            }
+        });
     }
 }
