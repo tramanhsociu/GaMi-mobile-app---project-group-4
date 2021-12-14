@@ -148,25 +148,56 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:orientation="horizontal"
         app:layout_constraintTop_toBottomOf="@+id/LinearLogin"
         android:layout_marginTop="13dp">
-        <ImageView
-            android:id="@+id/imageView2"
+<!--        <ImageView-->
+<!--            android:id="@+id/imageView2"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:src="@drawable/ic_gg"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            android:layout_marginLeft="128dp"/>-->
+        <FrameLayout
+            android:id="@+id/GG"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_gg"
+            android:layout_marginStart="100dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginLeft="128dp"/>
-
-        <ImageView
+            app:layout_constraintEnd_toStartOf="@+id/FB"
+            android:background="@drawable/ic_gg">
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/sign_in_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="128dp"
-            android:src="@drawable/ic_fb"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="gone"/>
+        </FrameLayout>
+        <FrameLayout
+            android:id="@+id/FB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_fb"
+            android:layout_marginEnd="100dp"
+            app:layout_constraintStart_toEndOf="@+id/GG"
+            app:layout_constraintEnd_toEndOf="parent">
+        <com.facebook.login.widget.LoginButton
+            android:id="@+id/btnFb"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone"/>
+        </FrameLayout>
+        <!--        <ImageView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginRight="128dp"-->
+<!--            android:src="@drawable/ic_fb"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView

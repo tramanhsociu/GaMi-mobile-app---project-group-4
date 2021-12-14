@@ -34,4 +34,7 @@
     <string name="sp5">Tôi có thể hủy đơn hàng không?</string>
     <string name="sp6">Tại sao tài khoản GaMi của tôi bị khóa/ bị giới hạn?</string>
 
+
+    <string name="facebook_app_id">599472041314938</string> <string name="fb_login_protocol_scheme">fb599472041314938</string>
+
 </resources>

@@ -1,5 +1,6 @@
 package com.example.onboarding;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -14,6 +15,11 @@ import android.widget.ListView;
 
 import com.example.Adapter.SectionAdapter;
 import com.example.model.Section;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 
 import java.util.ArrayList;
 
@@ -23,6 +29,9 @@ public class SettingActivity extends AppCompatActivity {
     SectionAdapter adapter;
     ImageView imvBack;
     FrameLayout btnLogout;
+
+    GoogleSignInClient mGoogleSignInClient;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +41,11 @@ public class SettingActivity extends AppCompatActivity {
         initAdapter();
 
         addEvents();
+
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestEmail()
+                .build();
+        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
     }
 
     private void linkViews() {
@@ -78,7 +92,10 @@ public class SettingActivity extends AppCompatActivity {
         btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //đăng xuất Google account
+                signOut();
 
+                //không còn remember me
                 SharedPreferences preferences = getSharedPreferences("checkbox", MODE_PRIVATE);
                 SharedPreferences.Editor editor = preferences.edit();
                 editor.putString("remember", "false");
@@ -88,5 +105,16 @@ public class SettingActivity extends AppCompatActivity {
                 startActivity(new Intent(SettingActivity.this, LoginActivity.class));
             }
         });
+
+        }
+    private void signOut() {
+        mGoogleSignInClient.signOut()
+                .addOnCompleteListener(this, new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        // ...
+                        finish();
+                    }
+                });
     }
 }

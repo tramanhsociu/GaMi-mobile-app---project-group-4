@@ -10,7 +10,9 @@ import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.inputmethodservice.ExtractEditText;
+import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.Window;
@@ -24,15 +26,45 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.database.AccountDB;
+import com.facebook.AccessToken;
+import com.facebook.AccessTokenTracker;
+import com.facebook.CallbackManager;
+import com.facebook.FacebookCallback;
+import com.facebook.FacebookException;
+import com.facebook.GraphRequest;
+import com.facebook.GraphResponse;
+import com.facebook.login.LoginManager;
+import com.facebook.login.LoginResult;
+import com.facebook.login.widget.LoginButton;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.common.SignInButton;
+import com.google.android.gms.common.api.ApiException;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.Arrays;
+
 public class LoginActivity extends AppCompatActivity {
+    //nút FB
+    private LoginButton btnFb;
+    private CallbackManager callbackManager;
+    //nút GG
+    GoogleSignInClient mGoogleSignInClient;
+    private static int RC_SIGN_IN = 100;
+
     ImageView imvBack;
     TextView txtForgotPass;
-    FrameLayout btnLogin;
+    FrameLayout btnLogin,FB,GG;
     AccountDB DB;
     TextInputEditText edtEmail, edtPass;
     CheckBox chkRemember;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,12 +74,61 @@ public class LoginActivity extends AppCompatActivity {
         imvBack = findViewById(R.id.imvBack);
         txtForgotPass = findViewById(R.id.txtForgotPass);
         btnLogin = findViewById(R.id.btnLogin);
-        chkRemember=findViewById(R.id.chkRemember);
+        chkRemember = findViewById(R.id.chkRemember);
         edtEmail = findViewById(R.id.edtEmail);
         edtPass = findViewById(R.id.edtPass);
-
+        btnFb = findViewById(R.id.btnFb);
         DB = new AccountDB(this);
+        FB = findViewById(R.id.FB);
+        GG = findViewById(R.id.GG);
+        //Đăng nhập bằng Facebook
+        callbackManager = CallbackManager.Factory.create();
+        btnFb.setReadPermissions("email");
+        // Callback registration
+        FB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (view == FB) {
+                    btnFb.performClick();
+                }
+            }
+        });
+        btnFb.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
+            @Override
+            public void onSuccess(LoginResult loginResult) {
+                Log.d("GaMi","Đăng nhập thành công!" );
+            }
 
+            @Override
+            public void onCancel() {
+                Log.d("GaMi","Hủy" );
+            }
+
+            @Override
+            public void onError(FacebookException exception) {
+                Log.d("GaMi","Đăng nhập không thành công" );
+            }
+        });
+        LoginManager.getInstance().logOut();
+        //Đăng nhập bằng Google
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestEmail()
+                .build();
+        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
+        GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
+        SignInButton signInButton = findViewById(R.id.sign_in_button);
+        signInButton.setSize(SignInButton.SIZE_WIDE);
+        GG.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (view == GG) {
+                    signInButton.performClick();
+                    signIn();
+                }
+            }
+        });
+
+        //remember me
         SharedPreferences preferences = getSharedPreferences("checkbox", MODE_PRIVATE);
         String checkbox = preferences.getString("remember", "");
         if (checkbox.equals("true")){
@@ -125,15 +206,6 @@ public class LoginActivity extends AppCompatActivity {
         });
 
     }
-
-//    private void replaceFragment(HomeFragment homeFragment) {
-//        //nhúng fragment home
-//        FragmentManager manager = getSupportFragmentManager();
-//        FragmentTransaction transaction = manager.beginTransaction();
-//        transaction.replace(R.id.home, new HomeFragment());
-//        transaction.commit();
-//    }
-
 
     private void openForgotPassDialog(int gravity) {
         final Dialog dialog = new Dialog(this);
@@ -276,6 +348,86 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void signIn() {
+        Intent signInIntent = mGoogleSignInClient.getSignInIntent();
+        startActivityForResult(signInIntent, RC_SIGN_IN);
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        callbackManager.onActivityResult(requestCode, resultCode, data);
+        super.onActivityResult(requestCode, resultCode, data);
+
+        // Result returned from launching the Intent from GoogleSignInClient.getSignInIntent(...);
+        if (requestCode == RC_SIGN_IN) {
+            // The Task returned from this call is always completed, no need to attach
+            // a listener.
+            Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
+            handleSignInResult(task);
+        }
+    }
+    private void handleSignInResult(Task<GoogleSignInAccount> completedTask) {
+        try {
+            GoogleSignInAccount account = completedTask.getResult(ApiException.class);
+            GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(this);
+            if (acct != null) {
+                String personName = acct.getDisplayName();
+                String personGivenName = acct.getGivenName();
+                String personFamilyName = acct.getFamilyName();
+                String personEmail = acct.getEmail();
+                String personId = acct.getId();
+                Uri personPhoto = acct.getPhotoUrl();
+
+            }
+            Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+            startActivity(intent);
+
+            // Signed in successfully, show authenticated UI.
+
+        } catch (ApiException e) {
+            // The ApiException status code indicates the detailed failure reason.
+            // Please refer to the GoogleSignInStatusCodes class reference for more information.
+            Log.d("message", e.toString());
+        }
+    }
+
+
+    AccessTokenTracker t = new AccessTokenTracker() {
+        @Override
+        protected void onCurrentAccessTokenChanged(AccessToken oldAccessToken, AccessToken currentAccessToken) {
+            if(currentAccessToken == null) {
+                Toast.makeText(LoginActivity.this, "Bạn đã đăng xuất", Toast.LENGTH_SHORT).show();
+            }else{
+                loaduserProfile(currentAccessToken);
+            }
+
+            if (t != null) {//<- IMPORTANT
+                Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                startActivity(intent);
+                finish();//<- IMPORTANT
+            }
+        }
+    };
+
+    private void loaduserProfile(AccessToken newAccessToken) {
+        GraphRequest request = GraphRequest.newMeRequest(newAccessToken, ((object, response) -> {
+            if(object!=null){
+                try{
+                    String email = object.getString("email");
+                    String id = object.getString("id");
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        }));
+        Bundle parameters = new Bundle();
+        parameters.putString("fields", "email,name,id");
+        request.setParameters(parameters);
+        request.executeAsync();
     }
 
 }
