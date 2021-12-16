@@ -3,15 +3,23 @@ package com.example.onboarding;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.example.Adapter.SectionAdapter;
 import com.example.model.Section;
@@ -20,6 +28,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+
 
 import java.util.ArrayList;
 
@@ -32,6 +41,8 @@ public class SettingActivity extends AppCompatActivity {
 
     GoogleSignInClient mGoogleSignInClient;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,8 +50,8 @@ public class SettingActivity extends AppCompatActivity {
         linkViews();
         initData();
         initAdapter();
-
         addEvents();
+
 
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
@@ -77,9 +88,13 @@ public class SettingActivity extends AppCompatActivity {
                 }else if(position == 1){
                     //hỗ trợ
                     startActivity(new Intent(SettingActivity.this, SettingSupportActivity.class));
-                }else{
+                }else if(position == 2){
                     //thanh toán
                     startActivity(new Intent(SettingActivity.this, SettingPaymentActivity.class));
+                }else{
+                    //đánh giá ứng dụng
+                    startActivity(new Intent(SettingActivity.this, SettingFeedbackActivity.class));
+
                 }
             }
         });
@@ -107,6 +122,7 @@ public class SettingActivity extends AppCompatActivity {
         });
 
         }
+    //đăng xuất
     private void signOut() {
         mGoogleSignInClient.signOut()
                 .addOnCompleteListener(this, new OnCompleteListener<Void>() {
@@ -117,4 +133,7 @@ public class SettingActivity extends AppCompatActivity {
                     }
                 });
     }
+    //mở đánh giá ứng dụng
+
+
 }

@@ -22,8 +22,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility targetCompatibility
+        targetCompatibility targetCompatibility
     }
     buildFeatures{
         viewBinding true;
@@ -50,4 +50,5 @@ dependencies {
     implementation "androidx.recyclerview:recyclerview:1.2.1"
     implementation 'com.google.android.gms:play-services-auth:20.0.0'
     implementation 'com.facebook.android:facebook-android-sdk:[8,9)'
+
 }
