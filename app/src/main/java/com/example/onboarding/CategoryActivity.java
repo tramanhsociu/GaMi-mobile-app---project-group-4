@@ -1,10 +1,8 @@
-package com.example;
+package com.example.onboarding;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-
-import com.example.onboarding.R;
 
 public class CategoryActivity extends AppCompatActivity{
 

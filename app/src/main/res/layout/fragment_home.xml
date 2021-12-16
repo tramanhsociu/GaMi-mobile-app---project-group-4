@@ -5,9 +5,28 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".HomeFragment"
-    android:background="@color/hongnhat">
+    android:layout_height="wrap_content"
+    tools:context=".HomeFragment">
+
+            <EditText
+                android:id="@+id/edtSearch"
+                android:layout_width="250dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/custom_search"
+                android:drawableStart="@drawable/ic_baseline_search_24"
+                android:drawablePadding="10dp"
+                android:elevation="3dp"
+                android:fontFamily="@font/sourcesanspro_regular"
+                android:hint="Bạn muốn tìm gì ?"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </EditText>
+
 
     <ScrollView
         android:id="@+id/scrollView2"
@@ -15,69 +34,16 @@
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/edtSearch">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:background="@color/white"
-            android:orientation="vertical">
-
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <EditText
-                    android:id="@+id/edtSearch"
-                    android:layout_width="250dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="16dp"
-                    android:background="@drawable/custom_search"
-                    android:drawableStart="@drawable/ic_baseline_search_24"
-                    android:drawablePadding="10dp"
-                    android:elevation="3dp"
-                    android:fontFamily="@font/sourcesanspro_regular"
-                    android:hint="Bạn muốn tìm gì ?"
-                    android:textSize="15sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
-
-                </EditText>
-
-
-                <ImageButton
-                    android:id="@+id/btnCard"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_marginEnd="16dp"
-                    android:background="#00000000"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/ic_giohang"
-                    app:layout_constraintBottom_toBottomOf="@+id/btnChat"
-                    app:layout_constraintEnd_toStartOf="@+id/btnChat"
-                    app:layout_constraintTop_toTopOf="@+id/btnChat">
-
-                </ImageButton>
-
-                <ImageButton
-                    android:id="@+id/btnChat"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="8dp"
-                    android:background="#00000000"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/ic_chat"
-                    app:layout_constraintBottom_toBottomOf="@+id/edtSearch"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
-
-                </ImageButton>
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/banner"
@@ -111,8 +77,6 @@
                     app:layout_constraintStart_toStartOf="parent">
 
                 </me.relex.circleindicator.CircleIndicator3>
-
-
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -149,7 +113,6 @@
                     app:layout_constraintTop_toBottomOf="@+id/textView">
 
                 </GridView>
-
                 <TextView
                     android:id="@+id/textView4"
                     android:layout_width="wrap_content"
@@ -170,7 +133,7 @@
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rcvPopular"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="160dp"
                     android:layout_marginTop="8dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -178,23 +141,31 @@
 
                 </androidx.recyclerview.widget.RecyclerView>
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rcvPopular2"
+
+                <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_height="100dp"
+                    android:src="@drawable/banner_2"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/rcvPopular">
 
-                </androidx.recyclerview.widget.RecyclerView>
-
+                </ImageView>
             </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:src="@drawable/banner_1">
+
+            </ImageView>
 
 
         </LinearLayout>
 
+
     </ScrollView>
+
+
 
 
 
