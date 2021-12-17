@@ -34,4 +34,13 @@
     <string name="sp5">Tôi có thể hủy đơn hàng không?</string>
     <string name="sp6">Tại sao tài khoản GaMi của tôi bị khóa/ bị giới hạn?</string>
 
+
+    <string name="facebook_app_id">599472041314938</string>
+    <string name="fb_login_protocol_scheme">fb599472041314938</string>
+    <string name="gami">GAMI</string>
+    <string name="chitietbaiviet1">Mũ là 1 item không thể thiếu cho các Boss mỗi khi đông về. Ngoài tác dụng giữ ấm thì 1 chiếc mũ thật cute sẽ giúp bé cưng của bạn trở nên đáng yêu hơn rất nhiều.</string>
+    <string name="payment">Thanh toán</string>
+    <string name="rate_des">Mỗi đánh giá của bạn là 1 viên gạch giúp ngôi nhà GaMi tối hơn.</string>
+    <string name="rate_us">Đánh giá GaMi tụi mình</string>
+
 </resources>
