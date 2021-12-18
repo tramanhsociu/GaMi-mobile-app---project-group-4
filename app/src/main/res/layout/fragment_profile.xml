@@ -88,11 +88,11 @@
 
                 <ImageView
                     android:id="@+id/imageView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="8dp"
-                    android:src="@drawable/avatar"
+                    android:src="@drawable/ic_avatar"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/txtProfile"
@@ -118,7 +118,7 @@
                 <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/order"
+                    android:src="@drawable/ic_order"
                     android:backgroundTint="#00FFFFFF"/>
                 <TextView
                     android:layout_width="wrap_content"
@@ -138,25 +138,25 @@
                     <ImageButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/check"
+                        android:src="@drawable/ic_check"
                         android:backgroundTint="#00FFFFFF"
                         />
                     <ImageButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/delivery"
+                        android:src="@drawable/ic_delivery"
                         android:backgroundTint="#00FFFFFF"
                         />
                     <ImageButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/box"
+                        android:src="@drawable/ic_box"
                         android:backgroundTint="#00FFFFFF"
                         />
                     <ImageButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/star"
+                        android:src="@drawable/ic_star"
                         android:backgroundTint="#00FFFFFF"
                         />
                 </TableRow>
@@ -225,7 +225,7 @@
                 <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/bookmark"
+                    android:src="@drawable/ic_bookmark"
                     android:backgroundTint="#00FFFFFF"/>
                 <TextView
                     android:layout_weight="1"
