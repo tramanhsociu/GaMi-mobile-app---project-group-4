@@ -101,7 +101,7 @@ public class SettingActivity extends AppCompatActivity {
         imvBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(SettingActivity.this, ProfileActivity.class));
+//                startActivity(new Intent(SettingActivity.this, ProfileActivity.class));
             }
         });
         btnLogout.setOnClickListener(new View.OnClickListener() {
