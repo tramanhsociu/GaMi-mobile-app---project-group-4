@@ -66,6 +66,69 @@
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+                <TableRow>
+                    <TextView
+                        android:layout_weight="1"
+                        android:text="Họ và tện: "
+                        android:textSize="18sp"
+                        android:fontFamily="@font/sourcesanspro_regular"
+                        android:textColor="#93766E"/>
+                    <EditText
+                        android:id="@+id/edtName"
+                        android:layout_weight="9"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/sourcesanspro_regular"
+                        android:textColor="#93766E"/>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_weight="1"
+                        android:text="Giới tính: "
+                        android:textSize="18sp"
+                        android:fontFamily="@font/sourcesanspro_regular"
+                        android:textColor="#93766E"/>
+                    <Spinner
+                        android:layout_width="40dp"
+                        android:spinnerMode="dropdown"/>
+
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_weight="1"
+                        android:text="Số điện thoại: "
+                        android:textSize="18sp"
+                        android:fontFamily="@font/sourcesanspro_regular"
+                        android:textColor="#93766E"/>
+                    <EditText
+                        android:id="@+id/edtPhone"
+                        android:layout_weight="9"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/sourcesanspro_regular"
+                        android:textColor="#93766E"/>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_weight="1"
+                        android:text="Địa chỉ: "
+                        android:textSize="18sp"
+                        android:fontFamily="@font/sourcesanspro_regular"
+                        android:textColor="#93766E"/>
+                    <EditText
+                        android:id="@+id/edtAddress"
+                        android:layout_weight="9"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/sourcesanspro_regular"
+                        android:textColor="#93766E"/>
+
+                </TableRow>
+
+
+            </TableLayout>
+
 
 
         </LinearLayout>
