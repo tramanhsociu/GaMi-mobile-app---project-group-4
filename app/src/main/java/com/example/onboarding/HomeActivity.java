@@ -24,7 +24,7 @@ import com.example.Adapter.CategoryAdapter;
 import com.example.Adapter.PopularAdapter;
 import com.example.model.Banner;
 import com.example.model.Category;
-import com.example.model.Popular;
+
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
