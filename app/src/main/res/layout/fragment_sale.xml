@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ItemSale"
-    android:padding="10dp">
-
-    <!--    <ScrollView-->
-    <!--        android:id="@+id/scrollView2"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="match_parent">-->
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_sale">
 
     <LinearLayout
         android:id="@+id/lnSale"
@@ -18,8 +11,7 @@
         android:layout_height="match_parent"
         android:fitsSystemWindows="true"
         android:orientation="vertical"
-        android:padding="10dp"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -27,11 +19,12 @@
             android:layout_height="wrap_content">
 
             <ImageButton
-                android:id="@+id/btnBack"
+                android:id="@+id/btnBacknoti"
                 android:layout_width="7dp"
                 android:layout_height="12dp"
-                android:layout_marginStart="5dp"
+                android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
+                android:layout_marginTop="16dp"
                 android:background="#00000000"
                 android:scaleType="fitXY"
                 android:src="@drawable/back"
@@ -47,44 +40,17 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/sourcesanspro_regular"
                 android:gravity="center"
+                android:layout_marginTop="16dp"
                 android:text="Khuyến mãi"
                 android:textColor="#93766E"
                 android:textSize="24sp"
+                android:paddingBottom="10px"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-
-            <ImageButton
-                android:id="@+id/btnCart"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_marginEnd="16dp"
-                android:background="#00000000"
-                android:scaleType="fitXY"
-                android:src="@drawable/ic_giohang"
-                app:layout_constraintBottom_toBottomOf="@+id/txtKhuyenmai"
-                app:layout_constraintEnd_toStartOf="@+id/btnChat"
-
-                app:layout_constraintTop_toTopOf="parent">
-
-            </ImageButton>
-
-            <ImageButton
-                android:id="@+id/btnChat"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:background="#00000000"
-                android:scaleType="fitXY"
-                android:src="@drawable/ic_chat"
-                app:layout_constraintBottom_toBottomOf="@+id/txtKhuyenmai"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-            </ImageButton>
-
-
         </androidx.constraintlayout.widget.ConstraintLayout>
+
         <ListView
             android:id="@+id/lvItemSale"
             android:layout_width="match_parent"
@@ -94,16 +60,11 @@
             app:layout_constraintBottom_toBottomOf="parent"
             android:dividerHeight="10dp"
             android:divider="@null"
-            android:layout_marginTop="16dp">
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp">
 
         </ListView>
 
     </LinearLayout>
-
-
-
-    <!--    </ScrollView>-->
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

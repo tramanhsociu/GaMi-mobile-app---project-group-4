@@ -1,16 +1,9 @@
 package com.example.model;
 
-public class Khuyenmai {
-
+public class Sale {
     private int saleThumb;
     private String saleName;
     private String saleContent;
-
-    public Khuyenmai(int saleThumb, String saleName, String saleContent) {
-        this.saleThumb = saleThumb;
-        this.saleName = saleName;
-        this.saleContent = saleContent;
-    }
 
     public int getSaleThumb() {
         return saleThumb;
@@ -33,6 +26,12 @@ public class Khuyenmai {
     }
 
     public void setSaleContent(String saleContent) {
+        this.saleContent = saleContent;
+    }
+
+    public Sale(int saleThumb, String saleName, String saleContent) {
+        this.saleThumb = saleThumb;
+        this.saleName = saleName;
         this.saleContent = saleContent;
     }
 }
