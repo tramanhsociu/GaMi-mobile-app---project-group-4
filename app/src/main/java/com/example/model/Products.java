@@ -2,28 +2,22 @@ package com.example.model;
 
 import java.io.Serializable;
 
-public class Popular implements Serializable{
+public class Products implements Serializable{
     private   int Thumb;
     private   String Name;
     private   String  Description;
     private   String Rate;
     private   Double Price;
+    private String Category;
     private int numberInCard;
 
-    public Popular(int thumb, String name, String description, String rate, Double price) {
+    public Products(int thumb, String name, String description, String rate, Double price, String category, int numberInCard) {
         Thumb = thumb;
         Name = name;
         Description = description;
         Rate = rate;
         Price = price;
-    }
-
-    public Popular(int thumb, String name, String description, String rate, Double price, int numberInCard) {
-        Thumb = thumb;
-        Name = name;
-        Description = description;
-        Rate = rate;
-        Price = price;
+        Category = category;
         this.numberInCard = numberInCard;
     }
 
@@ -65,6 +59,14 @@ public class Popular implements Serializable{
 
     public void setPrice(Double price) {
         Price = price;
+    }
+
+    public String getCategory() {
+        return Category;
+    }
+
+    public void setCategory(String category) {
+        Category = category;
     }
 
     public int getNumberInCard() {

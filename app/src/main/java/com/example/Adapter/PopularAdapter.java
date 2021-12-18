@@ -10,7 +10,8 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-import com.example.model.Popular;
+
+import com.example.model.Products;
 import com.example.onboarding.R;
 
 import java.util.List;
@@ -18,11 +19,11 @@ import java.util.List;
 
 public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.PopularViewHolder>{
     Context context;
-    List<Popular> popularList;
+    List<Products> productsList;
 
-    public PopularAdapter(Context context, List<Popular> popularList) {
+    public PopularAdapter(Context context, List<Products> productsList) {
         this.context = context;
-        this.popularList = popularList;
+        this.productsList = productsList;
     }
 
     @NonNull
@@ -35,15 +36,15 @@ public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.PopularV
 
     @Override
     public void onBindViewHolder(@NonNull PopularViewHolder holder, int position) {
-        holder.imvthumb.setImageResource(popularList.get(position).getThumb());
-        holder.txtPrice.setText(String.valueOf(popularList.get(position).getPrice()));
-        holder.txtName.setText(popularList.get(position).getName());
+        holder.imvthumb.setImageResource(productsList.get(position).getThumb());
+        holder.txtPrice.setText(String.valueOf(productsList.get(position).getPrice()));
+        holder.txtName.setText(productsList.get(position).getName());
 
     }
 
     @Override
     public int getItemCount() {
-        return popularList.size();
+        return productsList.size();
     }
 
 

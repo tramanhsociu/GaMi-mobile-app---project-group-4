@@ -48,7 +48,7 @@ public class HomeActivity extends AppCompatActivity{
         navigationView = findViewById(R.id.menu_navigation);
         btnChat = findViewById(R.id.btnChat);
         //chat
-        Crisp.configure(getApplicationContext(), "e4983e6a-06f0-42ca-b683-b7723850abc0");
+        Crisp.configure(getApplicationContext(), "1b4d03b2-db60-4da9-b658-bcf6eceac6f1");
 
        getSupportFragmentManager().beginTransaction()
         .replace(R.id.layout_container,new HomeFragment()).commit();

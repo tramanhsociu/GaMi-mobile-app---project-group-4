@@ -15,10 +15,11 @@ import android.widget.GridView;
 
 import com.example.Adapter.BannerAdapter;
 import com.example.Adapter.CategoryAdapter;
+import com.example.Adapter.DynamicRCVAdapter;
 import com.example.Adapter.PopularAdapter;
 import com.example.model.Banner;
 import com.example.model.Category;
-import com.example.model.Popular;
+import com.example.model.Products;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,12 +31,17 @@ public class HomeFragment extends Fragment{
     ViewPager2 viewPager2;
     CircleIndicator3 circleIndicator3;
     ArrayList<Banner> banners;
-
     BannerAdapter bannerAdapter;
 
     RecyclerView rcvPopular;
     PopularAdapter popularAdapter;
-    ArrayList<Popular> popular;
+
+    ArrayList<Products> popular;
+
+
+    RecyclerView rcvSale;
+
+
 
 
     GridView gvCategory;
@@ -60,19 +66,28 @@ public class HomeFragment extends Fragment{
 
     private void initDataPopular() {
         popular = new ArrayList<>();
-        popular.add(new Popular(R.drawable.dochoi_1,"name","Đồ chơi dành cho chó và mèo ","200000",20.000));
-        popular.add(new Popular(R.drawable.dochoi_2,"name","20000","30000",40.000));
-        popular.add(new Popular(R.drawable.dochoi_3,"name","20000","200000",20.000));
-        popular.add(new Popular(R.drawable.dochoi_4,"name","20000","200000",30.000));
-        popular.add(new Popular(R.drawable.dochoi_1,"name","20000","200000",50.000));
+        popular.add(new Products(R.drawable.dochoi_1,"name","Đồ chơi dành cho chó và mèo ","200000",20.000,"đồ chơi",1));
+        popular.add(new Products(R.drawable.dochoi_2,"name","Đồ chơi dành cho chó và mèo ","200000",20.000,"đồ chơi",1));
+        popular.add(new Products(R.drawable.dochoi_3,"name","Đồ chơi dành cho chó và mèo ","200000",20.000,"đồ chơi",1));
+        popular.add(new Products(R.drawable.dochoi_4,"name","Đồ chơi dành cho chó và mèo ","200000",20.000,"đồ chơi",1));
+
         popularAdapter = new PopularAdapter(getContext(),popular);
         rcvPopular.setAdapter(popularAdapter);
+
+        popularAdapter = new PopularAdapter(getContext(),popular);
+        rcvSale.setAdapter(popularAdapter);
+
 
     }
 
     private void recyclerViewPopular() {
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext(),RecyclerView.HORIZONTAL,false);
         rcvPopular.setLayoutManager(layoutManager);
+
+        LinearLayoutManager layoutManager2 = new LinearLayoutManager(getContext(),RecyclerView.HORIZONTAL,false);
+        rcvSale.setLayoutManager(layoutManager2);
+
+
 
     }
 
@@ -131,6 +146,9 @@ public class HomeFragment extends Fragment{
 
         rcvPopular = view.findViewById(R.id.rcvPopular);
 
+        rcvSale = view.findViewById(R.id.rcvSale);
+
+
         // banner
         initData();
         initAdapter();
@@ -141,9 +159,16 @@ public class HomeFragment extends Fragment{
         recyclerViewPopular();
         initDataPopular();
 
+        // item category
+
+
 
         return view;
     }
+
+
+
+
     @Override
     public void onPause() {
         super.onPause();

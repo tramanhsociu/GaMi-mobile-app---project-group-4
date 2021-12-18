@@ -2,6 +2,8 @@ package com.example.onboarding;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.app.Dialog;
 import android.content.Intent;
@@ -101,7 +103,10 @@ public class SettingActivity extends AppCompatActivity {
         imvBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                startActivity(new Intent(SettingActivity.this, ProfileActivity.class));
+                FragmentManager manager = getSupportFragmentManager();
+            FragmentTransaction transaction = manager.beginTransaction();
+            transaction.replace(R.id.Setting, new ProfileFragment());
+            transaction.commit();
             }
         });
         btnLogout.setOnClickListener(new View.OnClickListener() {
