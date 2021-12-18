@@ -44,40 +44,45 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <ImageButton
-                    android:id="@+id/imvChat"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_marginEnd="16dp"
-                    android:background="#00000000"
-                    android:scaleType="fitXY"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@+id/imvCover"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.4"
-                    app:srcCompat="@drawable/ic_chat" />
 
                 <ImageButton
-                    android:id="@+id/imvShopping"
+                    android:id="@+id/btnCart"
                     android:layout_width="25dp"
                     android:layout_height="25dp"
+                    android:layout_marginTop="20dp"
                     android:layout_marginEnd="16dp"
                     android:background="#00000000"
                     android:scaleType="fitXY"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/imvChat"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.4"
-                    app:srcCompat="@drawable/ic_giohang" />
+                    android:src="@drawable/ic_giohang"
+
+                    app:layout_constraintEnd_toStartOf="@+id/btnChat"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </ImageButton>
+
+                <ImageButton
+                    android:id="@+id/btnChat"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="#00000000"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_chat"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </ImageButton>
 
                 <ImageButton
                     android:id="@+id/imbSetting"
                     android:layout_width="25dp"
                     android:layout_height="25dp"
 
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="106dp"
                     android:backgroundTint="#00FFFFFF"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/settings" />
 
