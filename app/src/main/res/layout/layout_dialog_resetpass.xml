@@ -96,7 +96,7 @@
         android:background="@drawable/regis_button"
         android:layout_marginHorizontal="35dp"
         android:layout_marginTop="42dp"
-        android:elevation="5dp">
+        android:elevation="8dp">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
