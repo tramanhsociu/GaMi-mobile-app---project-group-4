@@ -1,43 +1,55 @@
 package com.example.onboarding;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.ImageView;
-import android.widget.TextView;
+import android.widget.ListView;
 
+import com.example.Adapter.SupportPostAdapter;
 import com.example.fragment.SettingFragment;
+import com.example.fragment.SettingFragment2;
+import com.example.fragment.SettingFragment3;
+import com.example.fragment.SettingFragment4;
+import com.example.fragment.SettingFragment5;
+import com.example.model.SupportPost;
+import com.google.android.material.textfield.TextInputEditText;
 
-import me.relex.circleindicator.CircleIndicator;
+import java.util.ArrayList;
 
 public class SettingSupportActivity extends AppCompatActivity {
     ImageView imvBack;
-    TextView txtInstruction, txtRefund, txtFollowOrd, txtFreeShip, txtCancelOrd, txtAccount;
+    SearchView searchView;
+    ListView lvSettingsupport;
+    ArrayList<SupportPost> posts;
+    SupportPostAdapter adapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setting_support);
         linkViews();
         addEvents();
-
-
+        initData();
+        initAdapter();
 
     }
 
     private void linkViews() {
         imvBack=findViewById(R.id.imvBack);
-        txtInstruction=findViewById(R.id.txtInstruction);
-        txtRefund=findViewById(R.id.txtRefund);
-        txtFollowOrd=findViewById(R.id.txtFollowOrd);
-        txtFreeShip=findViewById(R.id.txtFreeShip);
-        txtCancelOrd=findViewById(R.id.txtCancelOrd);
-        txtAccount=findViewById(R.id.txtAccount);
+        lvSettingsupport=findViewById(R.id.lvSettingsuport);
+        searchView=findViewById(R.id.searchView);
     }
 
     private void addEvents() {
@@ -47,48 +59,60 @@ public class SettingSupportActivity extends AppCompatActivity {
                 startActivity(new Intent(SettingSupportActivity.this, SettingActivity.class));
             }
         });
-        txtInstruction.setOnClickListener(new View.OnClickListener() {
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
-            public void onClick(View view) {
-                replaceFragment(new SettingFragment());
+            public boolean onQueryTextSubmit(String query) {
+                SettingSupportActivity.this.adapter.getFilter().filter(query);
+
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                adapter.getFilter().filter(newText);
+                return true;
             }
         });
-        txtRefund.setOnClickListener(new View.OnClickListener() {
+
+        lvSettingsupport.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onClick(View view) {
-                //hoàn tiền
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                if(i==0){
+                    replaceFragment(new SettingFragment());
+                }else if(i==1){
+                    replaceFragment(new SettingFragment2());
+                }else if(i==2){
+                    replaceFragment(new SettingFragment3());
+                }else if(i==3){
+                    replaceFragment(new SettingFragment4());
+                }else{
+                    replaceFragment(new SettingFragment5());
+                }
             }
         });
-        txtFollowOrd.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //theo dõi đơn
-            }
-        });
-        txtFreeShip.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //mã freeship
-            }
-        });
-        txtCancelOrd.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //hủy đơn
-            }
-        });
-        txtAccount.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //tk bị khóa
-            }
-        });
+
     }
 
-    private void replaceFragment(SettingFragment settingFragment) {
+    private void initData() {
+        posts = new ArrayList<SupportPost>();
+        posts.add(new SupportPost("Làm sao để mua hàng/ Đặt hàng trên ứng dụng GaMi?"));
+        posts.add(new SupportPost("Quy trình trả hàng hoàn tiền của GaMi"));
+        posts.add(new SupportPost("Cách theo dõi tình trạng vận chuyển của đơn hàng"));
+        posts.add(new SupportPost("Tôi có thể hủy đơn hàng không?"));
+        posts.add(new SupportPost("Tại sao tài khoản GaMi của tôi bị khóa/ bị giới hạn?"));
+    }
+
+    private void initAdapter() {
+        adapter = new SupportPostAdapter(SettingSupportActivity.this, R.layout.custom_list_setting_support,posts);
+        lvSettingsupport.setAdapter(adapter);
+
+    }
+
+    private void replaceFragment(Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.post_support, settingFragment);
+        fragmentTransaction.replace(R.id.post_support, fragment);
         fragmentTransaction.commit();
     }
 }
