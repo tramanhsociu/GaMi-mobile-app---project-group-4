@@ -1,122 +1,87 @@
 package com.example.Adapter;
 
-import android.app.Activity;
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
-import android.widget.ProgressBar;
+import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.RCVinterface.LoadMore;
 import com.example.model.Products;
 import com.example.onboarding.R;
 
-import java.util.List;
+import java.util.ArrayList;
 
-class LoadingViewHolder extends RecyclerView.ViewHolder{
-    public ProgressBar progressBar;
+public class DynamicRCVAdapter extends RecyclerView.Adapter<DynamicRCVAdapter.ViewHolder>{
+    int selectedItem = 0;
 
-    public LoadingViewHolder(@NonNull View itemView) {
-        super(itemView);
-        progressBar = itemView.findViewById(R.id.progress_bar);
-    }
-}
-class ItemViewHolder extends RecyclerView.ViewHolder{
-
-    public TextView name,price;
-    public ItemViewHolder(@NonNull View itemView) {
-        super(itemView);
-        name = itemView.findViewById(R.id.txtName);
-        price = itemView.findViewById(R.id.txtPrice);
-    }
-}
-
-public class DynamicRCVAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
-    private final int VIEW_TYPE_ITEM = 0, VIEW_TYPE_LOADING = 1;
-
-    LoadMore loadMore;
-    boolean isLoading;
-    Activity activity ;
-    List<Products> items;
-    int visibleThreshold = 5;
-    int lastVisibleItem,totalItemCount;
+    Context context;
+    ArrayList<Products> list;
 
 
-    public DynamicRCVAdapter(RecyclerView recyclerView,Activity activity, List<Products> items) {
-        this.activity = activity;
-        this.items = items;
+    public DynamicRCVAdapter(Context context, ArrayList<Products> list) {
+        this.context = context;
+        this.list = list;
 
-        final LinearLayoutManager linearLayoutManager = (LinearLayoutManager) recyclerView.getLayoutManager();
-        recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener(){
-            @Override
-            public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
-                super.onScrolled(recyclerView, dx, dy);
-                totalItemCount = linearLayoutManager.getItemCount();
-                lastVisibleItem = linearLayoutManager.findLastVisibleItemPosition();
-                if(!isLoading && totalItemCount <= (lastVisibleItem + visibleThreshold)){
-                    if(loadMore != null){
-                        loadMore.onLoadMore();
-                        isLoading = true;
-                    }
-                }
-            }
-        });
-
-
-    }
-
-    @Override
-    public int getItemViewType(int position) {
-        return items.get(position) == null ? VIEW_TYPE_LOADING : VIEW_TYPE_LOADING;
-
-
-    }
-    public void setLoadMore(LoadMore loadMore){
-        this.loadMore = loadMore;
     }
 
     @NonNull
     @Override
-    public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        if(viewType == VIEW_TYPE_ITEM){
-           View view = LayoutInflater.from(activity).inflate(R.layout.layout_popular,parent,false);
-           return new LoadingViewHolder(view);
-        }
-        else if(viewType== VIEW_TYPE_LOADING){
-            View view = LayoutInflater.from(activity).inflate(R.layout.item_category_progress,parent,false);
-            return new LoadingViewHolder(view);
-
-        }
-
-
-        return null;
+    public DynamicRCVAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.dynamic_rcv_item,parent,false);
+        return new DynamicRCVAdapter.ViewHolder(view) ;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-        if(holder instanceof ItemViewHolder){
-            Products item = items.get(position);
-            ItemViewHolder viewHolder = (ItemViewHolder) holder;
-            viewHolder.name.setText(items.get(position).getName());
-            viewHolder.price.setText(String.valueOf(items.get(position).getPrice()));
-        }
-        else if(holder instanceof LoadingViewHolder){
-            LoadingViewHolder loadingViewHolder = (LoadingViewHolder) holder;
-        }
+    public void onBindViewHolder(@NonNull DynamicRCVAdapter.ViewHolder holder, int position) {
 
+        holder.imvThumb.setImageResource(list.get(position).getThumb());
+        holder.txtName.setText(list.get(position).getName());
+        holder.txtPrice.setText(String.valueOf(list.get(position).getPrice()));
+        holder.ratingBar.setRating(list.get(position).getRate());
+
+        if (selectedItem == position){
+            holder.cardView.animate().scaleX(1.1f);
+            holder.cardView.animate().scaleY(1.1f);
+        }
+        else {
+            holder.cardView.animate().scaleX(1f);
+            holder.cardView.animate().scaleY(1f);
+        }
     }
 
     @Override
     public int getItemCount() {
-        return items.size();
+        return list.size();
     }
-    public void setLoaded(){
-        isLoading = false;
+
+    public class ViewHolder extends RecyclerView.ViewHolder{
+        TextView txtName,txtPrice;
+        ImageView imvThumb;
+        RatingBar ratingBar;
+        CardView cardView;
+
+        public ViewHolder(@NonNull View itemView) {
+            super(itemView);
+            txtName = itemView.findViewById(R.id.txtName);
+            txtPrice = itemView.findViewById(R.id.txtPrice);
+            imvThumb= itemView.findViewById(R.id.imvThumb);
+            ratingBar = itemView.findViewById(R.id.ratingBar);
+            cardView = itemView.findViewById(R.id.cardView);
+            cardView.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View view) {
+                    selectedItem = getLayoutPosition();
+                    notifyDataSetChanged();
+                }
+            });
+
+        }
     }
 }
-

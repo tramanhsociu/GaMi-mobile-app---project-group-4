@@ -1,27 +1,27 @@
 package com.example.model;
 
 public class Category{
-    private int productThumb;
-    private String productName;
+    private int categoryImage;
+    private String categoryName;
 
-    public Category(int productThumb, String productName) {
-        this.productThumb = productThumb;
-        this.productName = productName;
+    public Category(int categoryImage, String categoryName) {
+        this.categoryImage = categoryImage;
+        this.categoryName = categoryName;
     }
 
-    public int getProductThumb() {
-        return productThumb;
+    public int getCategoryImage() {
+        return categoryImage;
     }
 
-    public void setProductThumb(int productThumb) {
-        this.productThumb = productThumb;
+    public void setCategoryImage(int categoryImage) {
+        this.categoryImage = categoryImage;
     }
 
-    public String getProductName() {
-        return productName;
+    public String getCategoryName() {
+        return categoryName;
     }
 
-    public void setProductName(String productName) {
-        this.productName = productName;
+    public void setCategoryName(String categoryName) {
+        this.categoryName = categoryName;
     }
 }

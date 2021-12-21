@@ -6,12 +6,12 @@ public class Products implements Serializable{
     private   int Thumb;
     private   String Name;
     private   String  Description;
-    private   String Rate;
+    private   float Rate;
     private   Double Price;
     private String Category;
     private int numberInCard;
 
-    public Products(int thumb, String name, String description, String rate, Double price, String category, int numberInCard) {
+    public Products(int thumb, String name, String description, float rate, Double price, String category, int numberInCard) {
         Thumb = thumb;
         Name = name;
         Description = description;
@@ -45,11 +45,11 @@ public class Products implements Serializable{
         Description = description;
     }
 
-    public String getRate() {
+    public float getRate() {
         return Rate;
     }
 
-    public void setRate(String rate) {
+    public void setRate(float rate) {
         Rate = rate;
     }
 
