@@ -20,6 +20,9 @@ import android.widget.ListView;
 import com.example.Adapter.SupportPostAdapter;
 import com.example.fragment.SettingFragment;
 import com.example.fragment.SettingFragment2;
+import com.example.fragment.SettingFragment3;
+import com.example.fragment.SettingFragment4;
+import com.example.fragment.SettingFragment5;
 import com.example.model.SupportPost;
 import com.google.android.material.textfield.TextInputEditText;
 
@@ -27,8 +30,6 @@ import java.util.ArrayList;
 
 public class SettingSupportActivity extends AppCompatActivity {
     ImageView imvBack;
-//    AutoCompleteTextView actSearch;
-//    TextInputEditText edtSearch;
     SearchView searchView;
     ListView lvSettingsupport;
     ArrayList<SupportPost> posts;
@@ -48,9 +49,7 @@ public class SettingSupportActivity extends AppCompatActivity {
     private void linkViews() {
         imvBack=findViewById(R.id.imvBack);
         lvSettingsupport=findViewById(R.id.lvSettingsuport);
-//        edtSearch = findViewById(R.id.edtSearch);
         searchView=findViewById(R.id.searchView);
-//        actSearch = findViewById(R.id.actSearch);
     }
 
     private void addEvents() {
@@ -84,13 +83,11 @@ public class SettingSupportActivity extends AppCompatActivity {
                 }else if(i==1){
                     replaceFragment(new SettingFragment2());
                 }else if(i==2){
-
+                    replaceFragment(new SettingFragment3());
                 }else if(i==3){
-
-                }else if(i==4){
-
-                }else if(i==5){
-
+                    replaceFragment(new SettingFragment4());
+                }else{
+                    replaceFragment(new SettingFragment5());
                 }
             }
         });
@@ -102,7 +99,6 @@ public class SettingSupportActivity extends AppCompatActivity {
         posts.add(new SupportPost("Làm sao để mua hàng/ Đặt hàng trên ứng dụng GaMi?"));
         posts.add(new SupportPost("Quy trình trả hàng hoàn tiền của GaMi"));
         posts.add(new SupportPost("Cách theo dõi tình trạng vận chuyển của đơn hàng"));
-        posts.add(new SupportPost("Hướng dẫn sử dụng mã miễn phí vận chuyển"));
         posts.add(new SupportPost("Tôi có thể hủy đơn hàng không?"));
         posts.add(new SupportPost("Tại sao tài khoản GaMi của tôi bị khóa/ bị giới hạn?"));
     }

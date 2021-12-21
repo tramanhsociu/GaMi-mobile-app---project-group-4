@@ -1,30 +1,30 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp"
     android:background="@color/kem"
     android:fillViewport="true"
-    android:padding="10dp"
-    tools:context="com.example.fragment.SettingFragment2">
+    tools:context="com.example.fragment.SettingFragment5">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingBottom="150dp">
-
         <TextView
-            android:id="@+id/txtProcess"
+            android:id="@+id/txtAccount"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="10dp"
-            android:text="Quy trình trả hàng hoàn tiền của Shopee"
+            android:text="Tại sao tài khoản GaMi của tôi bị khóa/ bị giới hạn?"
             android:textColor="@color/gami3"
             android:textSize="19sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
         <ImageView
             android:id="@+id/imvLine"
             android:layout_width="wrap_content"
@@ -33,151 +33,132 @@
             android:src="@drawable/ic_line"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/txtProcess" />
-
-        <TextView
-            android:id="@+id/txtsubTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="10dp"
-            android:layout_marginTop="30dp"
-            android:text="Hiện tại GaMi chưa hỗ trợ đổi hàng. Trong trường hợp sản phẩm nhận được có vấn đề, bạn có thể yêu cầu Trả hàng/ Hoàn tiền ngay trên ứng dụng GaMi theo chi tiết bên dưới:"
-            android:textColor="@color/gami4"
-            android:textSize="14sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/txtProcess" />
-
-        <TextView
-            android:id="@+id/txtno1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="10dp"
-            android:layout_marginTop="10dp"
-            android:text="1. Quy trình trả hàng hoàn tiền cho đơn hàng thuộc GaMi:"
-            android:textColor="@color/gami2"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtsubTitle" />
-
+            app:layout_constraintTop_toBottomOf="@id/txtAccount" />
         <TextView
             android:id="@+id/txtDes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="10dp"
-            android:layout_marginTop="10dp"
-            android:text="Tham khảo hướng dẫn chi tiết"
-            android:textColor="@color/gami4"
+            android:text="Tài khoản của bạn có thể bị khóa bị giới hạn vì một trong các nguyên nhân sau:"
             android:textSize="14sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtno1" />
-
-        <TextView
-            android:id="@+id/txtno2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:textColor="@color/gami3"
+            android:layout_marginTop="30dp"
             android:layout_marginHorizontal="10dp"
-            android:layout_marginTop="15dp"
-            android:text="2. Lưu ý:"
-            android:textColor="@color/gami2"
-            android:textSize="14sp"
-            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/txtAccount"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtDes" />
+            app:layout_constraintStart_toStartOf="parent"/>
 
         <TextView
             android:id="@+id/txtline1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="10dp"
-            android:layout_marginTop="15dp"
-            android:text="- Người mua sẽ không thể gửi yêu cầu Trả hàng / Hoàn tiền sau khi bấm nút 'Đã nhận được hàng' hoặc quá thời gian quy định. Xem thêm điều kiện trả hàng/hoàn tiền."
-            android:textColor="@color/gami3"
+            android:text="- Tài khoản vi phạm Điều khoản dịch vụ của Shopee"
             android:textSize="14sp"
+            android:textColor="@color/gami3"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/txtDes"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtno2" />
+            app:layout_constraintStart_toStartOf="parent"/>
 
         <TextView
             android:id="@+id/txtline2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="10dp"
-            android:layout_marginTop="10dp"
-            android:text="- Người mua cần thực hiện các bước Trả hàng / Hoàn tiền đúng hạn. Nếu không, yêu cầu Trả hàng / Hoàn tiền của bạn sẽ bị tự động hủy / được xử lý theo quy định của GaMi."
-            android:textColor="@color/gami3"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtline1" />
-
-        <TextView
-            android:id="@+id/txtline3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="10dp"
-            android:layout_marginTop="10dp"
-            android:text="- GaMi sẽ cập nhật tình trạng Trả hàng / Hoàn tiền thường xuyên. Tham khảo hướng dẫn chi tiết."
-            android:textColor="@color/gami3"
+            android:text="- Tên đăng nhập giống với tài khoản chính thức của GaMi, giống hoặc gần giống với các trang thương mại điện tử khác, chưa đường dẫn tới web có hình thức kinh doanh giống với GaMi"
             android:textSize="14sp"
+            android:textColor="@color/gami3"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/txtline1"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtline2" />
-
-        <TextView
-            android:id="@+id/txtline4"
+            app:layout_constraintStart_toStartOf="parent"/>
+        <LinearLayout
+            android:id="@+id/Luuy"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="10dp"
             android:layout_marginTop="10dp"
-            android:text="- GaMi khuyến khích người mua liên lạc với GaMi để trao đổi về các vấn đề phát sinh liên quan đến đơn hàng để nhận được giải quyết nhanh chóng và hiệu quả nhất."
-            android:textColor="@color/gami3"
-            android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtline3" />
+            app:layout_constraintTop_toBottomOf="@id/txtline2">
 
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:src="@drawable/ic_baseline_warning_24" />
+
+            <TextView
+                android:id="@+id/txtno3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Lưu ý:"
+                android:textColor="@color/gami2"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </LinearLayout>
         <TextView
-            android:id="@+id/txtline5"
+            android:id="@+id/txtline1luuy"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="10dp"
+            android:text="- Khi tài khoản của bạn bị khóa/bị giới hạn, bạn sẽ nhận được thông báo khi thực hiện đăng nhập vào tài khoản hoặc một giao dịch nào đó liên quan trên GaMi"
+            android:textSize="14sp"
+            android:textColor="@color/gami3"
             android:layout_marginTop="10dp"
-            android:text="- GaMi chưa hỗ trợ các yêu cầu trả hàng / hoàn tiền thuộc về cảm quan / không ưng ý / thay đổi quyết định mua hàng."
-            android:textColor="@color/gami3"
-            android:textSize="14sp"
+            android:layout_marginHorizontal="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/Luuy"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/txtline4" />
-
+            app:layout_constraintStart_toStartOf="parent"/>
         <TextView
-            android:id="@+id/txtline6"
+            android:id="@+id/txtline2luuy"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="10dp"
+            android:text="- Tài khoản của bạn sẽ bị khóa vĩnh viễn nếu:"
+            android:textSize="14sp"
+            android:textColor="@color/gami3"
             android:layout_marginTop="10dp"
-            android:text="- Trong mọi trường hợp khiếu nại, quyết định của GaMi sẽ là quyết định cuối cùng."
-            android:textColor="@color/gami3"
-            android:textSize="14sp"
+            android:layout_marginHorizontal="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/txtline1luuy"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/txtline5" />
-
+            app:layout_constraintStart_toStartOf="parent"/>
         <TextView
-            android:id="@+id/txtNotice"
+            android:id="@+id/txtsubline1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=". Bạn không đưa ra yêu cầu khôi phục tài khoản phù hợp trong vòng 30 ngày kể từ thời điểm lần đầu tiên bạn nhận được thông báo về việc tài khoản bị khóa/bị giới hạn"
+            android:textSize="14sp"
+            android:textColor="@color/gami3"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="25dp"
+            app:layout_constraintTop_toBottomOf="@+id/txtline2luuy"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+        <TextView
+            android:id="@+id/txtsubline2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=". Yêu cầu khôi phục của bạn không được chấp thuận bởi bộ phận Quản lý rủi ro"
+            android:textSize="14sp"
+            android:textColor="@color/gami3"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="25dp"
+            app:layout_constraintTop_toBottomOf="@+id/txtsubline1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+        <TextView
+            android:id="@+id/txtNote"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="10dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="15dp"
             android:text="Bài viết này có hữu ích cho bạn không?"
             android:textColor="@color/gami3"
             android:textSize="14sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtline6" />
+            app:layout_constraintTop_toBottomOf="@+id/txtsubline2" />
 
         <FrameLayout
             android:id="@+id/btnLike"
@@ -187,7 +168,7 @@
             android:layout_marginTop="12dp"
             android:background="@drawable/like_button"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtNotice">
+            app:layout_constraintTop_toBottomOf="@+id/txtNote">
 
             <ImageView
                 android:layout_width="15dp"
@@ -214,7 +195,7 @@
             android:layout_marginTop="12dp"
             android:background="@drawable/like_button"
             app:layout_constraintStart_toEndOf="@+id/btnLike"
-            app:layout_constraintTop_toBottomOf="@+id/txtNotice">
+            app:layout_constraintTop_toBottomOf="@+id/txtNote">
 
             <ImageView
                 android:layout_width="15dp"
@@ -232,9 +213,6 @@
                 android:textColor="#4D000000"
                 android:textSize="11dp" />
         </FrameLayout>
-
-
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 </ScrollView>

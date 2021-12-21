@@ -1,0 +1,280 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.fragment.SettingFragment3"
+    android:fillViewport="true"
+    android:background="@color/kem"
+    android:padding="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="150dp">
+        <TextView
+            android:id="@+id/txtFollowShip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:text="Cách để theo dõi tình trạng vận chuyển của đơn hàng"
+            android:textColor="@color/gami3"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/imvLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13.5dp"
+            android:src="@drawable/ic_line"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtFollowShip" />
+        <TextView
+            android:id="@+id/txtDes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hướng dẫn theo dõi áp dụng cho tất cả đơn hàng"
+            android:textSize="14sp"
+            android:textColor="@color/gami4"
+            app:layout_constraintTop_toBottomOf="@+id/imvLine"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="20dp"/>
+        <TextView
+            android:id="@+id/txtStep1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1. GaMi đã gửi hàng cho đơn vị vận chuyển hay chưa"
+            android:textColor="@color/gami2"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/txtDes"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="10dp"/>
+        <TextView
+            android:id="@+id/txtDes1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="- Vào mục Tôi > Chờ lấy hàng > Chọn đơn hàng cần kiểm tra (hoặc thông tin hiển thị dưới đơn hàng)"
+            android:textSize="14sp"
+            android:textColor="@color/gami3"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/txtStep1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+        <TextView
+            android:id="@+id/txtStep2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2. Kiểm tra tình trạng giao hàng"
+            android:textColor="@color/gami2"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtDes1"/>
+    <ImageView
+        android:id="@+id/imvThumb1"
+        android:layout_width="200dp"
+        android:layout_height="420dp"
+        android:src="@drawable/me_screen"
+        android:scaleType="fitXY"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/txtStep2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+        <ImageView
+            android:id="@+id/imvThumb2"
+            android:layout_width="200dp"
+            android:layout_height="420dp"
+            android:src="@drawable/danggiao"
+            app:layout_constraintTop_toBottomOf="@+id/imvThumb1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="20dp"/>
+        <TextView
+            android:id="@+id/txtNotice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lưu ý:"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:textColor="@color/gami2"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/imvThumb2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+        <TextView
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="- GaMi chưa hỗ trợ giao hàng theo giờ cụ thể"
+            android:textColor="@color/gami3"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@+id/txtNotice"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="- GaMi chưa hỗ trợ cung cấp số điện thoại của shipper / nhân viên giao hàng."
+            android:textSize="14sp"
+            android:textColor="@color/gami3"
+            app:layout_constraintTop_toBottomOf="@id/line1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="10dp"/>
+            <TextView
+                android:id="@+id/txtStep3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3. Kiểm tra chi tiết tình trạng đơn hàng"
+                android:textColor="@color/gami2"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/line2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"/>
+        <TextView
+            android:id="@+id/onebar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bước 1: Vào mục Tôi > Đơn mua > Chọn đơn hàng cần kiểm tra"
+            android:textSize="14sp"
+            android:textColor="@color/gami3"
+            app:layout_constraintTop_toBottomOf="@id/txtStep3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"/>
+        <ImageView
+            android:id="@+id/imvThumb3"
+            android:layout_width="200dp"
+            android:layout_height="420dp"
+            android:src="@drawable/danggiao"
+            app:layout_constraintTop_toBottomOf="@+id/onebar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="20dp"/>
+        <TextView
+            android:id="@id/twobar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bước 2: Kiểm tra tình trạng tại thông tin đơn hàng"
+            android:textColor="@color/gami3"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/imvThumb3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="20dp"/>
+
+        <ImageView
+            android:id="@+id/imvThumb4"
+            android:layout_width="200dp"
+            android:layout_height="420dp"
+            android:src="@drawable/ord_info"
+            app:layout_constraintTop_toBottomOf="@+id/twobar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="20dp"/>
+        <TextView
+            android:id="@+id/txtStep4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="4. Theo dõi tại mục Trò chuyện với GaMi"
+            android:textSize="14sp"
+            android:textColor="@color/gami2"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/imvThumb4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:id="@+id/txtNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="15dp"
+            android:text="Bài viết này có hữu ích cho bạn không?"
+            android:textColor="@color/gami3"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtStep4" />
+
+        <FrameLayout
+            android:id="@+id/btnLike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/like_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtNote">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="4dp"
+                android:src="@drawable/ic_like" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:text="Vâng"
+                android:textColor="#4D000000"
+                android:textSize="11dp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/btnUnlike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="39dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/like_button"
+            app:layout_constraintStart_toEndOf="@+id/btnLike"
+            app:layout_constraintTop_toBottomOf="@+id/txtNote">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="4dp"
+                android:src="@drawable/ic_unlike" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:text="Không"
+                android:textColor="#4D000000"
+                android:textSize="11dp" />
+        </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

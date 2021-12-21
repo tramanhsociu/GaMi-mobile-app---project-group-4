@@ -41,32 +41,30 @@
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/post_support"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_container">
         <androidx.appcompat.widget.SearchView
             android:id="@+id/searchView"
             android:layout_width="wrap_content"
             android:layout_height="48dp"
-            android:layout_marginTop="24dp"
+
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             android:background="@drawable/search_bar"
             app:iconifiedByDefault="true"
             app:queryHint="Nhập từ khóa..."
             app:searchIcon="@drawable/ic_baseline_search_24"
-            app:layout_constraintTop_toBottomOf="@+id/header_container"
+            app:layout_constraintTop_toTopOf="parent"
             android:theme="@style/SearchAutoCompleteTextView"
             />
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/post_support"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/searchView"
-
-      >
-
         <TextView
             android:id="@+id/txtCommonQuestion"
             android:layout_width="wrap_content"
@@ -78,7 +76,7 @@
             android:textSize="16sp"
             app:layout_constraintBottom_toTopOf="@id/lvSettingsuport"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/searchView" />
 
         <ListView
             android:id="@+id/lvSettingsuport"
