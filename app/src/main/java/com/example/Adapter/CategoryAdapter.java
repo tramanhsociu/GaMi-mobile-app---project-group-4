@@ -56,14 +56,14 @@ public class CategoryAdapter extends BaseAdapter{
         }else {
             holder = (ViewHolder) view.getTag();
         }
-        // biding data
         Category c =categoryList.get(i);
-        holder.imvThumb.setImageResource(c.getProductThumb());
-        holder.txtName.setText(c.getProductName());
+        holder.imvThumb.setImageResource(c.getCategoryImage());
+        holder.txtName.setText(c.getCategoryName());
         return view;
 
     }
     public static class ViewHolder{
+        public View ratingBar;
         ImageView imvThumb;
         TextView txtName;
     }

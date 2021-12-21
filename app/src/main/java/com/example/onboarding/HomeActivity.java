@@ -17,7 +17,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.GridView;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.example.Adapter.BannerAdapter;
@@ -25,7 +24,6 @@ import com.example.Adapter.CategoryAdapter;
 import com.example.Adapter.PopularAdapter;
 import com.example.model.Banner;
 import com.example.model.Category;
-
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
@@ -40,7 +38,7 @@ public class HomeActivity extends AppCompatActivity{
 
     FragmentManager manager;
     BottomNavigationView navigationView;
-    ImageButton btnChat, btnCart;
+    ImageView btnChat;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,9 +46,8 @@ public class HomeActivity extends AppCompatActivity{
         setContentView(R.layout.activity_home);
         navigationView = findViewById(R.id.menu_navigation);
         btnChat = findViewById(R.id.btnChat);
-        btnCart = findViewById(R.id.btnCart);
         //chat
-        Crisp.configure(getApplicationContext(), "e4983e6a-06f0-42ca-b683-b7723850abc0");
+        Crisp.configure(getApplicationContext(), "1b4d03b2-db60-4da9-b658-bcf6eceac6f1");
 
        getSupportFragmentManager().beginTransaction()
         .replace(R.id.layout_container,new HomeFragment()).commit();
@@ -87,14 +84,6 @@ public class HomeActivity extends AppCompatActivity{
                startActivity(crispIntent);
            }
        });
-       //nút giỏ hàng
-        btnCart.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(HomeActivity.this, CartActivity.class);
-                startActivity(intent);
-            }
-        });
 
     }
 

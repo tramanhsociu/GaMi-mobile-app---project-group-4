@@ -1,5 +1,6 @@
 package com.example.onboarding;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -11,10 +12,12 @@ import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.GridView;
 
 import com.example.Adapter.BannerAdapter;
 import com.example.Adapter.CategoryAdapter;
+import com.example.Adapter.CategoryRCVAdapter;
 import com.example.Adapter.DynamicRCVAdapter;
 import com.example.Adapter.PopularAdapter;
 import com.example.model.Banner;
@@ -33,13 +36,15 @@ public class HomeFragment extends Fragment{
     ArrayList<Banner> banners;
     BannerAdapter bannerAdapter;
 
-    RecyclerView rcvPopular;
+    RecyclerView rcvPopular,rcvCategory;
     PopularAdapter popularAdapter;
-
     ArrayList<Products> popular;
 
+    CategoryRCVAdapter categoryRCVAdapter;
+    ArrayList<Category> list;
 
-    RecyclerView rcvSale;
+
+
 
 
 
@@ -66,16 +71,15 @@ public class HomeFragment extends Fragment{
 
     private void initDataPopular() {
         popular = new ArrayList<>();
-        popular.add(new Products(R.drawable.dochoi_1,"name","Đồ chơi dành cho chó và mèo ","200000",20.000,"đồ chơi",1));
-        popular.add(new Products(R.drawable.dochoi_2,"name","Đồ chơi dành cho chó và mèo ","200000",20.000,"đồ chơi",1));
-        popular.add(new Products(R.drawable.dochoi_3,"name","Đồ chơi dành cho chó và mèo ","200000",20.000,"đồ chơi",1));
-        popular.add(new Products(R.drawable.dochoi_4,"name","Đồ chơi dành cho chó và mèo ","200000",20.000,"đồ chơi",1));
+        popular.add(new Products(R.drawable.dochoi_1,"name","Đồ chơi dành cho chó và mèo ",5,20.000,"đồ chơi",1));
+        popular.add(new Products(R.drawable.dochoi_2,"name","Đồ chơi dành cho chó và mèo ",3,20.000,"đồ chơi",1));
+        popular.add(new Products(R.drawable.dochoi_3,"name","Đồ chơi dành cho chó và mèo ",5,20.000,"đồ chơi",1));
+        popular.add(new Products(R.drawable.dochoi_4,"name","Đồ chơi dành cho chó và mèo ",45,20.000,"đồ chơi",1));
 
         popularAdapter = new PopularAdapter(getContext(),popular);
         rcvPopular.setAdapter(popularAdapter);
 
-        popularAdapter = new PopularAdapter(getContext(),popular);
-        rcvSale.setAdapter(popularAdapter);
+
 
 
     }
@@ -84,8 +88,6 @@ public class HomeFragment extends Fragment{
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext(),RecyclerView.HORIZONTAL,false);
         rcvPopular.setLayoutManager(layoutManager);
 
-        LinearLayoutManager layoutManager2 = new LinearLayoutManager(getContext(),RecyclerView.HORIZONTAL,false);
-        rcvSale.setLayoutManager(layoutManager2);
 
 
 
@@ -94,6 +96,13 @@ public class HomeFragment extends Fragment{
     private void initAdapterCate() {
         categoryAdapter = new CategoryAdapter(getContext(),R.layout.item_category_layout,initDataCategory());
         gvCategory.setAdapter(categoryAdapter);
+//        gvCategory.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+//            @Override
+//            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+//                Intent intent = new Intent(getActivity(),ItemCategoryActivity.class);
+//                startActivity(intent);
+//            }
+//        });
     }
 
     private ArrayList<Category> initDataCategory() {
@@ -132,6 +141,29 @@ public class HomeFragment extends Fragment{
         return banners;
     }
 
+//    private void initDataCategory(int pos) {
+//        list = new ArrayList<>();
+//        list.add(new Category(R.drawable.ic_doan,"Đồ ăn"));
+//        list.add(new Category(R.drawable.ic_thuoc,"Thuốc"));
+//        list.add(new Category(R.drawable.ic_tamgoi,"Tắm gội"));
+//        list.add(new Category(R.drawable.ic_dodung,"Đồ dùng"));
+//        list.add(new Category(R.drawable.ic_dochoi,"Đồ chơi"));
+//        list.add(new Category(R.drawable.ic_phukien,"Phụ kiện"));
+//
+//
+//
+//        categoryRCVAdapter = new CategoryRCVAdapter(getContext(), list, new CategoryRCVAdapter.OnCategoryClick(){
+//            @Override
+//            public void onClick(int pos) {
+//                Intent intent = new Intent(getActivity(),ItemCategoryActivity.class);
+//            }
+//        });
+//        rcvCategory.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false));
+//        rcvCategory.setAdapter(categoryRCVAdapter);
+//        categoryRCVAdapter.notifyDataSetChanged();
+//
+//    }
+
 
 
     @Override
@@ -145,21 +177,22 @@ public class HomeFragment extends Fragment{
         gvCategory = view.findViewById(R.id.gvCategory);
 
         rcvPopular = view.findViewById(R.id.rcvPopular);
+        rcvCategory = view.findViewById(R.id.rvcCategory1);
 
-        rcvSale = view.findViewById(R.id.rcvSale);
+
 
 
         // banner
         initData();
         initAdapter();
-//        // category
+       // category
         initDataCategory();
         initAdapterCate();
         //popular
         recyclerViewPopular();
         initDataPopular();
 
-        // item category
+
 
 
 
