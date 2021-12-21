@@ -38,5 +38,5 @@
         android:layout_height="wrap_content"
         android:src="@drawable/ic_exit"
         android:layout_gravity="center_vertical"
-        android:layout_marginStart="80dp"/>
+        android:layout_marginStart="60dp"/>
 </LinearLayout>

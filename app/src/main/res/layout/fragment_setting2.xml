@@ -1,0 +1,231 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/kem"
+    android:fillViewport="true"
+    android:padding="10dp"
+    tools:context="com.example.fragment.SettingFragment2">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="150dp">
+
+        <TextView
+            android:id="@+id/txtProcess"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:text="Quy trình trả hàng hoàn tiền của Shopee"
+            android:textColor="@color/gami3"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtsubTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="25dp"
+            android:text="Hiện tại GaMi chưa hỗ trợ đổi hàng. Trong trường hợp sản phẩm nhận được có vấn đề, bạn có thể yêu cầu Trả hàng/ Hoàn tiền ngay trên ứng dụng GaMi theo chi tiết bên dưới:"
+            android:textColor="@color/gami4"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtProcess" />
+
+        <TextView
+            android:id="@+id/txtno1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:text="1. Quy trình trả hàng hoàn tiền cho đơn hàng thuộc GaMi:"
+            android:textColor="@color/gami2"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtsubTitle" />
+
+        <TextView
+            android:id="@+id/txtDes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Tham khảo hướng dẫn chi tiết"
+            android:textColor="@color/gami4"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtno1" />
+
+        <TextView
+            android:id="@+id/txtno2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="15dp"
+            android:text="2. Lưu ý:"
+            android:textColor="@color/gami2"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtDes" />
+
+        <TextView
+            android:id="@+id/txtline1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="15dp"
+            android:text="- Người mua sẽ không thể gửi yêu cầu Trả hàng / Hoàn tiền sau khi bấm nút 'Đã nhận được hàng' hoặc quá thời gian quy định. Xem thêm điều kiện trả hàng/hoàn tiền."
+            android:textColor="@color/gami3"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtno2" />
+
+        <TextView
+            android:id="@+id/txtline2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:text="- Người mua cần thực hiện các bước Trả hàng / Hoàn tiền đúng hạn. Nếu không, yêu cầu Trả hàng / Hoàn tiền của bạn sẽ bị tự động hủy / được xử lý theo quy định của GaMi."
+            android:textColor="@color/gami3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtline1" />
+
+        <TextView
+            android:id="@+id/txtline3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:text="- GaMi sẽ cập nhật tình trạng Trả hàng / Hoàn tiền thường xuyên. Tham khảo hướng dẫn chi tiết."
+            android:textColor="@color/gami3"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtline2" />
+
+        <TextView
+            android:id="@+id/txtline4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:text="- GaMi khuyến khích người mua liên lạc với GaMi để trao đổi về các vấn đề phát sinh liên quan đến đơn hàng để nhận được giải quyết nhanh chóng và hiệu quả nhất."
+            android:textColor="@color/gami3"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtline3" />
+
+        <TextView
+            android:id="@+id/txtline5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:text="- GaMi chưa hỗ trợ các yêu cầu trả hàng / hoàn tiền thuộc về cảm quan / không ưng ý / thay đổi quyết định mua hàng."
+            android:textColor="@color/gami3"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtline4" />
+
+        <TextView
+            android:id="@+id/txtline6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:text="- Trong mọi trường hợp khiếu nại, quyết định của GaMi sẽ là quyết định cuối cùng."
+            android:textColor="@color/gami3"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtline5" />
+
+        <TextView
+            android:id="@+id/txtNotice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="25dp"
+            android:text="Bài viết này có hữu ích cho bạn không?"
+            android:textColor="@color/gami3"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtline6" />
+
+        <FrameLayout
+            android:id="@+id/btnLike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/like_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtNotice">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="4dp"
+                android:src="@drawable/ic_like" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:text="Vâng"
+                android:textColor="#4D000000"
+                android:textSize="11dp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/btnUnlike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="39dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/like_button"
+            app:layout_constraintStart_toEndOf="@+id/btnLike"
+            app:layout_constraintTop_toBottomOf="@+id/txtNotice">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="4dp"
+                android:src="@drawable/ic_unlike" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:text="Không"
+                android:textColor="#4D000000"
+                android:textSize="11dp" />
+        </FrameLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

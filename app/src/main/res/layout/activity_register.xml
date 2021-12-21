@@ -239,7 +239,8 @@
         android:layout_marginTop="50dp"
         android:gravity="center"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@+id/btnRegis">
+        app:layout_constraintTop_toBottomOf="@+id/btnRegis"
+        >
 
         <TextView
             android:id="@+id/txtAlreadyAccount"
@@ -250,7 +251,8 @@
             android:textColor="@color/gami1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/txtLogin"/>
 
         <TextView
             android:id="@+id/txtLogin"
@@ -275,7 +277,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="203dp"/>
+        android:layout_marginTop="150dp"/>
 
     <ImageView
         android:id="@+id/imvPaw1"

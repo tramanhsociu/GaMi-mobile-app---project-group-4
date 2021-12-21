@@ -2,6 +2,7 @@ package com.example.onboarding;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -103,10 +104,7 @@ public class SettingActivity extends AppCompatActivity {
         imvBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FragmentManager manager = getSupportFragmentManager();
-            FragmentTransaction transaction = manager.beginTransaction();
-            transaction.replace(R.id.Setting, new ProfileFragment());
-            transaction.commit();
+             replaceFragment(new ProfileFragment());
             }
         });
         btnLogout.setOnClickListener(new View.OnClickListener() {
@@ -138,7 +136,13 @@ public class SettingActivity extends AppCompatActivity {
                     }
                 });
     }
-    //mở đánh giá ứng dụng
+
+    private void replaceFragment(Fragment fragment) {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.Setting, fragment);
+        fragmentTransaction.commit();
+    }
 
 
 }
