@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Onboarding">
         <activity
+            android:name=".ProfileSettingActivity"
+            android:exported="false" />
+        <activity
             android:name=".CartActivity"
             android:exported="true" />
         <activity
@@ -31,13 +34,10 @@
             android:exported="true" />
         <activity
             android:name=".SettingActivity"
-            android:exported="true"></activity>
-       
+            android:exported="true" />
         <activity
             android:name=".HomeActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".RegisSucessActivity"
             android:exported="true" />
@@ -55,8 +55,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <!-- Facebook -->
+        </activity> <!-- Facebook -->
         <activity
             android:name="com.facebook.FacebookActivity"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
