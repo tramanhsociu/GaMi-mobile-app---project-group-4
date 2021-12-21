@@ -16,7 +16,7 @@ import android.widget.TextView;
 
 public class ProfileFragment extends Fragment{
 
-    ImageButton imbSetting, imbSettingProfile, imbGoSettingProfile;
+    ImageButton imbSetting, imbSettingProfile;
     TextView txtSettingProfile;
     LinearLayout LayoutTLTK;
     @Override
@@ -25,7 +25,6 @@ public class ProfileFragment extends Fragment{
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_profile, container, false);
         imbSetting=view.findViewById(R.id.imbSetting);
-        imbSettingProfile=view.findViewById(R.id.imbSettingProfile);
         LayoutTLTK=view.findViewById(R.id.LayoutTLTK);
         addEvents();
         return view;
