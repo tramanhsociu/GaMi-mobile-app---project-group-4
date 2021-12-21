@@ -39,7 +39,8 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:fontFamily="@font/sourcesanspro_bold"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -63,7 +64,8 @@
             android:textSize="14sp"
             android:layout_marginStart="10dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:fontFamily="@font/sourcesanspro_regular"/>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/Email"
@@ -101,7 +103,8 @@
             android:textColor="@color/gami3"
             android:textSize="14dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/Email" />
+            app:layout_constraintTop_toBottomOf="@id/Email"
+            android:fontFamily="@font/sourcesanspro_regular"/>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/Pass"
@@ -140,7 +143,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
 
-            app:layout_constraintTop_toBottomOf="@id/Pass" />
+            app:layout_constraintTop_toBottomOf="@id/Pass"
+            android:fontFamily="@font/sourcesanspro_regular"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -209,7 +213,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/LinearSocial"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/sourcesanspro_regular"/>
 
     <FrameLayout
         android:id="@+id/btnLogin"
@@ -231,7 +236,8 @@
             android:text="@string/logn"
             android:textColor="@color/white"
             android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:fontFamily="@font/sourcesanspro_bold"/>
     </FrameLayout>
 
     <ImageView

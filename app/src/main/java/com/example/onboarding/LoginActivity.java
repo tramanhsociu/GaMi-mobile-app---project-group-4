@@ -12,6 +12,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.inputmethodservice.ExtractEditText;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
@@ -22,10 +23,12 @@ import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.database.AccountDB;
+import com.example.fragment.SettingNotiFragmentOn;
 import com.facebook.AccessToken;
 import com.facebook.AccessTokenTracker;
 import com.facebook.CallbackManager;
@@ -51,6 +54,8 @@ import org.json.JSONObject;
 import java.util.Arrays;
 
 public class LoginActivity extends AppCompatActivity {
+
+
     //nút FB
     private LoginButton btnFb;
     private CallbackManager callbackManager;
@@ -64,7 +69,7 @@ public class LoginActivity extends AppCompatActivity {
     AccountDB DB;
     TextInputEditText edtEmail, edtPass;
     CheckBox chkRemember;
-
+    Dialog dialogWait;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,6 +86,10 @@ public class LoginActivity extends AppCompatActivity {
         DB = new AccountDB(this);
         FB = findViewById(R.id.FB);
         GG = findViewById(R.id.GG);
+
+
+
+
         //Đăng nhập bằng Facebook
         callbackManager = CallbackManager.Factory.create();
         btnFb.setReadPermissions("email");
@@ -157,11 +166,24 @@ public class LoginActivity extends AppCompatActivity {
                     boolean checkemailpass = DB.checkemailpassword(email, pass);
                     if(checkemailpass==true){
                         Toast.makeText(LoginActivity.this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
-                            //nhúng fragment home
-                            FragmentManager manager = getSupportFragmentManager();
-                            FragmentTransaction transaction = manager.beginTransaction();
-                            transaction.replace(R.id.Login, new HomeFragment());
-                            transaction.commit();
+                        dialogWait = new Dialog(LoginActivity.this);
+                        dialogWait.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                        dialogWait.setContentView(R.layout.dialog_wait);
+                        dialogWait.setCanceledOnTouchOutside(false);
+                        dialogWait.show();
+
+                        new CountDownTimer(5000,1000){
+
+                            @Override
+                            public void onTick(long l) {
+
+                            }
+
+                            @Override
+                            public void onFinish() {
+                                dialogWait.dismiss();
+                            }
+                        }.start();
 
                         Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
                         startActivity(intent);
@@ -194,8 +216,9 @@ public class LoginActivity extends AppCompatActivity {
         imvBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(LoginActivity.this, onboardingFragment2.class);
-                startActivity(intent);
+//                Intent intent = new Intent(LoginActivity.this, onboardingFragment2.class);
+//                startActivity(intent);
+
             }
         });
         txtForgotPass.setOnClickListener(new View.OnClickListener() {
@@ -257,39 +280,7 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-//    private void openVerifyDialog(int gravity) {
-//        final Dialog dialog1 = new Dialog(this);
-//        dialog1.requestWindowFeature(Window.FEATURE_NO_TITLE);
-//        dialog1.setContentView(R.layout.layout_dialog_verify);
-//
-//        Window window = dialog1.getWindow();
-//        if (window == null) {
-//            return;
-//        }
-//        window.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT);
-//        window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-//
-//        WindowManager.LayoutParams windowAttribute = window.getAttributes();
-//        windowAttribute.gravity = gravity;
-//        window.setAttributes(windowAttribute);
-//
-//        if (Gravity.BOTTOM == gravity) {
-//            dialog1.setCancelable(true);
-//        } else {
-//            dialog1.setCancelable(false);
-//        }
-//        dialog1.show();
 
-        //mở dialog 3 - start reset
-//        FrameLayout btnContinueReset = dialog1.findViewById(R.id.btnContinueReset);
-//        btnContinueReset.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                openResetPassDialog(Gravity.BOTTOM);
-//                dialog1.dismiss();
-//            }
-//        });
-//    }
 
     private void openResetPassDialog(int gravity, Bundle bundle) {
         final Dialog dialog1 = new Dialog(this);
@@ -429,5 +420,6 @@ public class LoginActivity extends AppCompatActivity {
         request.setParameters(parameters);
         request.executeAsync();
     }
+
 
 }

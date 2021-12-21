@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/3rdyr1stsem/mobile/Project/app/src/main/res/drawable/bg_green_corner_7.xml" value="0.16936936936936936" />
+        <entry key="..\:/3rdyr1stsem/mobile/Project/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.1671111111111111" />
         <entry key="..\:/3rdyr1stsem/mobile/Project/app/src/main/res/drawable/ic_success.xml" value="0.16936936936936936" />
         <entry key="..\:/3rdyr1stsem/mobile/Project/app/src/main/res/drawable/like_button.xml" value="0.15630630630630632" />
         <entry key="..\:/3rdyr1stsem/mobile/Project/app/src/main/res/drawable/logout_button.xml" value="0.1" />
@@ -14,28 +15,34 @@
         <entry key="..\:/3rdyr1stsem/mobile/Project/app/src/main/res/drawable/tron.xml" value="0.26666666666666666" />
         <entry key="..\:/3rdyr1stsem/mobile/Project/app/src/main/res/layout/activity_cart.xml" value="0.22" />
         <entry key="..\:/3rdyr1stsem/mobile/Project/app/src/main/res/layout/activity_home.xml" value="0.25416666666666665" />
-        <entry key="..\:/3rdyr1stsem/mobile/Project/app/src/main/res/layout/activity_login.xml" value="0.3333333333333333" />
+        <entry key="..\:/3rdyr1stsem/mobile/Project/app/src/main/res/layout/activity_login.xml" value="0.22" />
         <entry key="..\:/3rdyr1stsem/mobile/Project/app/src/main/res/layout/activity_main.xml" value="0.13333333333333333" />
         <entry key="..\:/3rdyr1stsem/mobile/Project/app/src/main/res/layout/activity_profile.xml" value="0.25416666666666665" />
         <entry key="..\:/3rdyr1stsem/mobile/Project/app/src/main/res/layout/activity_regis_sucess.xml" value="0.16666666666666666" />
         <entry key="..\:/3rdyr1stsem/mobile/Project/app/src/main/res/layout/activity_register.xml" value="0.22" />
         <entry key="..\:/3rdyr1stsem/mobile/Project/app/src/main/res/layout/activity_setting.xml" value="0.16666666666666666" />
+        <entry key="..\:/3rdyr1stsem/mobile/Project/app/src/main/res/layout/activity_setting_feedback.xml" value="0.1554054054054054" />
         <entry key="..\:/3rdyr1stsem/mobile/Project/app/src/main/res/layout/activity_setting_notification.xml" value="0.14666666666666667" />
         <entry key="..\:/3rdyr1stsem/mobile/Project/app/src/main/res/layout/activity_setting_payment.xml" value="0.14907407407407408" />
-        <entry key="..\:/3rdyr1stsem/mobile/Project/app/src/main/res/layout/activity_setting_support.xml" value="0.22" />
+        <entry key="..\:/3rdyr1stsem/mobile/Project/app/src/main/res/layout/activity_setting_support.xml" value="0.3463855421686747" />
+        <entry key="..\:/3rdyr1stsem/mobile/Project/app/src/main/res/layout/custom_list_setting_support.xml" value="0.3333333333333333" />
         <entry key="..\:/3rdyr1stsem/mobile/Project/app/src/main/res/layout/fragment_home.xml" value="0.16666666666666666" />
         <entry key="..\:/3rdyr1stsem/mobile/Project/app/src/main/res/layout/fragment_onboarding.xml" value="0.25052083333333336" />
         <entry key="..\:/3rdyr1stsem/mobile/Project/app/src/main/res/layout/fragment_onboarding1.xml" value="0.25052083333333336" />
         <entry key="..\:/3rdyr1stsem/mobile/Project/app/src/main/res/layout/fragment_onboarding2.xml" value="0.14666666666666667" />
         <entry key="..\:/3rdyr1stsem/mobile/Project/app/src/main/res/layout/fragment_profile.xml" value="0.1518018018018018" />
         <entry key="..\:/3rdyr1stsem/mobile/Project/app/src/main/res/layout/fragment_profile_setting.xml" value="0.1518018018018018" />
-        <entry key="..\:/3rdyr1stsem/mobile/Project/app/src/main/res/layout/fragment_setting.xml" value="0.3333333333333333" />
+        <entry key="..\:/3rdyr1stsem/mobile/Project/app/src/main/res/layout/fragment_setting.xml" value="0.22" />
+        <entry key="..\:/3rdyr1stsem/mobile/Project/app/src/main/res/layout/fragment_setting2.xml" value="0.3333333333333333" />
+        <entry key="..\:/3rdyr1stsem/mobile/Project/app/src/main/res/layout/fragment_setting3.xml" value="0.16666666666666666" />
+        <entry key="..\:/3rdyr1stsem/mobile/Project/app/src/main/res/layout/fragment_setting4.xml" value="0.22927461139896374" />
+        <entry key="..\:/3rdyr1stsem/mobile/Project/app/src/main/res/layout/fragment_setting5.xml" value="0.4466666666666667" />
         <entry key="..\:/3rdyr1stsem/mobile/Project/app/src/main/res/layout/fragment_setting_noti_bell_off.xml" value="0.39944521497919555" />
         <entry key="..\:/3rdyr1stsem/mobile/Project/app/src/main/res/layout/fragment_setting_noti_on.xml" value="0.5" />
         <entry key="..\:/3rdyr1stsem/mobile/Project/app/src/main/res/layout/fragment_settinh_noti.xml" value="0.22" />
         <entry key="..\:/3rdyr1stsem/mobile/Project/app/src/main/res/layout/layout_dialog_feedback_post.xml" value="0.22" />
-        <entry key="..\:/3rdyr1stsem/mobile/Project/app/src/main/res/layout/layout_dialog_forgotpass.xml" value="0.12129629629629629" />
-        <entry key="..\:/3rdyr1stsem/mobile/Project/app/src/main/res/layout/layout_dialog_resetpass.xml" value="0.1554054054054054" />
+        <entry key="..\:/3rdyr1stsem/mobile/Project/app/src/main/res/layout/layout_dialog_forgotpass.xml" value="0.3333333333333333" />
+        <entry key="..\:/3rdyr1stsem/mobile/Project/app/src/main/res/layout/layout_dialog_resetpass.xml" value="0.22" />
         <entry key="..\:/3rdyr1stsem/mobile/Project/app/src/main/res/layout/noti_title_layout.xml" value="0.16666666666666666" />
         <entry key="..\:/3rdyr1stsem/mobile/Project/app/src/main/res/layout/setting_layout.xml" value="0.16666666666666666" />
         <entry key="..\:/3rdyr1stsem/mobile/onboarding/app/src/main/res/drawable/chkbox.xml" value="0.2703125" />
@@ -78,8 +85,6 @@
         <entry key="..\:/Users/vannt/AndroidStudioProjects/GaMi-mobile-app---project-group-4/app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/vannt/AndroidStudioProjects/GaMi-mobile-app---project-group-4/app/src/main/res/layout/activity_notification.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/vannt/AndroidStudioProjects/GaMi-mobile-app---project-group-4/app/src/main/res/layout/activity_profile.xml" value="0.17753623188405798" />
-        <entry key="..\:/Users/vannt/AndroidStudioProjects/GaMi-mobile-app---project-group-4/app/src/main/res/layout/activity_profile_setting.xml" value="0.264" />
-        <entry key="..\:/Users/vannt/AndroidStudioProjects/GaMi-mobile-app---project-group-4/app/src/main/res/layout/activity_profile_setting2.xml" value="0.2" />
         <entry key="..\:/Users/vannt/AndroidStudioProjects/GaMi-mobile-app---project-group-4/app/src/main/res/layout/activity_regis_sucess.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/vannt/AndroidStudioProjects/GaMi-mobile-app---project-group-4/app/src/main/res/layout/activity_setting.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/vannt/AndroidStudioProjects/GaMi-mobile-app---project-group-4/app/src/main/res/layout/activity_setting_feedback.xml" value="0.25416666666666665" />
