@@ -2,9 +2,9 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_profile_setting"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:id="@+id/layout_profile_setting">
+    android:layout_height="match_parent">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -16,12 +16,10 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp">
-
                 <TextView
                     android:id="@+id/txtTLTK"
                     android:layout_width="match_parent"
@@ -35,7 +33,6 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
-
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -66,18 +63,15 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/imageButton2" />
-
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:padding="15dp">
-
                 <TableRow>
-
                     <TextView
-                        android:layout_weight="1"
+                        android:layout_weight="0"
                         android:fontFamily="@font/sourcesanspro_regular"
                         android:text="Họ và tện: "
                         android:textColor="#93766E"
@@ -92,29 +86,24 @@
                 </TableRow>
 
                 <TableRow>
-
                     <TextView
-                        android:layout_weight="1"
+                        android:layout_weight="0"
                         android:fontFamily="@font/sourcesanspro_regular"
                         android:text="Giới tính: "
                         android:textColor="#93766E"
                         android:textSize="18sp" />
-
                     <Spinner
-                        android:layout_width="40dp"
+                        android:layout_width="60dp"
                         android:spinnerMode="dropdown" />
-
                 </TableRow>
 
                 <TableRow>
-
                     <TextView
-                        android:layout_weight="1"
+                        android:layout_weight="0"
                         android:fontFamily="@font/sourcesanspro_regular"
                         android:text="Số điện thoại: "
                         android:textColor="#93766E"
                         android:textSize="18sp" />
-
                     <EditText
                         android:id="@+id/edtPhone"
                         android:layout_weight="9"
@@ -124,14 +113,12 @@
                 </TableRow>
 
                 <TableRow>
-
                     <TextView
-                        android:layout_weight="1"
+                        android:layout_weight="0"
                         android:fontFamily="@font/sourcesanspro_regular"
                         android:text="Địa chỉ: "
                         android:textColor="#93766E"
                         android:textSize="18sp" />
-
                     <EditText
                         android:id="@+id/edtAddress"
                         android:layout_weight="9"
@@ -141,16 +128,13 @@
                 </TableRow>
 
             </TableLayout>
-
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:padding="15dp">
-
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
                     android:backgroundTint="#DE816F"
                     android:fontFamily="@font/sourcesanspro_bold"
                     android:padding="10dp"
@@ -160,8 +144,6 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
-
-
         </LinearLayout>
     </ScrollView>
 

@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="#F6F2F1"
     >
     <ScrollView
         android:layout_width="match_parent"
@@ -14,55 +13,49 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:background="#F6F2F1"
             android:divider="@color/white">
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-
-                <ImageView
-                    android:id="@+id/imvCover"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/cover"
+                <ImageButton
+                    android:id="@+id/imbSetting"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="90dp"
+                    android:backgroundTint="#00FFFFFF"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/settings" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape"
+                android:layout_marginTop="5dp"
+                >
 
                 <TextView
                     android:id="@+id/txtProfile"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:layout_marginTop="68dp"
+                    android:layout_marginTop="20dp"
                     android:text="Profile"
-                    android:textColor="@color/white"
+                    android:textColor="#E24E31"
                     android:textSize="24sp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-
-                <ImageButton
-                    android:id="@+id/imbSetting"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-
-                    android:layout_marginTop="20dp"
-                    android:layout_marginEnd="106dp"
-                    android:backgroundTint="#00FFFFFF"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/settings" />
-
                 <ImageView
-                    android:id="@+id/imageView"
+                    android:id="@+id/imvAvatar"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="8dp"
+                    android:layout_marginBottom="10dp"
                     android:src="@drawable/ic_avatar"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -73,15 +66,16 @@
                     android:id="@+id/txtName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
                     android:text="Sen Sen "
-                    android:layout_marginLeft="10dp"
-                    android:textSize="18sp"
                     android:textColor="#E24E31"
+                    android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/imageView"
+                    app:layout_constraintStart_toEndOf="@+id/imvAvatar"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.7" />
+                    app:layout_constraintVertical_bias="0.828" />
             </androidx.constraintlayout.widget.ConstraintLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
@@ -168,11 +162,13 @@
                 android:orientation="horizontal"
                 android:layout_marginTop="15dp">
                 <ImageButton
+                    android:id="@+id/imbSettingProfile"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/people"
                     android:backgroundTint="#00FFFFFF"/>
                 <TextView
+                    android:id="@+id/txtSettingProfile"
                     android:layout_weight="1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -182,6 +178,7 @@
                     android:textColor="#5B4944"/>
 
                 <ImageButton
+                    android:id="@+id/imbGoSettingProfile"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:backgroundTint="#00FFFFFF"
