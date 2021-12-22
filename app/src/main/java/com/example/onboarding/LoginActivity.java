@@ -1,6 +1,7 @@
 package com.example.onboarding;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -63,8 +64,8 @@ public class LoginActivity extends AppCompatActivity {
     GoogleSignInClient mGoogleSignInClient;
     private static int RC_SIGN_IN = 100;
 
-    ImageView imvBack;
-    TextView txtForgotPass;
+//    ImageView imvBack;
+    TextView txtForgotPass, txtRegister;
     FrameLayout btnLogin,FB,GG;
     AccountDB DB;
     TextInputEditText edtEmail, edtPass;
@@ -76,8 +77,9 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        imvBack = findViewById(R.id.imvBack);
+//        imvBack = findViewById(R.id.imvBack);
         txtForgotPass = findViewById(R.id.txtForgotPass);
+        txtRegister = findViewById(R.id.txtRegister);
         btnLogin = findViewById(R.id.btnLogin);
         chkRemember = findViewById(R.id.chkRemember);
         edtEmail = findViewById(R.id.edtEmail);
@@ -213,18 +215,25 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        imvBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-//                Intent intent = new Intent(LoginActivity.this, onboardingFragment2.class);
+//        imvBack.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
 //                startActivity(intent);
-
-            }
-        });
+//
+//
+//            }
+//        });
         txtForgotPass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 openForgotPassDialog(Gravity.BOTTOM);
+            }
+        });
+        txtRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
             }
         });
 
@@ -420,6 +429,7 @@ public class LoginActivity extends AppCompatActivity {
         request.setParameters(parameters);
         request.executeAsync();
     }
+
 
 
 }

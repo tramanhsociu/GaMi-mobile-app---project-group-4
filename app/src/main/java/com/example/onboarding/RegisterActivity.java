@@ -15,7 +15,7 @@ import com.google.android.material.textfield.TextInputEditText;
 
 public class RegisterActivity extends AppCompatActivity {
     TextView txtLogin;
-    ImageView imvBack;
+//    ImageView imvBack;
     FrameLayout btnRegis;
     TextInputEditText edtName,edtEmail,edtPass,edtPassAgain;
 
@@ -27,7 +27,7 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
     txtLogin=findViewById(R.id.txtLogin);
-    imvBack=findViewById(R.id.imvBack);
+//    imvBack=findViewById(R.id.imvBack);
     btnRegis=findViewById(R.id.btnRegis);
     edtName=findViewById(R.id.edtName);
     edtEmail=findViewById(R.id.edtEmail);
@@ -42,13 +42,13 @@ public class RegisterActivity extends AppCompatActivity {
             startActivity(intent);
         }
     });
-    imvBack.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-            Intent intent =new Intent(RegisterActivity.this, onboardingFragment2.class);
-            startActivity(intent);
-        }
-    });
+//    imvBack.setOnClickListener(new View.OnClickListener() {
+//        @Override
+//        public void onClick(View view) {
+//            Intent intent =new Intent(RegisterActivity.this, onboardingFragment2.class);
+//            startActivity(intent);
+//        }
+//    });
     btnRegis.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View view) {

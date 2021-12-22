@@ -17,15 +17,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/imvBack"
-            android:layout_width="7dp"
-            android:layout_height="14dp"
-            android:src="@drawable/back"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginLeft="30dp"/>
+<!--        <ImageView-->
+<!--            android:id="@+id/imvBack"-->
+<!--            android:layout_width="7dp"-->
+<!--            android:layout_height="14dp"-->
+<!--            android:src="@drawable/back"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            android:layout_marginLeft="30dp"/>-->
 
         <TextView
             android:id="@+id/txtHeaderRegis"
