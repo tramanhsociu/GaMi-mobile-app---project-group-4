@@ -44,5 +44,6 @@
     <string name="rate_us">Đánh giá GaMi tụi mình</string>
     <string name="cart">Giỏ hàng</string>
     <string name="bill">Tổng thanh toán</string>
+    <string name="dangky"><u>Đăng ký nếu chưa có tài khoản</u></string>
 
 </resources>

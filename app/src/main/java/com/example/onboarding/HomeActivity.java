@@ -47,6 +47,7 @@ public class HomeActivity extends AppCompatActivity{
         setContentView(R.layout.activity_home);
         navigationView = findViewById(R.id.menu_navigation);
         btnChat = findViewById(R.id.btnChat);
+        btnCart = findViewById(R.id.btnCart);
         //chat
         Crisp.configure(getApplicationContext(), "e4983e6a-06f0-42ca-b683-b7723850abc0");
 
