@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:text="Bạn chờ chút nha!"
+        android:text="Please wait"
         android:layout_margin="10dp"
         android:textColor="@color/gami3"
         android:fontFamily="@font/sourcesanspro_regular"/>
@@ -20,5 +20,5 @@
         android:layout_height="50dp"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/txtWait"
-        app:type="folding_circles"/>
+        app:type="chrome_floating_circles"/>
 </RelativeLayout>
