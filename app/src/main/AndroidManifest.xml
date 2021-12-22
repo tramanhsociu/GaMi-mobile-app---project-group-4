@@ -18,6 +18,9 @@
             android:name=".SettingFeedbackActivity"
             android:exported="true" />
         <activity
+            android:name=".ProfileSettingActivity"
+            android:exported="true" />
+        <activity
             android:name=".CategoryActivity"
             android:exported="true" />
         <activity
