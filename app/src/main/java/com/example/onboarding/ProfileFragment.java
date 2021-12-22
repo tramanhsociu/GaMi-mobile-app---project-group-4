@@ -16,7 +16,7 @@ import android.widget.TextView;
 
 public class ProfileFragment extends Fragment{
 
-    ImageButton imbSetting, imbSettingProfile;
+    ImageButton imbSetting, imbSettingProfile, imbGoSettingProfile;
     TextView txtSettingProfile;
     LinearLayout LayoutTLTK;
     @Override
@@ -42,7 +42,7 @@ public class ProfileFragment extends Fragment{
         LayoutTLTK.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(getActivity(), ProfileSettingActivity.class);
+                Intent intent = new Intent(getActivity(), ProfileSettingActivity.class);
                 startActivity(intent);
             }
         });

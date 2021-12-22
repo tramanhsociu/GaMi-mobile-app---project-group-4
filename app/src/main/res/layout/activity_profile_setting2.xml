@@ -82,7 +82,7 @@
                         android:layout_weight="9"
                         android:fontFamily="@font/sourcesanspro_regular"
                         android:textColor="#93766E"
-                        android:textSize="16sp" />
+                        android:textSize="22sp" />
                 </TableRow>
 
                 <TableRow>
@@ -93,6 +93,7 @@
                         android:textColor="#93766E"
                         android:textSize="18sp" />
                     <Spinner
+                        android:id="@+id/spiner_gioitinh"
                         android:layout_width="90dp"
                         android:spinnerMode="dropdown"
                         />
@@ -110,7 +111,7 @@
                         android:layout_weight="9"
                         android:fontFamily="@font/sourcesanspro_regular"
                         android:textColor="#93766E"
-                        android:textSize="16sp" />
+                        android:textSize="22sp" />
                 </TableRow>
 
                 <TableRow>
@@ -125,7 +126,7 @@
                         android:layout_weight="9"
                         android:fontFamily="@font/sourcesanspro_regular"
                         android:textColor="#93766E"
-                        android:textSize="16sp" />
+                        android:textSize="22sp" />
                 </TableRow>
 
             </TableLayout>

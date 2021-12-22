@@ -29,10 +29,12 @@
                     android:layout_height="25dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="90dp"
+                    android:layout_marginBottom="2dp"
                     android:backgroundTint="#00FFFFFF"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/settings" />
+                    app:srcCompat="@drawable/ic_setting" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -200,7 +202,6 @@
                     android:layout_height="wrap_content"
                     android:backgroundTint="#00FFFFFF"
                     android:src="@drawable/back_go" />
-
             </LinearLayout>
 
             <LinearLayout
