@@ -51,47 +51,78 @@ public class ItemCategoryActivity extends AppCompatActivity {
         dynamic = new ArrayList<>();
         switch (pos){
             case 0:
-
-                dynamic.add(new Products(R.drawable.dochoi_1,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"đồ chơi",1));
-                dynamic.add(new Products(R.drawable.dochoi_2,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"đồ chơi",1));
-                dynamic.add(new Products(R.drawable.dochoi_3,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"đồ chơi",1));
-                dynamic.add(new Products(R.drawable.dochoi_4,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"đồ chơi",1));
-                dynamic.add(new Products(R.drawable.dochoi_4,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"đồ chơi",1));
-                dynamic.add(new Products(R.drawable.dochoi_4,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"đồ chơi",1));
-                dynamic.add(new Products(R.drawable.dochoi_4,"name","Đồ chơi dành cho chó và mèo ",3.5f,20.000,"đồ chơi",1));
-                dynamic.add(new Products(R.drawable.dochoi_4,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"đồ chơi",1));
-                dynamic.add(new Products(R.drawable.dochoi_4,"name","Đồ chơi dành cho chó và mèo ",4.5f,20.000,"đồ chơi",1));
-                dynamic.add(new Products(R.drawable.dochoi_4,"name","Đồ chơi dành cho chó và mèo ",4.5f,20.000,"đồ chơi",1));
+                dynamic.add(new Products(R.drawable.doan_1,"Food Natural","Đồ ăn dành cho chó và mèo ",3.5f,20.000,"đồ ăn",1));
+                dynamic.add(new Products(R.drawable.doan_2,"Food Natural","Đồ chơi dành cho chó và mèo ",4.5f,40.000,"đồ ăn",1));
+                dynamic.add(new Products(R.drawable.doan_3,"Food Natural","Đồ chơi dành cho chó và mèo ",5f,70.000,"đồ ăn",1));
+                dynamic.add(new Products(R.drawable.doan_4,"Food Natural","Đồ chơi dành cho chó và mèo ",4.5f,90.000,"đồ ăn",1));
+                dynamic.add(new Products(R.drawable.doan_6,"Food Natural","Đồ ăn dành cho chó và mèo ",5f,20.000,"đồ ăn",1));
+                dynamic.add(new Products(R.drawable.doan_9,"Food Natural","Đồ chơi dành cho chó và mèo ",5f,70.000,"đồ ăn",1));
+                dynamic.add(new Products(R.drawable.doan_10,"Food Natural","Đồ chơi dành cho chó và mèo ",5f,90.000,"đồ ăn",1));
 
                 break;
-
             case 1:
-                dynamic.add(new Products(R.drawable.dochoi_3,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"đồ chơi",1));
-                dynamic.add(new Products(R.drawable.dochoi_2,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"đồ chơi",1));
-                dynamic.add(new Products(R.drawable.dochoi_3,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"đồ chơi",1));
-                dynamic.add(new Products(R.drawable.dochoi_4,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"đồ chơi",1));
-                dynamic.add(new Products(R.drawable.dochoi_4,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"đồ chơi",1));
-                dynamic.add(new Products(R.drawable.dochoi_4,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"đồ chơi",1));
-                dynamic.add(new Products(R.drawable.dochoi_4,"name","Đồ chơi dành cho chó và mèo ",3.5f,20.000,"đồ chơi",1));
-                dynamic.add(new Products(R.drawable.dochoi_4,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"đồ chơi",1));
-                dynamic.add(new Products(R.drawable.dochoi_4,"name","Đồ chơi dành cho chó và mèo ",4.5f,20.000,"đồ chơi",1));
-                dynamic.add(new Products(R.drawable.dochoi_4,"name","Đồ chơi dành cho chó và mèo ",4.5f,20.000,"đồ chơi",1));
+                dynamic.add(new Products(R.drawable.thuoc_6,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"thuốc",1));
+                dynamic.add(new Products(R.drawable.thuoc_2,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"thuốc",1));
+                dynamic.add(new Products(R.drawable.thuoc_3,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"thuốc",1));
+                dynamic.add(new Products(R.drawable.thuoc_5,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"thuốc",1));
+                dynamic.add(new Products(R.drawable.thuoc_1,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"thuốc",1));
+                dynamic.add(new Products(R.drawable.thuoc_6,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"thuốc",1));
+                dynamic.add(new Products(R.drawable.thuoc_2,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"thuốc",1));
+                dynamic.add(new Products(R.drawable.thuoc_3,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"thuốc",1));
+                dynamic.add(new Products(R.drawable.thuoc_5,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"thuốc",1));
+                dynamic.add(new Products(R.drawable.thuoc_1,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"thuốc",1));
 
                 break;
             case 2:
-                dynamic.add(new Products(R.drawable.dochoi_2,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"đồ chơi",1));
+                dynamic.add(new Products(R.drawable.tamgoi_1,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"tắm gội",1));
+                dynamic.add(new Products(R.drawable.tamgoi_2,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"tắm gội",1));
+                dynamic.add(new Products(R.drawable.tamgoi_3,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"tắm gội",1));
+                dynamic.add(new Products(R.drawable.tamgoi_4,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"tắm gội",1));
+                dynamic.add(new Products(R.drawable.tamgoi_5,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"tắm gội",1));
+                dynamic.add(new Products(R.drawable.tamgoi_1,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"tắm gội",1));
+                dynamic.add(new Products(R.drawable.tamgoi_2,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"tắm gội",1));
+                dynamic.add(new Products(R.drawable.tamgoi_3,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"tắm gội",1));
+                dynamic.add(new Products(R.drawable.tamgoi_4,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"tắm gội",1));
+                dynamic.add(new Products(R.drawable.tamgoi_5,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"tắm gội",1));
+
                 break;
             case 3:
-                dynamic.add(new Products(R.drawable.dochoi_4,"name","Đồ chơi dành cho chó và mèo ",4.5f,20.000,"đồ chơi",1));
+                dynamic.add(new Products(R.drawable.dodung_1,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"đồ dùng",1));
+                dynamic.add(new Products(R.drawable.dodung_2,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"đồ dùng",1));
+                dynamic.add(new Products(R.drawable.dodung_3,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"đồ dùng",1));
+                dynamic.add(new Products(R.drawable.dodung_4,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"đồ dùng",1));
+                dynamic.add(new Products(R.drawable.dodung_5,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"đồ dùng",1));
+                dynamic.add(new Products(R.drawable.dodung_1,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"đồ dùng",1));
+                dynamic.add(new Products(R.drawable.dodung_2,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"đồ dùng",1));
+                dynamic.add(new Products(R.drawable.dodung_3,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"đồ dùng",1));
+                dynamic.add(new Products(R.drawable.dodung_4,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"đồ dùng",1));
+                dynamic.add(new Products(R.drawable.dodung_5,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"đồ dùng",1));
+
+
                 break;
+
             case 4:
-                dynamic.add(new Products(R.drawable.dochoi_4,"name","Đồ chơi dành cho chó và mèo ",3.5f,20.000,"đồ chơi",1));
+                dynamic.add(new Products(R.drawable.dochoi_6,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"đồ chơi",1));
+                dynamic.add(new Products(R.drawable.dochoi_7,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"đồ chơi",1));
+                dynamic.add(new Products(R.drawable.dochoi_8,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"đồ chơi",1));
+                dynamic.add(new Products(R.drawable.dochoi_9,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"đồ chơi",1));
+                dynamic.add(new Products(R.drawable.dochoi_10,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"đồ chơi",1));
+                dynamic.add(new Products(R.drawable.dochoi_6,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"đồ chơi",1));
+                dynamic.add(new Products(R.drawable.dochoi_7,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"đồ chơi",1));
+                dynamic.add(new Products(R.drawable.dochoi_8,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"đồ chơi",1));
+                dynamic.add(new Products(R.drawable.dochoi_9,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"đồ chơi",1));
+                dynamic.add(new Products(R.drawable.dochoi_10,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"đồ chơi",1));
+
                 break;
             case 5:
-                dynamic.add(new Products(R.drawable.dochoi_4,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"đồ chơi",1));
-                break;
-            case 6:
-                dynamic.add(new Products(R.drawable.dochoi_3,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"đồ chơi",1));
+                dynamic.add(new Products(R.drawable.phukien_1,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"phụ kiện",1));
+                dynamic.add(new Products(R.drawable.phukien_2,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"phụ kiện",1));
+                dynamic.add(new Products(R.drawable.phukien_3,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"phụ kiện",1));
+                dynamic.add(new Products(R.drawable.phukien_4,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"phụ kiện",1));
+                dynamic.add(new Products(R.drawable.phukien_1,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"phụ kiện",1));
+                dynamic.add(new Products(R.drawable.phukien_2,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"phụ kiện",1));
+                dynamic.add(new Products(R.drawable.phukien_3,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"phụ kiện",1));
+                dynamic.add(new Products(R.drawable.phukien_4,"name","Đồ chơi dành cho chó và mèo ",5f,20.000,"phụ kiện",1));
                 break;
 
         }

@@ -9,7 +9,7 @@
     android:outlineAmbientShadowColor="@color/chu"
     android:outlineSpotShadowColor="@color/chu"
     android:background="@drawable/category_rcv_bg"
-    app:cardElevation="10dp"
+    app:cardElevation="5dp"
     app:cardCornerRadius="23dp"
     android:layout_marginLeft="10dp">
     <LinearLayout

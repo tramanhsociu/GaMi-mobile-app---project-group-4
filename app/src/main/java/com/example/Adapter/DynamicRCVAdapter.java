@@ -43,16 +43,16 @@ public class DynamicRCVAdapter extends RecyclerView.Adapter<DynamicRCVAdapter.Vi
 
         holder.imvThumb.setImageResource(list.get(position).getThumb());
         holder.txtName.setText(list.get(position).getName());
-        holder.txtPrice.setText(String.valueOf(list.get(position).getPrice()));
+        holder.txtPrice.setText((list.get(position).getPrice()+ " VND"));
         holder.ratingBar.setRating(list.get(position).getRate());
 
         if (selectedItem == position){
-            holder.cardView.animate().scaleX(1.1f);
-            holder.cardView.animate().scaleY(1.1f);
+            holder.imvThumb.animate().scaleX(1.2f);
+            holder.imvThumb.animate().scaleY(1.2f);
         }
         else {
-            holder.cardView.animate().scaleX(1f);
-            holder.cardView.animate().scaleY(1f);
+            holder.imvThumb.animate().scaleX(1f);
+            holder.imvThumb.animate().scaleY(1f);
         }
     }
 
