@@ -1,6 +1,7 @@
 package com.example.onboarding;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -216,8 +217,9 @@ public class LoginActivity extends AppCompatActivity {
         imvBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Intent intent = new Intent(LoginActivity.this, onboardingFragment2.class);
-//                startActivity(intent);
+                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                startActivity(intent);
+
 
             }
         });
@@ -419,6 +421,12 @@ public class LoginActivity extends AppCompatActivity {
         parameters.putString("fields", "email,name,id");
         request.setParameters(parameters);
         request.executeAsync();
+    }
+    private void replaceFragment(Fragment fragment) {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.Login, fragment);
+        fragmentTransaction.commit();
     }
 
 
