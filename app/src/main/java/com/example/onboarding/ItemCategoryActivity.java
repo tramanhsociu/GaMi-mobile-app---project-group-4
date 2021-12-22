@@ -4,8 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.GridView;
+import android.widget.ImageView;
 
 import com.example.Adapter.CategoryRCVAdapter;
 import com.example.Adapter.DynamicRCVAdapter;
@@ -14,9 +17,11 @@ import com.example.model.Products;
 
 import java.util.ArrayList;
 
+import im.crisp.client.ChatActivity;
+import im.crisp.client.Crisp;
+
 public class ItemCategoryActivity extends AppCompatActivity {
     RecyclerView rcvCategory, rcvDynamic;
-    GridView gvDynamic;
 
     // horizonal
     CategoryRCVAdapter categoryRCVAdapter;
@@ -25,6 +30,8 @@ public class ItemCategoryActivity extends AppCompatActivity {
    // vertical
     ArrayList<Products> dynamic;
     DynamicRCVAdapter dynamicRCVAdapter;
+
+    ImageView btnChat;
 
 
     @Override
@@ -38,11 +45,23 @@ public class ItemCategoryActivity extends AppCompatActivity {
         initDynamic(0);
 
 
+        btnChat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent crispIntent = new Intent(ItemCategoryActivity.this, ChatActivity.class);
+                startActivity(crispIntent);
+            }
+        });
+
+
     }
 
     private void linkViews() {
         rcvCategory = findViewById(R.id.rvcCategory1);
         rcvDynamic = findViewById(R.id.rcvCategory2);
+        btnChat = findViewById(R.id.btnChat);
+        //chat
+        Crisp.configure(getApplicationContext(), "1b4d03b2-db60-4da9-b658-bcf6eceac6f1");
 
 
     }
@@ -160,5 +179,7 @@ public class ItemCategoryActivity extends AppCompatActivity {
         categoryRCVAdapter.notifyDataSetChanged();
 
     }
+
+
 
 }

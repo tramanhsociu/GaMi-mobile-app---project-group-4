@@ -41,12 +41,6 @@ public class HomeFragment extends Fragment{
     ArrayList<Products> products;
 
 
-
-
-
-
-
-
     GridView gvCategory;
     ArrayList<Category> category;
     CategoryAdapter categoryAdapter;
@@ -144,29 +138,6 @@ public class HomeFragment extends Fragment{
         return banners;
     }
 
-//    private void initDataCategory(int pos) {
-//        list = new ArrayList<>();
-//        list.add(new Category(R.drawable.ic_doan,"Đồ ăn"));
-//        list.add(new Category(R.drawable.ic_thuoc,"Thuốc"));
-//        list.add(new Category(R.drawable.ic_tamgoi,"Tắm gội"));
-//        list.add(new Category(R.drawable.ic_dodung,"Đồ dùng"));
-//        list.add(new Category(R.drawable.ic_dochoi,"Đồ chơi"));
-//        list.add(new Category(R.drawable.ic_phukien,"Phụ kiện"));
-//
-//
-//
-//        categoryRCVAdapter = new CategoryRCVAdapter(getContext(), list, new CategoryRCVAdapter.OnCategoryClick(){
-//            @Override
-//            public void onClick(int pos) {
-//                Intent intent = new Intent(getActivity(),ItemCategoryActivity.class);
-//            }
-//        });
-//        rcvCategory.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false));
-//        rcvCategory.setAdapter(categoryRCVAdapter);
-//        categoryRCVAdapter.notifyDataSetChanged();
-//
-//    }
-
 
 
     @Override
@@ -195,10 +166,6 @@ public class HomeFragment extends Fragment{
         recyclerView();
         initDataPopular();
 
-
-
-
-
         return view;
     }
 
@@ -210,7 +177,6 @@ public class HomeFragment extends Fragment{
         super.onPause();
         handler.removeCallbacks(runnable);
     }
-
     @Override
     public void onResume() {
         super.onResume();
