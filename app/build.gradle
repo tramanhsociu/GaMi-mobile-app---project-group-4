@@ -68,6 +68,7 @@ dependencies {
     implementation 'com.razorpay:checkout:1.6.12'
     implementation 'com.jpardogo.googleprogressbar:library:1.2.0'
     implementation 'com.airbnb.android:lottie:3.7.0'
+    implementation 'com.getkeepsafe.taptargetview:taptargetview:1.13.0'
 
 
 }
