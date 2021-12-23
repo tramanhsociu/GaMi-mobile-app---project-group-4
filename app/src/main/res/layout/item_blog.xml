@@ -17,8 +17,7 @@
         app:layout_constraintTop_toTopOf="parent"
         android:padding="10dp">
 
-        <ImageView
-            android:id="@+id/imvLogo"
+        <ImageView android:id="@+id/imvLogo"
             android:src="@drawable/ic_logo"
             android:layout_width="30dp"
             android:layout_height="match_parent"
@@ -58,7 +57,7 @@
             android:id="@+id/imv_ic_tim"
             android:layout_width="50dp"
             android:layout_height="match_parent"
-            android:src="@drawable/ic_ictym"
+            android:src="@drawable/ic_unlike"
             android:scaleType="fitCenter"
             />
 

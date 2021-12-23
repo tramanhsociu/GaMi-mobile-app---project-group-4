@@ -32,7 +32,7 @@
                 android:id="@+id/imvThumb"
                 android:layout_width="75dp"
                 android:layout_height="73dp"
-                android:src="@drawable/dochoi_1">
+                android:src="@drawable/dochoi_10">
 
             </ImageView>
 

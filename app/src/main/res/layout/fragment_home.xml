@@ -79,7 +79,8 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp">
 
                 <TextView
                     android:id="@+id/textView"
@@ -162,7 +163,8 @@
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rcvSale"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="160dp"
+
                     android:layout_marginTop="8dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"

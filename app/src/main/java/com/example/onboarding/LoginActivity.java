@@ -14,6 +14,7 @@ import android.inputmethodservice.ExtractEditText;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.os.Handler;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
@@ -173,8 +174,14 @@ public class LoginActivity extends AppCompatActivity {
                         dialogWait.setContentView(R.layout.dialog_wait);
                         dialogWait.setCanceledOnTouchOutside(false);
                         dialogWait.show();
+//                        new Handler().postDelayed(new Runnable() {
+//                            @Override
+//                            public void run() {
+//                                dialogWait.dismiss();
+//                            }
+//                        },10000);
 
-                        new CountDownTimer(5000,1000){
+                        new CountDownTimer(5000,100){
 
                             @Override
                             public void onTick(long l) {

@@ -48,21 +48,45 @@ public class BlogAdapter extends BaseAdapter {
             view =inflater.inflate(layout,null);
             holder.imvProduct=view.findViewById(R.id.imvImage);
             holder.txtContent=view.findViewById(R.id.txtContent);
+            holder.imvReact=view.findViewById(R.id.imv_ic_tim);
             view.setTag(holder);
         }
         else {
             holder= (ViewHolder) view.getTag();
+
         }
 
         Blog b=blogList.get(i);
         holder.txtContent.setText(b.getContent());
         holder.imvProduct.setImageResource(b.getImage());
 
+        holder.imvReact.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ImageView imvReact=view.findViewById(R.id.imv_ic_tim);
+                imvReact.setSelected(!imvReact.isSelected());
+                if(imvReact.isSelected()){
+                    imvReact.setImageResource(R.drawable.ic_like);
+                }else {
+                    imvReact.setImageResource(R.drawable.ic_unlike);
+                }
+
+
+
+
+            }
+        });
+
+
+
         return view;
+
+
     }
-    private static class ViewHolder {
+    public static class ViewHolder {
         TextView txtContent;
         ImageView imvProduct;
+        ImageView imvReact, imvCmt;
 
     }
 }
