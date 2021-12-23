@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/kem"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="14dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp">
+
+            <ImageView
+                android:id="@+id/imvBack"
+                android:layout_width="7dp"
+                android:layout_height="14dp"
+                android:src="@drawable/back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtPolicy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sourcesanspro_bold"
+                android:gravity="center"
+                android:text="Chính sách vận chuyển"
+                android:textColor="#93766E"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/kem"
+            android:fillViewport="true"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtDetailPolicy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro_bold"
+                    android:textColor="#93766E"
+                    android:textSize="14sp"
+                    android:text="1.   Các khuyến cáo về việc vận chuyển"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:textColor="#93766E"
+                    android:textSize="14sp"
+                    android:paddingTop="5dp"
+                    android:paddingStart="5dp"
+                    android:text="- Đơn vị vận chuyển sẽ yêu cầu Người Mua thanh toán đầy đủ hoặc xác nhận nhận hàng trước khi Người Mua có thể bóc hàng và kiểm tra hàng. Nếu có bất cứ vấn đề phát sinh với bưu kiện, Người Mua vui lòng liên hệ tới Tổng đài hỗ trợ 19001221 hoặc gửi yêu cầu tại đây"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:textColor="#93766E"
+                    android:textSize="14sp"
+                    android:paddingStart="5dp"
+                    android:text="- Luôn chụp lại gói hàng trước khi mở ra để lưu lại bằng chứng về tình trạng bao bì gói bọc, phục vụ cho quá trình xử lý khiếu nại (nếu có). Do nguyên tắc “nguyên đai, nguyên kiện”, các đơn vị vận chuyển sẽ không giải quyết các khiếu nại bồi thường nếu Người Mua/Người Bán đồng ý nhận (lại) hàng và đã ký vào biên bản nhận hàng/trả hàng. Do đó, vui lòng kiểm tra kỹ bao bì của sản phẩm. Nếu bao bì sản phẩm có dấu hiệu bị hư hại (rách/móp méo/vỡ/ướt) và bạn nghi ngờ hàng hóa bên trong đã bị tổn hại, vui lòng từ chối nhận hàng và thông báo cho GaMi."/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:textColor="#93766E"
+                    android:textSize="14sp"
+                    android:paddingStart="5dp"
+                    android:text="- Khi có khiếu nại xảy ra, Người dùng phải có trách nhiệm hỗ trợ GaMi trong quá trình xác minh thông tin bằng cách cung cấp thông tin trung thực, chính xác khi GaMi liên hệ. Trong trường hợp GaMi không thể liên hệ với Người khiếu nại để xác minh thông tin, Shopee có quyền kết thúc khiếu nại và không giải thích gì thêm."/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:textColor="#93766E"
+                    android:textSize="14sp"
+                    android:paddingStart="5dp"
+                    android:text="- Việc không gửi hàng thật, đưa tiền cho nhân viên vận chuyển để cập nhật sai trạng thái đơn hàng, tự đặt hàng của chính mình, vv… nhằm lợi dụng Chính Sách Vận Chuyển và/hoặc các chương trình khuyến mại theo từng thời kỳ của GaMi sẽ dẫn đến hình thức xử phạt nghiêm khắc của GaMi. Ngoài ra, tất cả Người Bán có trách nhiệm đảm bảo hàng hóa gửi đi không vi phạm quy định của GaMi và pháp luật Việt Nam. Người bán sẽ hoàn toàn chịu trách nhiệm trong trường hợp hàng hóa gửi đi bị phát hiện vi phạm pháp luật./.
+"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro_bold"
+                    android:textColor="#93766E"
+                    android:textSize="14sp"
+                    android:paddingStart="5dp"
+                    android:text="2.   Khiếu nại"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:textColor="#93766E"
+                    android:textSize="14sp"
+                    android:paddingStart="5dp"
+                    android:paddingTop="5dp"
+                    android:text="Thời hạn khiếu nại:"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:textColor="#93766E"
+                    android:textSize="14sp"
+                    android:paddingStart="5dp"
+                    android:text="Hàng hóa hư hại do vận chuyển: trong vòng 24 giờ sau khi Người Mua nhận hàng."/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:textColor="#93766E"
+                    android:textSize="14sp"
+                    android:paddingStart="5dp"
+                    android:text="Không nhận được hàng: trong vòng 24 giờ sau khi nhận được thông báo đơn hàng đã giao hàng thành công cho Người Mua hoặc đơn hàng đã chuyển hoàn thành công cho GaMi."/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:textColor="#93766E"
+                    android:textSize="14sp"
+                    android:paddingStart="5dp"
+                    android:text="Sai phí vận chuyển dẫn đến tiền hàng nhận được bị thiếu (dành cho Người Bán): trong vòng 7 ngày kể từ ngày khoản tiền hàng của đơn hàng được chuyển vào Ví.
+Kênh tiếp nhận khiếu nại về vận chuyển: Tổng đài 19001221 hoặc gửi yêu cầu cho GaMi."/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:textColor="#93766E"
+                    android:textSize="14sp"
+                    android:paddingStart="5dp"
+                    android:text="Dịch vụ vận chuyển của GaMi không cho phép Người Nhận kiểm tra hàng trước khi nhận hàng."/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:textColor="#93766E"
+                    android:textSize="14sp"
+                    android:paddingStart="5dp"
+                    android:text="Người Bán hoàn toàn chịu trách nhiệm đóng gói sản phẩm của mình đúng quy cách khi giao hàng cho đơn vị vận chuyển. Trường hợp bao bì/gói/hộp đựng sản phẩm vẫn còn nguyên vẹn trong quá trình vận chuyển nhưng hàng hóa bên trong lại bị hư hại do đóng gói không đúng cách, GaMi sẽ không giải quyết bất cứ khiếu nại yêu cầu bồi thường nào từ phía Người Mua (trong trường hợp gửi trả hàng).
+Người Bán cần phải giữ lại vận đơn/hóa đơn vận chuyển mỗi khi giao hàng cho đơn vị vận chuyển. Khi có bất kỳ khiếu nại hay tranh chấp nào về mất mát hàng hóa xảy ra, vận đơn/hóa đơn vận chuyển sẽ là bằng chứng vững chắc nhất chứng minh Người Bán đã giao hàng."/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:textColor="#93766E"
+                    android:textSize="14sp"
+                    android:paddingStart="5dp"
+                    android:text="Người Bán cần phải giữ lại vận đơn/hóa đơn vận chuyển mỗi khi giao hàng cho đơn vị vận chuyển. Khi có bất kỳ khiếu nại hay tranh chấp nào về mất mát hàng hóa xảy ra, vận đơn/hóa đơn vận chuyển sẽ là bằng chứng vững chắc nhất chứng minh Người Bán đã giao hàng."/>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

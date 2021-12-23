@@ -12,6 +12,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Onboarding">
         <activity
+            android:name=".ExchangePolicyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DeliveryPolicy"
+            android:exported="false" />
+        <activity
+            android:name=".PrivacyPolicyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PolicyActivity"
+            android:exported="false" />
+        <activity
             android:name=".CartActivity"
             android:exported="true" />
         <activity
@@ -35,12 +47,10 @@
             android:exported="true" />
         <activity
             android:name=".SettingActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".HomeActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".RegisSucessActivity"
             android:exported="true" />
