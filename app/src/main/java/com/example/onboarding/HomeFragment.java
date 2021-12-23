@@ -38,7 +38,8 @@ public class HomeFragment extends Fragment{
 
     RecyclerView rcvPopular,rcvSale;
     PopularAdapter popularAdapter;
-    ArrayList<Products> products;
+    ArrayList<Products> popular;
+    ArrayList<Products> sale;
 
 
     GridView gvCategory;
@@ -62,16 +63,21 @@ public class HomeFragment extends Fragment{
 
 
     private void initDataPopular() {
-        products = new ArrayList<>();
-        products.add(new Products(R.drawable.dochoi_1,"name","Đồ chơi dành cho chó và mèo ",5,20.000,"đồ chơi",1));
-        products.add(new Products(R.drawable.dochoi_2,"name","Đồ chơi dành cho chó và mèo ",3,20.000,"đồ chơi",1));
-        products.add(new Products(R.drawable.dochoi_3,"name","Đồ chơi dành cho chó và mèo ",5,20.000,"đồ chơi",1));
-        products.add(new Products(R.drawable.dochoi_4,"name","Đồ chơi dành cho chó và mèo ",45,20.000,"đồ chơi",1));
+        popular = new ArrayList<>();
+        popular.add(new Products(R.drawable.phukien_1,"name","Đồ chơi dành cho chó và mèo ",5,20.000,"đồ chơi",1));
+        popular.add(new Products(R.drawable.phukien_2,"name","Đồ chơi dành cho chó và mèo ",3,20.000,"đồ chơi",1));
+        popular.add(new Products(R.drawable.phukien_3,"name","Đồ chơi dành cho chó và mèo ",5,20.000,"đồ chơi",1));
+        popular.add(new Products(R.drawable.phukien_4,"name","Đồ chơi dành cho chó và mèo ",45,20.000,"đồ chơi",1));
 
-        popularAdapter = new PopularAdapter(getContext(),products);
+        popularAdapter = new PopularAdapter(getContext(),popular);
         rcvPopular.setAdapter(popularAdapter);
 
-        popularAdapter = new PopularAdapter(getContext(),products);
+        sale = new ArrayList<>();
+        sale.add(new Products(R.drawable.dochoi_6,"name","Đồ chơi dành cho chó và mèo ",5,20.000,"đồ chơi",1));
+        sale.add(new Products(R.drawable.dochoi_7,"name","Đồ chơi dành cho chó và mèo ",3,20.000,"đồ chơi",1));
+        sale.add(new Products(R.drawable.dochoi_8,"name","Đồ chơi dành cho chó và mèo ",5,20.000,"đồ chơi",1));
+        sale.add(new Products(R.drawable.dochoi_9,"name","Đồ chơi dành cho chó và mèo ",45,20.000,"đồ chơi",1));
+        popularAdapter = new PopularAdapter(getContext(),sale);
         rcvSale.setAdapter(popularAdapter);
 
 
