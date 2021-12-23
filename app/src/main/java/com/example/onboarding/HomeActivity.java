@@ -12,6 +12,7 @@ import androidx.viewpager2.widget.ViewPager2;
 
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.graphics.drawable.Icon;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.MenuItem;
@@ -103,16 +104,82 @@ public class HomeActivity extends AppCompatActivity{
                startActivity(intent);
            }
        });
+
         //showcase
+
         new TapTargetSequence(this).targets(
+                TapTarget.forView(findViewById(R.id.menu_trangchu),"Trang chủ","Bạn mua sắm ở đây nè")
+                        .outerCircleColor(R.color.gami2)
+                        .outerCircleAlpha(0.96f)
+                        .targetCircleColor(R.color.white)
+                        .titleTextSize(18)
+                        .titleTextColor(R.color.white)
+                        .descriptionTextColor(R.color.white)
+                        .descriptionTextSize(16)
+                        .textColor(R.color.white)
+                        .textTypeface(Typeface.SANS_SERIF)
+                        .dimColor(R.color.black)
+                        .drawShadow(true)
+                        .cancelable(false)
+                        .tintTarget(true)
+                        .transparentTarget(true)
+                        .targetRadius(60),
+                TapTarget.forView(findViewById(R.id.menu_blog),"Bài viết","Nơi GaMi đăng tải các bài viết bổ ích cho bạn")
+                        .outerCircleColor(R.color.gami2)
+                        .outerCircleAlpha(0.96f)
+                        .targetCircleColor(R.color.white)
+                        .titleTextSize(18)
+                        .titleTextColor(R.color.white)
+                        .descriptionTextColor(R.color.white)
+                        .descriptionTextSize(16)
+                        .textColor(R.color.white)
+                        .textTypeface(Typeface.SANS_SERIF)
+                        .dimColor(R.color.black)
+                        .drawShadow(true)
+                        .cancelable(false)
+                        .tintTarget(true)
+                        .transparentTarget(true)
+                        .targetRadius(60),
+                TapTarget.forView(findViewById(R.id.menu_noti),"Thông báo","Chúng mình cập nhật sớm nhất cho bạn")
+                        .outerCircleColor(R.color.gami2)
+                        .outerCircleAlpha(0.96f)
+                        .targetCircleColor(R.color.white)
+                        .titleTextSize(18)
+                        .titleTextColor(R.color.white)
+                        .descriptionTextColor(R.color.white)
+                        .descriptionTextSize(16)
+                        .textColor(R.color.white)
+                        .textTypeface(Typeface.SANS_SERIF)
+                        .dimColor(R.color.black)
+                        .drawShadow(true)
+                        .cancelable(false)
+                        .tintTarget(true)
+                        .transparentTarget(true)
+                        .targetRadius(60),
+                TapTarget.forView(findViewById(R.id.menu_toi),"Tôi","Nơi lưu giữ thông tin của bạn hê hê")
+                        .outerCircleColor(R.color.gami2)
+                        .outerCircleAlpha(0.96f)
+                        .targetCircleColor(R.color.white)
+                        .titleTextSize(18)
+                        .titleTextColor(R.color.white)
+                        .descriptionTextColor(R.color.white)
+                        .descriptionTextSize(16)
+                        .textColor(R.color.white)
+                        .textTypeface(Typeface.SANS_SERIF)
+                        .dimColor(R.color.black)
+                        .drawShadow(true)
+                        .cancelable(false)
+                        .tintTarget(true)
+                        .transparentTarget(true)
+                        .targetRadius(60),
                 TapTarget.forView(btnCart,"Giỏ hàng", "Bỏ vào đây món đồ bạn muốn mua")
                         .outerCircleColor(R.color.gami2)
                         .outerCircleAlpha(0.96f)
                         .targetCircleColor(R.color.white)
-                        .titleTextSize(10)
+                        .titleTextSize(18)
                         .titleTextColor(R.color.white)
                         .descriptionTextColor(R.color.white)
-                        .descriptionTextSize(10)
+                        .descriptionTextSize(16)
                         .textColor(R.color.white)
                         .textTypeface(Typeface.SANS_SERIF)
                         .dimColor(R.color.black)
@@ -125,10 +192,10 @@ public class HomeActivity extends AppCompatActivity{
                         .outerCircleColor(R.color.gami2)
                         .outerCircleAlpha(0.96f)
                         .targetCircleColor(R.color.white)
-                        .titleTextSize(10)
+                        .titleTextSize(18)
                         .titleTextColor(R.color.white)
                         .descriptionTextColor(R.color.white)
-                        .descriptionTextSize(10)
+                        .descriptionTextSize(16)
                         .textColor(R.color.white)
                         .textTypeface(Typeface.SANS_SERIF)
                         .dimColor(R.color.black)
