@@ -18,17 +18,27 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imvPetshop"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="265dp"
-        android:src="@drawable/ic_petshop"
+<!--    <ImageView-->
+<!--        android:id="@+id/imvPetshop"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center_horizontal"-->
+<!--        android:layout_marginTop="265dp"-->
+<!--        android:src="@drawable/ic_petshop"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/music"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        app:lottie_rawRes="@raw/music"
+        android:layout_marginTop="185dp"
+        app:lottie_autoPlay="true"
+        app:lottie_repeatCount="100"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintStart_toStartOf="parent"/>
     <TextView
         android:id="@+id/txtDescription2"
         android:layout_width="match_parent"
