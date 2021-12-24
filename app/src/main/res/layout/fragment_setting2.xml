@@ -19,6 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="10dp"
             android:text="Quy trình trả hàng hoàn tiền của GaMi"
+            android:fontFamily="@font/sourcesanspro_bold"
             android:textColor="@color/gami3"
             android:textSize="19sp"
             android:textStyle="bold"
@@ -42,6 +43,7 @@
             android:layout_marginHorizontal="10dp"
             android:layout_marginTop="30dp"
             android:text="Hiện tại GaMi chưa hỗ trợ đổi hàng. Trong trường hợp sản phẩm nhận được có vấn đề, bạn có thể yêu cầu Trả hàng/ Hoàn tiền ngay trên ứng dụng GaMi theo chi tiết bên dưới:"
+            android:fontFamily="@font/sourcesanspro_regular"
             android:textColor="@color/gami4"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -60,7 +62,8 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtsubTitle" />
+            app:layout_constraintTop_toBottomOf="@+id/txtsubTitle"
+            android:fontFamily="@font/sourcesanspro_bold"/>
 
         <TextView
             android:id="@+id/txtDes"
@@ -73,7 +76,8 @@
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtno1" />
+            app:layout_constraintTop_toBottomOf="@+id/txtno1"
+            android:fontFamily="@font/sourcesanspro_regular"/>
 
         <TextView
             android:id="@+id/txtno2"
@@ -87,7 +91,8 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtDes" />
+            app:layout_constraintTop_toBottomOf="@+id/txtDes"
+            android:fontFamily="@font/sourcesanspro_bold"/>
 
         <TextView
             android:id="@+id/txtline1"
@@ -100,7 +105,8 @@
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtno2" />
+            app:layout_constraintTop_toBottomOf="@+id/txtno2"
+            android:fontFamily="@font/sourcesanspro_regular"/>
 
         <TextView
             android:id="@+id/txtline2"
@@ -112,7 +118,8 @@
             android:textColor="@color/gami3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtline1" />
+            app:layout_constraintTop_toBottomOf="@+id/txtline1"
+            android:fontFamily="@font/sourcesanspro_regular"/>
 
         <TextView
             android:id="@+id/txtline3"
@@ -151,7 +158,8 @@
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/txtline4" />
+            app:layout_constraintTop_toBottomOf="@id/txtline4"
+            android:fontFamily="@font/sourcesanspro_regular"/>
 
         <TextView
             android:id="@+id/txtline6"
@@ -164,7 +172,8 @@
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/txtline5" />
+            app:layout_constraintTop_toBottomOf="@id/txtline5"
+            android:fontFamily="@font/sourcesanspro_regular"/>
 
         <TextView
             android:id="@+id/txtNotice"
@@ -177,7 +186,8 @@
             android:textSize="14sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtline6" />
+            app:layout_constraintTop_toBottomOf="@+id/txtline6"
+            android:fontFamily="@font/sourcesanspro_bold"/>
 
         <FrameLayout
             android:id="@+id/btnLike"
@@ -203,7 +213,8 @@
                 android:layout_marginStart="10dp"
                 android:text="Vâng"
                 android:textColor="#4D000000"
-                android:textSize="11dp" />
+                android:textSize="11dp"
+                android:fontFamily="@font/sourcesanspro_regular"/>
         </FrameLayout>
 
         <FrameLayout
@@ -230,7 +241,8 @@
                 android:layout_marginStart="10dp"
                 android:text="Không"
                 android:textColor="#4D000000"
-                android:textSize="11dp" />
+                android:textSize="11dp"
+                android:fontFamily="@font/sourcesanspro_regular"/>
         </FrameLayout>
 
 
