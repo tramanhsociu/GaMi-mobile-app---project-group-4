@@ -59,6 +59,29 @@ dependencies {
     implementation 'com.razorpay:checkout:1.6.12'
     implementation 'com.jpardogo.googleprogressbar:library:1.2.0'
     implementation 'com.getkeepsafe.taptargetview:taptargetview:1.13.0'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     def lottieVersion = "3.4.0"
     implementation "com.airbnb.android:lottie:$lottieVersion"
 
