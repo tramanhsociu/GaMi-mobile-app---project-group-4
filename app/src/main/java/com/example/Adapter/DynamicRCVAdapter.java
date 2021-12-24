@@ -1,6 +1,8 @@
 package com.example.Adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.model.Products;
 import com.example.onboarding.R;
+import com.example.onboarding.ShowDetailActivity;
 
 import java.util.ArrayList;
 
@@ -39,12 +42,21 @@ public class DynamicRCVAdapter extends RecyclerView.Adapter<DynamicRCVAdapter.Vi
     }
 
     @Override
-    public void onBindViewHolder(@NonNull DynamicRCVAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull DynamicRCVAdapter.ViewHolder holder, @SuppressLint("RecyclerView") int position) {
 
         holder.imvThumb.setImageResource(list.get(position).getThumb());
         holder.txtName.setText(list.get(position).getName());
         holder.txtPrice.setText((list.get(position).getPrice()+ " VND"));
         holder.ratingBar.setRating(list.get(position).getRate());
+        holder.btnAddtoCart.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(holder.itemView.getContext(), ShowDetailActivity.class);
+                intent.putExtra("object",list.get(position));
+                holder.itemView.getContext().startActivity(intent);
+
+            }
+        });
 
         if (selectedItem == position){
             holder.imvThumb.animate().scaleX(1.2f);
@@ -63,7 +75,7 @@ public class DynamicRCVAdapter extends RecyclerView.Adapter<DynamicRCVAdapter.Vi
 
     public class ViewHolder extends RecyclerView.ViewHolder{
         TextView txtName,txtPrice;
-        ImageView imvThumb;
+        ImageView imvThumb,btnAddtoCart;
         RatingBar ratingBar;
         CardView cardView;
 
@@ -74,6 +86,7 @@ public class DynamicRCVAdapter extends RecyclerView.Adapter<DynamicRCVAdapter.Vi
             imvThumb= itemView.findViewById(R.id.imvThumb);
             ratingBar = itemView.findViewById(R.id.ratingBar);
             cardView = itemView.findViewById(R.id.cardView);
+            btnAddtoCart = itemView.findViewById(R.id.btnAddCart);
             cardView.setOnClickListener(new View.OnClickListener(){
                 @Override
                 public void onClick(View view) {

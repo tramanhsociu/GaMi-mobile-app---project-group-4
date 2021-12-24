@@ -6,6 +6,7 @@
     android:elevation="4dp"
     android:layout_width="88dp"
     android:layout_height="150dp"
+
     android:background="@drawable/background_popular">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -62,7 +63,7 @@
         android:layout_marginEnd="8dp"
         android:fontFamily="@font/sourcesanspro_bold"
         android:text="Bông Elite đầu thú"
-        android:textColor="@color/chu"
+        android:textColor="@color/nau"
         android:textSize="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -83,19 +84,24 @@
         app:layout_constraintTop_toBottomOf="@+id/txtName">
 
     </TextView>
+
     <ImageButton
         android:id="@+id/btnAddCart"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="4dp"
         android:layout_marginBottom="8dp"
         android:background="#00000000"
+        android:elevation="2dp"
         android:scaleType="fitXY"
-        android:src="@drawable/add_cart"
+        android:src="@drawable/ic_add_cart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtName">
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/txtPrice"
+        app:layout_constraintTop_toBottomOf="@+id/txtName"
+        app:layout_constraintVertical_bias="0.0">
 
     </ImageButton>
 

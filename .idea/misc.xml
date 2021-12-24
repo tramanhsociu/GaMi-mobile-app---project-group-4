@@ -69,7 +69,35 @@
         <entry key="..\:/3rdyr1stsem/mobile/onboarding/app/src/main/res/layout/layout_dialog_forgotpass.xml" value="0.4" />
         <entry key="..\:/3rdyr1stsem/mobile/onboarding/app/src/main/res/layout/layout_dialog_resetpass.xml" value="0.4" />
         <entry key="..\:/3rdyr1stsem/mobile/onboarding/app/src/main/res/layout/layout_dialog_verify.xml" value="0.4" />
+        <entry key="..\:/GaMi-mobile-app---project-group-4/app/src/main/res/drawable/Checkout_button.xml" value="0.14444444444444443" />
+        <entry key="..\:/GaMi-mobile-app---project-group-4/app/src/main/res/drawable/background_show_detail_item.xml" value="0.1429553264604811" />
+        <entry key="..\:/GaMi-mobile-app---project-group-4/app/src/main/res/drawable/cart_button.xml" value="0.14444444444444443" />
+        <entry key="..\:/GaMi-mobile-app---project-group-4/app/src/main/res/drawable/cart_item_bg.xml" value="0.14444444444444443" />
+        <entry key="..\:/GaMi-mobile-app---project-group-4/app/src/main/res/drawable/category_rcv_selected_bg.xml" value="0.1429553264604811" />
+        <entry key="..\:/GaMi-mobile-app---project-group-4/app/src/main/res/drawable/dynamic_rcv_bg.xml" value="0.1429553264604811" />
+        <entry key="..\:/GaMi-mobile-app---project-group-4/app/src/main/res/drawable/ic_add_cart.xml" value="0.1429553264604811" />
+        <entry key="..\:/GaMi-mobile-app---project-group-4/app/src/main/res/drawable/ic_addcart.xml" value="0.1429553264604811" />
+        <entry key="..\:/GaMi-mobile-app---project-group-4/app/src/main/res/drawable/regis_button.xml" value="0.14444444444444443" />
+        <entry key="..\:/GaMi-mobile-app---project-group-4/app/src/main/res/layout/activity_cart.xml" value="0.16666666666666666" />
+        <entry key="..\:/GaMi-mobile-app---project-group-4/app/src/main/res/layout/activity_category.xml" value="0.3333333333333333" />
+        <entry key="..\:/GaMi-mobile-app---project-group-4/app/src/main/res/layout/activity_home.xml" value="0.13368055555555555" />
+        <entry key="..\:/GaMi-mobile-app---project-group-4/app/src/main/res/layout/activity_login.xml" value="0.13368055555555555" />
+        <entry key="..\:/GaMi-mobile-app---project-group-4/app/src/main/res/layout/activity_register.xml" value="0.13368055555555555" />
+        <entry key="..\:/GaMi-mobile-app---project-group-4/app/src/main/res/layout/activity_search.xml" value="0.13368055555555555" />
+        <entry key="..\:/GaMi-mobile-app---project-group-4/app/src/main/res/layout/activity_setting_payment.xml" value="0.13368055555555555" />
+        <entry key="..\:/GaMi-mobile-app---project-group-4/app/src/main/res/layout/activity_setting_support.xml" value="0.13368055555555555" />
+        <entry key="..\:/GaMi-mobile-app---project-group-4/app/src/main/res/layout/activity_show_detail.xml" value="0.13333333333333333" />
+        <entry key="..\:/GaMi-mobile-app---project-group-4/app/src/main/res/layout/cart_item_layout.xml" value="0.3333333333333333" />
+        <entry key="..\:/GaMi-mobile-app---project-group-4/app/src/main/res/layout/category_rcv_item.xml" value="0.13368055555555555" />
+        <entry key="..\:/GaMi-mobile-app---project-group-4/app/src/main/res/layout/custom_list_setting_support.xml" value="0.13368055555555555" />
         <entry key="..\:/GaMi-mobile-app---project-group-4/app/src/main/res/layout/dialog_wait.xml" value="0.13368055555555555" />
+        <entry key="..\:/GaMi-mobile-app---project-group-4/app/src/main/res/layout/dynamic_rcv_item.xml" value="0.3333333333333333" />
+        <entry key="..\:/GaMi-mobile-app---project-group-4/app/src/main/res/layout/fragment_home.xml" value="0.16666666666666666" />
+        <entry key="..\:/GaMi-mobile-app---project-group-4/app/src/main/res/layout/fragment_rating.xml" value="0.13368055555555555" />
+        <entry key="..\:/GaMi-mobile-app---project-group-4/app/src/main/res/layout/fragment_sale.xml" value="0.13368055555555555" />
+        <entry key="..\:/GaMi-mobile-app---project-group-4/app/src/main/res/layout/fragment_setting_noti_on.xml" value="0.13368055555555555" />
+        <entry key="..\:/GaMi-mobile-app---project-group-4/app/src/main/res/layout/item_info_order.xml" value="0.13368055555555555" />
+        <entry key="..\:/GaMi-mobile-app---project-group-4/app/src/main/res/layout/layout_popular.xml" value="0.6" />
         <entry key="..\:/GitHub/GaMi-mobile-app---project-group-4/app/src/main/res/drawable/background_cricle.xml" value="0.1" />
         <entry key="..\:/GitHub/GaMi-mobile-app---project-group-4/app/src/main/res/drawable/background_popular.xml" value="0.14629629629629629" />
         <entry key="..\:/GitHub/GaMi-mobile-app---project-group-4/app/src/main/res/drawable/custom_search.xml" value="0.1" />
