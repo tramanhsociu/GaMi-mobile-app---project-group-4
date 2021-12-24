@@ -18,6 +18,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <ImageView
+            android:id="@+id/imvBack"
+            android:layout_width="7dp"
+            android:layout_height="14dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <ImageButton
             android:id="@+id/btnCard"
             android:layout_width="25dp"

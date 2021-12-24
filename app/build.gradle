@@ -85,4 +85,9 @@ dependencies {
     def lottieVersion = "3.4.0"
     implementation "com.airbnb.android:lottie:$lottieVersion"
 
+    // ảnh
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    // data
+    implementation 'com.google.code.gson:gson:2.8.7'
+
 }

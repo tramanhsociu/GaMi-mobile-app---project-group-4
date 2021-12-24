@@ -13,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.EditText;
 import android.widget.GridView;
 
 import com.example.Adapter.BannerAdapter;
@@ -31,6 +32,8 @@ import me.relex.circleindicator.CircleIndicator3;
 
 
 public class HomeFragment extends Fragment{
+    EditText edtSearch;
+
     ViewPager2 viewPager2;
     CircleIndicator3 circleIndicator3;
     ArrayList<Banner> banners;
@@ -158,6 +161,15 @@ public class HomeFragment extends Fragment{
 
         rcvPopular = view.findViewById(R.id.rcvPopular);
         rcvSale = view.findViewById(R.id.rcvSale);
+
+        edtSearch = view.findViewById(R.id.edtSearch);
+        edtSearch.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(),SearchActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
 
