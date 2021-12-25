@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -19,12 +21,16 @@ import com.razorpay.PaymentResultListener;
 
 import org.json.JSONObject;
 
-public class CartActivity extends AppCompatActivity implements PaymentResultListener {
+import im.crisp.client.ChatActivity;
+import im.crisp.client.Crisp;
+
+public class CartActivity extends AppCompatActivity {
 
     private RecyclerView.Adapter adapter;
     private RecyclerView recyclerViewList;
     private ManagementCard managementCard;
     private ScrollView scrollView;
+    ImageButton btnChat;
 
     TextView txtCheckOut,txtTotalFee,txtTotalPayment,txtDeliveryFee,txtEmpty;
     @Override
@@ -33,11 +39,11 @@ public class CartActivity extends AppCompatActivity implements PaymentResultList
         setContentView(R.layout.activity_cart);
         managementCard = new ManagementCard(this);
         linkViews();
-        addEvents();
+
         initList();
         calculateCart();
 
-        Checkout.preload(CartActivity.this);
+
     }
 
     private void initList() {
@@ -77,51 +83,26 @@ public class CartActivity extends AppCompatActivity implements PaymentResultList
         txtCheckOut=findViewById(R.id.btnCheckOut);
         txtEmpty = findViewById(R.id.txtEmpty);
         scrollView = findViewById(R.id.srvCart);
-
-
-    }
-
-    private void addEvents() {
-        txtCheckOut.setOnClickListener(new View.OnClickListener() {
+        btnChat = findViewById(R.id.btnChat);
+        Crisp.configure(getApplicationContext(), "1b4d03b2-db60-4da9-b658-bcf6eceac6f1");
+        btnChat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startPayment(Integer.parseInt(txtTotalPayment.getText().toString()));
+                Intent crispIntent = new Intent(CartActivity.this, ChatActivity.class);
+                startActivity(crispIntent);
             }
         });
-    }
-    public void startPayment(int Amount) {
-        Checkout checkout = new Checkout();
-        checkout.setKeyID("rzp_test_MyDwhAOJr8uZqe");
-        try{
-            JSONObject jsonObject = new JSONObject();
-            jsonObject.put("name", "GaMi");
-            jsonObject.put("description", "Giao dịch nhanh chóng với RazorPay");
-         //   jsonObject.put("image", "");
-            jsonObject.put("theme.color", "#FF8A75");
-            jsonObject.put("currency", "VND");
-            jsonObject.put("amount", Amount);
 
-            JSONObject retryObj=new JSONObject();
-            retryObj.put("enabled", true);
-            retryObj.put("max_count",4);
+        txtCheckOut.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(CartActivity.this, PaymentActivity.class);
+                startActivity(intent);
+            }
+        });
 
-            jsonObject.put("retry", retryObj);
-
-            checkout.open(CartActivity.this, retryObj);
-
-        }catch (Exception e){
-            Toast.makeText(CartActivity.this, "Có gì đó không ổn", Toast.LENGTH_SHORT).show();
-        }
 
     }
 
-    @Override
-    public void onPaymentSuccess(String s) {
-        Toast.makeText(CartActivity.this, s, Toast.LENGTH_SHORT).show();
-    }
 
-    @Override
-    public void onPaymentError(int i, String s) {
-        Toast.makeText(CartActivity.this, "Error: "+ s, Toast.LENGTH_SHORT).show();
-    }
 }

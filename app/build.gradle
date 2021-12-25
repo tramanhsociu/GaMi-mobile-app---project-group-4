@@ -59,6 +59,9 @@ dependencies {
     implementation 'com.razorpay:checkout:1.6.12'
     implementation 'com.jpardogo.googleprogressbar:library:1.2.0'
     implementation 'com.getkeepsafe.taptargetview:taptargetview:1.13.0'
+    // cart
+    implementation 'com.jakewharton:butterknife:10.2.3'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'
 
 
 

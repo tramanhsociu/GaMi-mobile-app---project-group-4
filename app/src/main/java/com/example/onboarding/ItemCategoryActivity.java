@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.GridView;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.example.Adapter.CategoryRCVAdapter;
@@ -31,7 +32,8 @@ public class ItemCategoryActivity extends AppCompatActivity {
     ArrayList<Products> dynamic;
     DynamicRCVAdapter dynamicRCVAdapter;
 
-    ImageView btnChat;
+    ImageButton btnChat,btnCart;
+
 
 
     @Override
@@ -45,6 +47,18 @@ public class ItemCategoryActivity extends AppCompatActivity {
         initDynamic(0);
 
 
+
+
+
+    }
+
+    private void linkViews() {
+        rcvCategory = findViewById(R.id.rvcCategory1);
+        rcvDynamic = findViewById(R.id.rcvCategory2);
+        btnCart = findViewById(R.id.btnCart);
+        btnChat = findViewById(R.id.btnChat);
+        //chat
+        Crisp.configure(getApplicationContext(), "1b4d03b2-db60-4da9-b658-bcf6eceac6f1");
         btnChat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -56,27 +70,17 @@ public class ItemCategoryActivity extends AppCompatActivity {
 
     }
 
-    private void linkViews() {
-        rcvCategory = findViewById(R.id.rvcCategory1);
-        rcvDynamic = findViewById(R.id.rcvCategory2);
-        btnChat = findViewById(R.id.btnChat);
-        //chat
-        Crisp.configure(getApplicationContext(), "1b4d03b2-db60-4da9-b658-bcf6eceac6f1");
-
-
-    }
-
     public void initDynamic(int pos){
         dynamic = new ArrayList<>();
         switch (pos){
             case 0:
-                dynamic.add(new Products(R.drawable.doan_1,"Food Natural","Đồ ăn dành cho chó và mèo ",3.5f,20.000,"đồ ăn",1));
-                dynamic.add(new Products(R.drawable.doan_2,"Food Natural","Đồ chơi dành cho chó và mèo ",4.5f,40.000,"đồ ăn",1));
-                dynamic.add(new Products(R.drawable.doan_3,"Food Natural","Đồ chơi dành cho chó và mèo ",5f,70.000,"đồ ăn",1));
-                dynamic.add(new Products(R.drawable.doan_4,"Food Natural","Đồ chơi dành cho chó và mèo ",4.5f,90.000,"đồ ăn",1));
-                dynamic.add(new Products(R.drawable.doan_6,"Food Natural","Đồ ăn dành cho chó và mèo ",5f,20.000,"đồ ăn",1));
-                dynamic.add(new Products(R.drawable.doan_9,"Food Natural","Đồ chơi dành cho chó và mèo ",5f,70.000,"đồ ăn",1));
-                dynamic.add(new Products(R.drawable.doan_10,"Food Natural","Đồ chơi dành cho chó và mèo ",5f,90.000,"đồ ăn",1));
+                dynamic.add(new Products(R.drawable.doan_1,"Food Natural","Đồ ăn dành cho chó và mèo ",3.5f,20000.0,"đồ ăn",1));
+                dynamic.add(new Products(R.drawable.doan_2,"Food Natural","Đồ chơi dành cho chó và mèo ",4.5f,40000.0,"đồ ăn",1));
+                dynamic.add(new Products(R.drawable.doan_3,"Food Natural","Đồ chơi dành cho chó và mèo ",5f,70000.0,"đồ ăn",1));
+                dynamic.add(new Products(R.drawable.doan_4,"Food Natural","Đồ chơi dành cho chó và mèo ",4.5f,90000.0,"đồ ăn",1));
+                dynamic.add(new Products(R.drawable.doan_6,"Food Natural","Đồ ăn dành cho chó và mèo ",5f,20000.0,"đồ ăn",1));
+                dynamic.add(new Products(R.drawable.doan_9,"Food Natural","Đồ chơi dành cho chó và mèo ",5f,70000.0,"đồ ăn",1));
+                dynamic.add(new Products(R.drawable.doan_10,"Food Natural","Đồ chơi dành cho chó và mèo ",5f,90000.0,"đồ ăn",1));
 
                 break;
             case 1:

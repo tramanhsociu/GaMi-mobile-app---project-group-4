@@ -45,7 +45,7 @@
     <string name="cart">Giỏ hàng</string>
     <string name="bill">Tổng thanh toán</string>
     <string name="dangky"><u>Đăng ký nếu chưa có tài khoản</u></string>
-    
+
     <string-array name="gioitinh">
         <item>Nam</item>
         <item>Nữ</item>

@@ -10,14 +10,14 @@
     >
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
+        android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/btnBack"
-            android:layout_width="20dp"
+            android:id="@+id/imageButton"
+            android:layout_width="10dp"
             android:layout_height="20dp"
             android:layout_marginStart="8dp"
+            android:scaleType="centerCrop"
             android:src="@drawable/ic_back"
             app:layout_constraintBottom_toBottomOf="@+id/edtSearch"
             app:layout_constraintStart_toStartOf="parent"
@@ -25,12 +25,13 @@
 
         </ImageView>
 
+
         <EditText
             android:id="@+id/edtSearch"
             android:layout_width="250dp"
             android:layout_height="30dp"
             android:layout_gravity="center_vertical"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
             android:background="@drawable/custom_search"
             android:drawableStart="@drawable/ic_baseline_search_24"
@@ -39,12 +40,15 @@
             android:fontFamily="@font/sourcesanspro_regular"
             android:hint="Bạn muốn tìm gì ?"
             android:textSize="15sp"
-            app:layout_constraintStart_toEndOf="@+id/btnBack"
+            app:layout_constraintEnd_toStartOf="@+id/btnCart"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/imageButton"
             app:layout_constraintTop_toTopOf="parent">
 
         </EditText>
+
         <ImageButton
-            android:id="@+id/btnCard"
+            android:id="@+id/btnCart"
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:layout_marginEnd="16dp"
@@ -66,10 +70,13 @@
             android:background="#00000000"
             android:scaleType="fitXY"
             android:src="@drawable/ic_chat"
+            app:layout_constraintBottom_toBottomOf="@+id/edtSearch"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
         </ImageButton>
+
+
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvcCategory1"
