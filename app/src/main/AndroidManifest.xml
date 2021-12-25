@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Onboarding">
         <activity
+            android:name=".activity_cmt_blog"
+            android:exported="true" />
+        <activity
             android:name=".CartActivity"
             android:exported="true" />
         <activity

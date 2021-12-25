@@ -71,11 +71,10 @@ public class BlogAdapter extends BaseAdapter {
                     imvReact.setImageResource(R.drawable.ic_unlike);
                 }
 
-
-
-
             }
         });
+
+
 
 
 
