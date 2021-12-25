@@ -33,7 +33,6 @@ import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
-import de.hdodenhof.circleimageview.CircleImageView;
 
 
 public class ProfileSettingActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
