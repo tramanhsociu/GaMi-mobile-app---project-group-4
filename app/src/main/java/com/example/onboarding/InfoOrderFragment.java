@@ -44,6 +44,15 @@ public class InfoOrderFragment extends Fragment {
         infoOrders.add(new InfoOrder(R.drawable.product3,"GaMi đang giao hàng cho bạn ","Đơn hàng GM003 của “Sen” đang được vận chuyển\n" +
                 "Mã đơn hàng 003.","10:09 12/10/2021",R.drawable.muiten));
 
+        infoOrders.add(new InfoOrder(R.drawable.product3,"GaMi đang giao hàng cho bạn ","Đơn hàng GM003 của “Sen” đang được vận chuyển\n" +
+                "Mã đơn hàng 003.","10:09 12/10/2021",R.drawable.muiten));
+
+        infoOrders.add(new InfoOrder(R.drawable.product3,"GaMi đang giao hàng cho bạn ","Đơn hàng GM003 của “Sen” đang được vận chuyển\n" +
+                "Mã đơn hàng 003.","10:09 12/10/2021",R.drawable.muiten));
+
+        infoOrders.add(new InfoOrder(R.drawable.product3,"GaMi đang giao hàng cho bạn ","Đơn hàng GM003 của “Sen” đang được vận chuyển\n" +
+                "Mã đơn hàng 003.","10:09 12/10/2021",R.drawable.muiten));
+
         return infoOrders;
     }
 }
