@@ -15,21 +15,6 @@
             android:name=".CartActivity"
             android:exported="true" />
         <activity
-            android:name=".ProfileSettingActivity"
-            android:exported="true" />
-        <activity
-            android:name=".PrivacyPolicyActivity"
-            android:exported="true" />
-        <activity
-            android:name=".ExchangePolicyActivity"
-            android:exported="true" />
-        <activity
-            android:name=".DeliveryPolicy"
-            android:exported="true" />
-        <activity
-            android:name=".PolicyActivity"
-            android:exported="true" />
-        <activity
             android:name=".SettingFeedbackActivity"
             android:exported="true" />
         <activity
@@ -77,6 +62,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".ProfileSettingActivity"
+            android:exported="true" />
+        <activity
+            android:name=".PrivacyPolicyActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ExchangePolicyActivity"
+            android:exported="true" />
+        <activity
+            android:name=".DeliveryPolicy"
+            android:exported="true" />
+        <activity
+            android:name=".PolicyActivity"
+            android:exported="true" />
         <!-- Facebook -->
         <activity
             android:name="com.facebook.FacebookActivity"
