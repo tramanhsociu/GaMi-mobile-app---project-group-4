@@ -24,7 +24,8 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:fontFamily="@font/sourcesanspro_bold"/>
 
         <ImageView
             android:id="@+id/imvLine"
@@ -48,7 +49,8 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtCancelord" />
+            app:layout_constraintTop_toBottomOf="@+id/txtCancelord"
+            android:fontFamily="@font/sourcesanspro_bold"/>
 
         <TextView
             android:id="@+id/txtline1"
@@ -61,7 +63,8 @@
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtno1" />
+            app:layout_constraintTop_toBottomOf="@+id/txtno1"
+            android:fontFamily="@font/sourcesanspro_regular"/>
 
         <TextView
             android:id="@+id/txtline2"
@@ -74,7 +77,8 @@
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtline1" />
+            app:layout_constraintTop_toBottomOf="@+id/txtline1"
+            android:fontFamily="@font/sourcesanspro_regular"/>
 
         <TextView
             android:id="@+id/txtno2"
@@ -88,7 +92,8 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtline2" />
+            app:layout_constraintTop_toBottomOf="@+id/txtline2"
+            android:fontFamily="@font/sourcesanspro_bold"/>
 
         <TextView
             android:id="@+id/txtline1no2"
@@ -101,7 +106,8 @@
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtno2" />
+            app:layout_constraintTop_toBottomOf="@+id/txtno2"
+            android:fontFamily="@font/sourcesanspro_regular"/>
 
         <TextView
             android:id="@+id/txtline2no2"
@@ -110,6 +116,7 @@
             android:layout_marginHorizontal="10dp"
             android:layout_marginTop="10dp"
             android:text="- Hệ thống không hiển thị nút hủy đơn hàng"
+            android:fontFamily="@font/sourcesanspro_regular"
             android:textColor="@color/gami3"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -141,7 +148,8 @@
                 android:text="Lưu ý:"
                 android:textColor="@color/gami2"
                 android:textSize="14sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:fontFamily="@font/sourcesanspro_bold"/>
         </LinearLayout>
         <TextView
             android:id="@+id/txtline1luuy"
@@ -154,7 +162,8 @@
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Luuy" />
+            app:layout_constraintTop_toBottomOf="@+id/Luuy"
+            android:fontFamily="@font/sourcesanspro_regular"/>
         <TextView
             android:id="@+id/txtline2luuy"
             android:layout_width="match_parent"
@@ -162,6 +171,7 @@
             android:layout_marginHorizontal="10dp"
             android:layout_marginTop="10dp"
             android:text="- Nếu yêu cầu hủy đơn của bạn bị từ chối bạn sẽ không thể tiếp tục đưa ra yêu cầu hủy đơn cho đơn hàng này"
+            android:fontFamily="@font/sourcesanspro_regular"
             android:textColor="@color/gami3"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -174,6 +184,7 @@
             android:layout_marginHorizontal="10dp"
             android:layout_marginTop="10dp"
             android:text="- Sau khi hủy đơn thành công, tiền hàng sẽ được hoàn lại cho bạn theo Chính sách của GaMi tùy thuộc vào phương thức thanh toán mà bạn đã lựa chọn"
+            android:fontFamily="@font/sourcesanspro_regular"
             android:textColor="@color/gami3"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -186,6 +197,7 @@
             android:layout_marginHorizontal="10dp"
             android:layout_marginTop="10dp"
             android:text="- Nếu đơn hàng bị hủy không cập nhật đúng trạng thái, vui lòng liên hệ với GaMi qua Trò chuyện với GaMi hoặc qua Tổng đài CSKH để được tư vấn và hỗ trợ."
+            android:fontFamily="@font/sourcesanspro_regular"
             android:textColor="@color/gami3"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -202,7 +214,8 @@
             android:textSize="14sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtline4luuy" />
+            app:layout_constraintTop_toBottomOf="@+id/txtline4luuy"
+            android:fontFamily="@font/sourcesanspro_bold"/>
 
         <FrameLayout
             android:id="@+id/btnLike"
@@ -228,7 +241,8 @@
                 android:layout_marginStart="10dp"
                 android:text="Vâng"
                 android:textColor="#4D000000"
-                android:textSize="11dp" />
+                android:textSize="11dp"
+                android:fontFamily="@font/sourcesanspro_regular"/>
         </FrameLayout>
 
         <FrameLayout
@@ -255,7 +269,8 @@
                 android:layout_marginStart="10dp"
                 android:text="Không"
                 android:textColor="#4D000000"
-                android:textSize="11dp" />
+                android:textSize="11dp"
+                android:fontFamily="@font/sourcesanspro_regular"/>
         </FrameLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

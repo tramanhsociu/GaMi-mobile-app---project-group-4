@@ -11,8 +11,11 @@ import androidx.fragment.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.ImageButton;
+import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class NotiFragment extends Fragment{
@@ -21,6 +24,7 @@ public class NotiFragment extends Fragment{
     ImageButton btnTransfer,btnDropDown;
     TextView txtNoti;
     ConstraintLayout itemSale, itemInfo;
+    FrameLayout infolayout;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -32,6 +36,7 @@ public class NotiFragment extends Fragment{
         txtNoti = view.findViewById(R.id.txtThongBao);
         itemSale = view.findViewById(R.id.itemSale);
         itemInfo = view.findViewById(R.id.itemInfo);
+        infolayout = view.findViewById(R.id.infoOrder);
 
         FragmentManager manager = getActivity().getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
@@ -51,6 +56,7 @@ public class NotiFragment extends Fragment{
                 txtNoti.setVisibility(View.GONE);
                 itemInfo.setVisibility(View.GONE);
                 itemSale.setVisibility(View.GONE);
+                infolayout.setVisibility(View.GONE);
             }
 
 
@@ -59,10 +65,12 @@ public class NotiFragment extends Fragment{
         btnDropDown.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-                transaction.add(R.id.infoOrder, new InfoOrderFragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
+                    FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                    transaction.add(R.id.infoOrder, new InfoOrderFragment());
+                    transaction.addToBackStack(null);
+                    transaction.commit();
+
+
             }
         });
 

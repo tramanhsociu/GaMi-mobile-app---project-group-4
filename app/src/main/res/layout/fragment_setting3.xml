@@ -23,7 +23,8 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:fontFamily="@font/sourcesanspro_bold"/>
         <ImageView
             android:id="@+id/imvLine"
             android:layout_width="wrap_content"
@@ -38,6 +39,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Hướng dẫn theo dõi áp dụng cho tất cả đơn hàng"
+            android:fontFamily="@font/sourcesanspro_regular"
             android:textSize="14sp"
             android:textColor="@color/gami4"
             app:layout_constraintTop_toBottomOf="@+id/imvLine"
@@ -50,6 +52,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="1. GaMi đã gửi hàng cho đơn vị vận chuyển hay chưa"
+            android:fontFamily="@font/sourcesanspro_bold"
             android:textColor="@color/gami2"
             android:textSize="14sp"
             android:textStyle="bold"
@@ -63,6 +66,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="- Vào mục Tôi > Chờ lấy hàng > Chọn đơn hàng cần kiểm tra (hoặc thông tin hiển thị dưới đơn hàng)"
+            android:fontFamily="@font/sourcesanspro_regular"
             android:textSize="14sp"
             android:textColor="@color/gami3"
             android:layout_marginTop="10dp"
@@ -75,6 +79,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="2. Kiểm tra tình trạng giao hàng"
+            android:fontFamily="@font/sourcesanspro_bold"
             android:textColor="@color/gami2"
             android:textStyle="bold"
             android:layout_marginTop="10dp"
@@ -113,7 +118,8 @@
             android:layout_marginHorizontal="10dp"
             app:layout_constraintTop_toBottomOf="@+id/imvThumb2"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"/>
+            app:layout_constraintStart_toStartOf="parent"
+            android:fontFamily="@font/sourcesanspro_bold"/>
         <TextView
             android:id="@+id/line1"
             android:layout_width="match_parent"
@@ -125,7 +131,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginHorizontal="10dp"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/sourcesanspro_regular"/>
         <TextView
             android:id="@+id/line2"
             android:layout_width="match_parent"
@@ -137,7 +144,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginTop="10dp"
-            android:layout_marginHorizontal="10dp"/>
+            android:layout_marginHorizontal="10dp"
+            android:fontFamily="@font/sourcesanspro_regular"/>
             <TextView
                 android:id="@+id/txtStep3"
                 android:layout_width="match_parent"
@@ -150,7 +158,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginHorizontal="10dp"
-                android:layout_marginTop="10dp"/>
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/sourcesanspro_bold"/>
         <TextView
             android:id="@+id/onebar"
             android:layout_width="match_parent"
@@ -162,7 +171,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginHorizontal="10dp"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/sourcesanspro_regular"/>
         <ImageView
             android:id="@+id/imvThumb3"
             android:layout_width="200dp"
@@ -183,7 +193,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginHorizontal="10dp"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/sourcesanspro_regular"/>
 
         <ImageView
             android:id="@+id/imvThumb4"
@@ -201,6 +212,7 @@
             android:text="4. Theo dõi tại mục Trò chuyện với GaMi"
             android:textSize="14sp"
             android:textColor="@color/gami2"
+            android:fontFamily="@font/sourcesanspro_bold"
             android:textStyle="bold"
             app:layout_constraintTop_toBottomOf="@id/imvThumb4"
             app:layout_constraintEnd_toEndOf="parent"
@@ -215,6 +227,7 @@
             android:layout_marginHorizontal="10dp"
             android:layout_marginTop="15dp"
             android:text="Bài viết này có hữu ích cho bạn không?"
+            android:fontFamily="@font/sourcesanspro_bold"
             android:textColor="@color/gami3"
             android:textSize="14sp"
             android:textStyle="bold"
@@ -245,7 +258,8 @@
                 android:layout_marginStart="10dp"
                 android:text="Vâng"
                 android:textColor="#4D000000"
-                android:textSize="11dp" />
+                android:textSize="11dp"
+                android:fontFamily="@font/sourcesanspro_regular"/>
         </FrameLayout>
 
         <FrameLayout
@@ -272,7 +286,8 @@
                 android:layout_marginStart="10dp"
                 android:text="Không"
                 android:textColor="#4D000000"
-                android:textSize="11dp" />
+                android:textSize="11dp"
+                android:fontFamily="@font/sourcesanspro_regular"/>
         </FrameLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
