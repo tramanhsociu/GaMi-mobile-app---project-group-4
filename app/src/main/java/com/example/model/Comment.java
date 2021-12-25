@@ -1,38 +1,29 @@
 package com.example.model;
 
 public class Comment {
-    private int blog_id;
-    private int blog_image;
-    private String blog_content;
 
-    public Comment(int blog_id, int blog_image, String blog_content) {
+private String cmt;
 
-        this.blog_id = blog_id;
-        this.blog_image = blog_image;
-        this.blog_content = blog_content;
+private String name;
+
+    public Comment(String cmt, String name) {
+        this.cmt = cmt;
+        this.name = name;
     }
 
-    public int getBlog_id() {
-        return blog_id;
+    public String getCmt() {
+        return cmt;
     }
 
-    public void setBlog_id(int blog_id) {
-        this.blog_id = blog_id;
+    public void setCmt(String cmt) {
+        this.cmt = cmt;
     }
 
-    public int getBlog_image() {
-        return blog_image;
+    public String getName() {
+        return name;
     }
 
-    public void setBlog_image(int blog_image) {
-        this.blog_image = blog_image;
-    }
-
-    public String getBlog_content() {
-        return blog_content;
-    }
-
-    public void setBlog_content(String blog_content) {
-        this.blog_content = blog_content;
+    public void setName(String name) {
+        this.name = name;
     }
 }

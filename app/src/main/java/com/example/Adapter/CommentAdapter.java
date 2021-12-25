@@ -49,21 +49,23 @@ public class CommentAdapter extends BaseAdapter {
             holder= new ViewHolder();
             LayoutInflater inflater=(LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             view=inflater.inflate(item_layout,null);
-            holder.imvAvtCmt.setImageResource(R.drawable.ic_avatar);
             holder.txtCmt=view.findViewById(R.id.txtCmt);
+            holder.txtName=view.findViewById(R.id.txtName);
             view.setTag(holder);
         }else{
             holder=(ViewHolder) view.getTag();
         }
 
         Comment c=comment.get(i);
-        holder.txtCmt.setText(c.getBlog_content());
-        holder.imvAvtCmt.setImageResource(R.drawable.ic_avatar);
+        holder.txtCmt.setText(c.getCmt());
+        holder.txtName.setText(c.getName());
         return view;
     }
 
-    private class ViewHolder{
-        ImageView imvAvtCmt;
-        TextView txtCmt;
+    public static class ViewHolder{
+
+        TextView txtCmt,txtName;
+
+
     }
 }

@@ -66,6 +66,7 @@ public class BlogFragment extends Fragment{
 
 
     private void addEvent() {
+
 //    lvBlog.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 //        @Override
 //        public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
@@ -82,6 +83,5 @@ public class BlogFragment extends Fragment{
 //            }
 //        }
 //    });
-
     }
 }

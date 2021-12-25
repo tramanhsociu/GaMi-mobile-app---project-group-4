@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity_cmt_blog"
+    tools:context=".CommentBlog"
     android:orientation="vertical"
     android:padding="10dp">
 
@@ -14,7 +14,7 @@
         android:layout_height="50dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:text="@string/Binh_luan"
+        android:text="Bình luận"
         android:fontFamily="@font/sourcesanspro_regular"
         android:textSize="26sp"
         android:textColor="@color/gami3"
@@ -46,7 +46,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="8"
-            android:hint="@string/add_cmt"
+            android:hint="Nhập bình luận"
             android:fontFamily="@font/sourcesanspro_regular"
             android:textColor="@color/gami4"
             android:background="@drawable/shape"
