@@ -1,121 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".NotiFragment"
-    android:id="@+id/layout_notification">
+    android:layout_height="match_parent">
 
-<!--    <ScrollView-->
-<!--        android:id="@+id/scrollView3"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent">-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".NotiFragment"
+        android:id="@+id/layout_notification">
 
-        <LinearLayout
-            android:id="@+id/lnlayout"
+        <TextView
+            android:id="@+id/txtThongBao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sourcesanspro_regular"
+            android:gravity="center"
+            android:paddingTop="16dp"
+            android:text="Thông báo"
+            android:textColor="#93766E"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/itemSale"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/shape"
+            app:layout_constraintTop_toBottomOf="@id/txtThongBao"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageView
+                android:id="@+id/imvsale"
+                android:layout_width="45dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center_vertical"
+                android:scaleType="fitXY"
+                android:src="@drawable/tagsale"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:id="@+id/lnSale"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="2"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="9"
                 android:orientation="vertical"
-                android:layout_marginStart="5dp"
-                android:layout_marginEnd="5dp">
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/imvsale"
+                app:layout_constraintTop_toTopOf="parent">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/txtSale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:text="Khuyến mãi"
+                    android:textColor="#93766E"
+                    android:textSize="20sp" />
 
-                    <TextView
-                        android:id="@+id/txtThongBao"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/sourcesanspro_regular"
-                        android:gravity="center"
-                        android:paddingTop="16dp"
-                        android:text="Thông báo"
-                        android:textColor="#93766E"
-                        android:textSize="24sp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/itemSale"
-                    android:layout_width="match_parent"
-                    android:layout_height="65dp"
-                    android:layout_marginTop="16dp"
-                    android:background="@drawable/shape">
-
-                    <ImageView
-                        android:id="@+id/imvsale"
-                        android:layout_width="45dp"
-                        android:layout_height="48dp"
-                        android:layout_gravity="center_vertical"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/tagsale"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <LinearLayout
-                        android:id="@+id/lnSale"
-                        android:layout_width="wrap_content"
-                        android:layout_height="45dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_weight="9"
-                        android:orientation="vertical"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toEndOf="@id/imvsale"
-                        app:layout_constraintTop_toTopOf="parent">
-
-                        <TextView
-                            android:id="@+id/txtSale"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/sourcesanspro_regular"
-                            android:text="Khuyến mãi"
-                            android:textColor="#93766E"
-                            android:textSize="20sp" />
-
-                        <TextView
-                            android:id="@+id/txtsubSale"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/sourcesanspro_regular"
-                            android:text="Ở đây có sale khổng lồ"
-                            android:textColor="#8A8A8A"
-                            android:textSize="14sp" />
-                    </LinearLayout>
+                <TextView
+                    android:id="@+id/txtsubSale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:text="Ở đây có sale khổng lồ"
+                    android:textColor="#8A8A8A"
+                    android:textSize="14sp" />
+            </LinearLayout>
 
 
-                    <ImageButton
-                        android:id="@+id/btnTransfer"
-                        android:layout_width="7dp"
-                        android:layout_height="15dp"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginEnd="12dp"
-                        android:background="#00000000"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/ic_chuyenhuong"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+            <ImageButton
+                android:id="@+id/btnTransfer"
+                android:layout_width="7dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="12dp"
+                android:background="#00000000"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_chuyenhuong"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/lnnoti"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_weight="2"-->
+<!--                android:orientation="vertical"-->
+<!--                android:layout_marginStart="5dp"-->
+<!--                android:layout_marginEnd="5dp">-->
+
+
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/itemInfo"
                     android:layout_width="match_parent"
-                    android:layout_height="65dp"
+                    android:layout_height="match_parent"
                     android:layout_marginTop="16dp"
-                    android:background="@drawable/shape">
+                    android:layout_marginRight="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:background="@drawable/shape"
+                    app:layout_constraintTop_toBottomOf="@id/itemSale"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
 
                     <ImageView
                         android:id="@+id/imvgau"
@@ -129,7 +130,7 @@
 
                     <LinearLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_gravity="center_vertical"
                         android:layout_marginLeft="10dp"
                         android:layout_weight="8.5"
@@ -162,20 +163,17 @@
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
-            </LinearLayout>
-            <FrameLayout
-                android:id="@+id/infoOrder"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_marginStart="5dp"
-                android:layout_marginEnd="5dp"/>
+        <FrameLayout
+            android:id="@+id/infoOrder"
+            android:layout_width="match_parent"
+            android:layout_height="960dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/itemInfo"
+            />
 
-        </LinearLayout>
+<!--            </LinearLayout>-->
 
-<!--    </ScrollView>-->
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

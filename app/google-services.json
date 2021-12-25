@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "11211881357",
+    "project_id": "gami-d08b7",
+    "storage_bucket": "gami-d08b7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:11211881357:android:e3caf37b5fb0ca29391bc4",
+        "android_client_info": {
+          "package_name": "com.example.onboarding"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "11211881357-bp7vv33d72i45r4voa7fg3ouv9lvrt79.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.onboarding",
+            "certificate_hash": "2f01f991c8912956b3187a77e92f4fe3d1260d4a"
+          }
+        },
+        {
+          "client_id": "11211881357-ksn3v3antgg3ojcjtmn1gan1g7a7uh7v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUQMaDftRahucXvb4OK8YdmNs106O0_t8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "11211881357-ksn3v3antgg3ojcjtmn1gan1g7a7uh7v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
