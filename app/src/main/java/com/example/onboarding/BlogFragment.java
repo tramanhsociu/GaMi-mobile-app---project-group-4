@@ -1,5 +1,6 @@
 package com.example.onboarding;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffColorFilter;
@@ -39,10 +40,11 @@ public class BlogFragment extends Fragment{
         lvBlog=view.findViewById(R.id.lvBlog);
         txtContent=view.findViewById(R.id.txtContent);
         imvReact=view.findViewById(R.id.imv_ic_tim);
+        imvCmt=view.findViewById(R.id.imv_ic_cmt);
 
         initData();
         initAdapter();
-//        myColor();
+
         addEvent();
         return view;
 
@@ -62,44 +64,24 @@ public class BlogFragment extends Fragment{
         lvBlog.setAdapter(adapter);
     }
 
-//    private void myColor() {
-//        int tint= Color.parseColor("#DE816F");
-//        PorterDuff.Mode mode=PorterDuff.Mode.SRC_ATOP;
-//        int draw[]={R.drawable.ic_unlike};
-//        for (int id:draw){
-//            Drawable icon=getResources().getDrawable(id);
-//            icon.setColorFilter(tint,mode);
-//        }
-//    }
 
     private void addEvent() {
-    lvBlog.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-        @Override
-        public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-            imvReact.setSelected(!imvReact.isSelected());
-            if(imvReact.isSelected()){
-                imvReact.setImageResource(R.drawable.ic_like);
-            }else{
-                imvReact.setImageResource(R.drawable.ic_unlike);
-            }
-        }
-    });
+//    lvBlog.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//        @Override
+//        public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+//            imvReact.setSelected(!imvReact.isSelected());
+//            if(imvReact.isSelected()){
+//                imvReact.setImageResource(R.drawable.ic_like);
+//            }else{
+//                imvReact.setImageResource(R.drawable.ic_unlike);
+//            }
+//            imvCmt.setSelected(!imvCmt.isSelected());
+//            if (imvCmt.isSelected()){
+//               Intent intent= new Intent(view.getContext(),CommentBlog.class);
+//               view.getContext().startActivity(intent);
+//            }
+//        }
+//    });
 
-
-//       lvBlog.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//           @Override
-//           public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-//
-//                   if (imvReact.getTag()==null||imvReact.getTag().equals("like")){
-//                       imvReact.setImageResource(R.drawable.ic_like);
-//                       imvReact.setTag("unlike");
-//                   }else{
-//                       imvReact.setImageResource(R.drawable.ic_unlike);
-//                       imvReact.setTag("like");
-//                   }
-//               }
-//
-//
-//       });
     }
 }

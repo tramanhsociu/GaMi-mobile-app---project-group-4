@@ -24,7 +24,7 @@
     <ListView
         android:id="@+id/lvCmt"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="580dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/edtBinhluan"/>
     <LinearLayout
@@ -42,6 +42,7 @@
             android:layout_weight="1"
             />
         <EditText
+            android:id="@+id/edtCmt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="8"
@@ -51,6 +52,7 @@
             android:background="@drawable/shape"
             />
         <ImageView
+            android:id="@+id/imvSendCmt"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:src="@drawable/ic_send"

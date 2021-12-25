@@ -5,6 +5,7 @@ import android.database.Cursor;
 import android.database.DatabaseErrorHandler;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.database.sqlite.SQLiteStatement;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -31,7 +32,7 @@ public class BlogDatabase extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        String sql="CREATE TABLE IF NOT EXISTS "+TBL_NAME+"("+COL_B_ID+" INTEGER PRIMARY KEY AUTOINCREMENT, "+COL_B_CONTENT+" VARCHAR(500), "+COL_B_IMAGE+" BLOB)";
+        String sql="CREATE TABLE IF NOT EXISTS "+TBL_NAME+"("+COL_B_ID+" INTEGER PRIMARY KEY AUTOINCREMENT, "+COL_B_CONTENT+" VARCHAR(500), "+COL_B_IMAGE+" INTEGER)";
         sqLiteDatabase.execSQL(sql);
 
     }
@@ -66,5 +67,20 @@ public class BlogDatabase extends SQLiteOpenHelper {
         if(count==0){
             this.execSql("INSERT INTO "+TBL_NAME+" VALUES(null, 'Chi tiết bài băng 1', 'R.drawable.product1')");
         }
+    }
+
+    public boolean insertData(String content, int image){
+        try{
+            SQLiteDatabase db=getWritableDatabase();
+            String sql="INSERT INTO "+TBL_NAME+" VALUES(null, ?, ?)";
+            SQLiteStatement statement=db.compileStatement(sql);
+            statement.bindString(1,content);
+            statement.bindDouble(3,image);
+            statement.executeInsert();
+            return true;
+        }catch(Exception e){
+            return false;
+        }
+
     }
 }
