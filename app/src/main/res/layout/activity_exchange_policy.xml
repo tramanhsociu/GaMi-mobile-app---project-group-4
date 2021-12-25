@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/kem"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="14dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp">
+
+            <ImageView
+                android:id="@+id/imvBack"
+                android:layout_width="7dp"
+                android:layout_height="14dp"
+                android:src="@drawable/back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtPolicy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sourcesanspro_bold"
+                android:gravity="center"
+                android:text="Chính sách đổi, trả hàng"
+                android:textColor="#93766E"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/kem"
+            android:fillViewport="true"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtDetailPolicy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro_bold"
+                    android:textColor="#93766E"
+                    android:textSize="14sp"
+                    android:text="1. Điều kiện áp dụng"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:textColor="#93766E"
+                    android:textSize="14sp"
+                    android:paddingTop="5dp"
+                    android:paddingStart="5dp"
+                    android:text="Theo các điều khoản và điều kiện được quy định trong Chính sách Trả hàng và Hoàn tiền này và tạo thành một phần của Điều khoản dịch vụ, GaMi đảm bảo quyền lợi của Người mua bằng cách cho phép gửi yêu cầu hoàn trả sản phẩm và/hoặc hoàn tiền trước khi hết hạn. Thời hạn Shopee Đảm Bảo đã được qui định trong Điều khoản Dịch vụ."/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:textColor="#93766E"
+                    android:textSize="14sp"
+                    android:paddingStart="5dp"
+                    android:paddingTop="5dp"
+                    android:text="GaMi Đảm bảo thực hiện bởi GaMi, theo yêu cầu của Người dùng, để hỗ trợ Người dùng trong việc giải quyết các xung đột có thể phát sinh trong quá trình giao dịch. Người dùng có thể liên hệ với nhau để thỏa thuận về việc giải quyết tranh chấp của họ hoặc báo cáo lên GaMi hoặc cơ quan nhà nước có thẩm quyền để được hỗ trợ trong việc giải quyết bất kỳ tranh chấp xảy ra trước, trong hoặc sau khi sử dụng GaMi Đảm bảo."/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro_bold"
+                    android:textColor="#93766E"
+                    android:textSize="14sp"
+                    android:paddingTop="5dp"
+                    android:text="2. Điều kiện trả hàng"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:textColor="#93766E"
+                    android:textSize="14sp"
+                    android:paddingStart="5dp"
+                    android:paddingTop="5dp"
+                    android:text="Người mua đồng ý rằng cô ấy/anh ấy chỉ có thể yêu cầu trả hàng và hoàn tiền trong các trường hợp sau:"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:textColor="#93766E"
+                    android:textSize="14sp"
+                    android:paddingStart="10dp"
+                    android:text="- Người mua đã thanh toán nhưng (i) không nhận được sản phẩm, hoặc (ii) không nhận được toàn bộ các sản phẩm đã đặt, hoặc (iii) nhận được sản phẩm là hàng giả, hàng nhái;"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:textColor="#93766E"
+                    android:textSize="14sp"
+                    android:paddingStart="10dp"
+                    android:text="- Sản phẩm bị lỗi hoặc bị hư hại trong quá trình vận chuyển;"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:textColor="#93766E"
+                    android:textSize="14sp"
+                    android:paddingStart="10dp"
+                    android:text="- Người bán giao sai sản phẩm cho Người mua (ví dụ: sai kích cỡ, sai màu sắc, v.vv...);"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:textColor="#93766E"
+                    android:textSize="14sp"
+                    android:paddingStart="10dp"
+                    android:text="- Sản phẩm Người mua nhận được khác biệt một cách rõ rệt so với thông tin mà Người bán cung cấp trong mục mô tả sản phẩm;"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:textColor="#93766E"
+                    android:textSize="14sp"
+                    android:paddingStart="10dp"
+                    android:text="- Sản phẩm bị trả lại không phải là Sản phẩm hạn chế trả hàng;"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:textColor="#93766E"
+                    android:textSize="14sp"
+                    android:paddingStart="10dp"
+                    android:text="-  Người bán đã tự thỏa thuận và đồng ý cho Người mua trả hàng (tuy nhiên GaMi sẽ cần Người bán xác nhận lại những thoả thuận này)."/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:textColor="#93766E"
+                    android:textSize="14sp"
+                    android:paddingStart="5dp"
+                    android:text="Người mua có thể gửi yêu cầu trả hàng/hoàn tiền trong vòng 07 (bảy) ngày kể từ lúc đơn hàng được cập nhật giao hàng thành công. Riêng đối với các sản phẩm thực phẩm tươi sống và đông lạnh (trừ trường hợp chưa nhận được hàng), Người mua cần gửi yêu cầu trả hàng/hoàn tiền trong vòng 24 giờ kể từ lúc đơn hàng được cập nhật giao hàng thành công."/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:textColor="#93766E"
+                    android:textSize="14sp"
+                    android:paddingStart="5dp"
+                    android:text="Tất cả các yêu cầu trả hàng-hoàn tiền phải được thực hiện trên Ứng dụng GaMi."/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:textColor="#93766E"
+                    android:textSize="14sp"
+                    android:paddingStart="5dp"
+                    android:text="Dịch vụ vận chuyển của GaMi không cho phép Người Nhận kiểm tra hàng trước khi nhận hàng."/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:textColor="#93766E"
+                    android:textSize="14sp"
+                    android:paddingStart="5dp"
+                    android:text="GaMi luôn xem xét cẩn thận từng yêu cầu trả hàng/hoàn tiền của Người mua và có quyền đưa ra quyết định cuối cùng đối với yêu cầu đó dựa trên các quy định nêu trên và  theo Điều khoản Dịch vụ của GaMi."/>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

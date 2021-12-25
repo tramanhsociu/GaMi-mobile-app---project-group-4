@@ -11,7 +11,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
+import android.graphics.drawable.Icon;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.MenuItem;
@@ -103,59 +105,134 @@ public class HomeActivity extends AppCompatActivity{
                startActivity(intent);
            }
        });
-        //showcase
-        new TapTargetSequence(this).targets(
-                TapTarget.forView(btnCart,"Giỏ hàng", "Bỏ vào đây món đồ bạn muốn mua")
-                        .outerCircleColor(R.color.gami2)
-                        .outerCircleAlpha(0.96f)
-                        .targetCircleColor(R.color.white)
-                        .titleTextSize(10)
-                        .titleTextColor(R.color.white)
-                        .descriptionTextColor(R.color.white)
-                        .descriptionTextSize(10)
-                        .textColor(R.color.white)
-                        .textTypeface(Typeface.SANS_SERIF)
-                        .dimColor(R.color.black)
-                        .drawShadow(true)
-                        .cancelable(false)
-                        .tintTarget(true)
-                        .transparentTarget(true)
-                        .targetRadius(60),
-                TapTarget.forView(btnChat,"Trò chuyện với GaMi", "Trò chuyện trực tiếp cùng đội ngũ siêu cute")
-                        .outerCircleColor(R.color.gami2)
-                        .outerCircleAlpha(0.96f)
-                        .targetCircleColor(R.color.white)
-                        .titleTextSize(10)
-                        .titleTextColor(R.color.white)
-                        .descriptionTextColor(R.color.white)
-                        .descriptionTextSize(10)
-                        .textColor(R.color.white)
-                        .textTypeface(Typeface.SANS_SERIF)
-                        .dimColor(R.color.black)
-                        .drawShadow(true)
-                        .cancelable(false)
-                        .tintTarget(true)
-                        .transparentTarget(true)
-                        .targetRadius(60)).listener(new TapTargetSequence.Listener() {
-            @Override
-            public void onSequenceFinish() {
-                Toast.makeText(HomeActivity.this, "Hướng dẫn hoàn tất", Toast.LENGTH_SHORT).show();
-            }
 
-            @Override
-            public void onSequenceStep(TapTarget lastTarget, boolean targetClicked) {
-                Toast.makeText(HomeActivity.this, "Tuyệt!", Toast.LENGTH_SHORT).show();
-            }
+        //showcase for once
+        SharedPreferences prefs=getSharedPreferences("prefs",MODE_PRIVATE);
+        boolean firstStart = prefs.getBoolean("firstStart",true);
 
-            @Override
-            public void onSequenceCanceled(TapTarget lastTarget) {
-
-            }
-        }).start();
-
+        if(firstStart){
+            tapTartget();
+        }
 
     }
+        private void tapTartget (){
+            new TapTargetSequence(this).targets(
+                    TapTarget.forView(findViewById(R.id.menu_trangchu),"Trang chủ","Bạn mua sắm ở đây nè")
+                            .outerCircleColor(R.color.gami2)
+                            .outerCircleAlpha(0.96f)
+                            .targetCircleColor(R.color.white)
+                            .titleTextSize(18)
+                            .titleTextColor(R.color.white)
+                            .descriptionTextColor(R.color.white)
+                            .descriptionTextSize(16)
+                            .textColor(R.color.white)
+                            .textTypeface(Typeface.SANS_SERIF)
+                            .dimColor(R.color.black)
+                            .drawShadow(true)
+                            .cancelable(false)
+                            .tintTarget(true)
+                            .transparentTarget(true)
+                            .targetRadius(60),
+                    TapTarget.forView(findViewById(R.id.menu_blog),"Bài viết","Nơi GaMi đăng tải các bài viết bổ ích cho bạn")
+                            .outerCircleColor(R.color.gami2)
+                            .outerCircleAlpha(0.96f)
+                            .targetCircleColor(R.color.white)
+                            .titleTextSize(18)
+                            .titleTextColor(R.color.white)
+                            .descriptionTextColor(R.color.white)
+                            .descriptionTextSize(16)
+                            .textColor(R.color.white)
+                            .textTypeface(Typeface.SANS_SERIF)
+                            .dimColor(R.color.black)
+                            .drawShadow(true)
+                            .cancelable(false)
+                            .tintTarget(true)
+                            .transparentTarget(true)
+                            .targetRadius(60),
+                    TapTarget.forView(findViewById(R.id.menu_noti),"Thông báo","Chúng mình cập nhật sớm nhất cho bạn")
+                            .outerCircleColor(R.color.gami2)
+                            .outerCircleAlpha(0.96f)
+                            .targetCircleColor(R.color.white)
+                            .titleTextSize(18)
+                            .titleTextColor(R.color.white)
+                            .descriptionTextColor(R.color.white)
+                            .descriptionTextSize(16)
+                            .textColor(R.color.white)
+                            .textTypeface(Typeface.SANS_SERIF)
+                            .dimColor(R.color.black)
+                            .drawShadow(true)
+                            .cancelable(false)
+                            .tintTarget(true)
+                            .transparentTarget(true)
+                            .targetRadius(60),
+                    TapTarget.forView(findViewById(R.id.menu_toi),"Tôi","Nơi lưu giữ thông tin của bạn hê hê")
+                            .outerCircleColor(R.color.gami2)
+                            .outerCircleAlpha(0.96f)
+                            .targetCircleColor(R.color.white)
+                            .titleTextSize(18)
+                            .titleTextColor(R.color.white)
+                            .descriptionTextColor(R.color.white)
+                            .descriptionTextSize(16)
+                            .textColor(R.color.white)
+                            .textTypeface(Typeface.SANS_SERIF)
+                            .dimColor(R.color.black)
+                            .drawShadow(true)
+                            .cancelable(false)
+                            .tintTarget(true)
+                            .transparentTarget(true)
+                            .targetRadius(60),
+                    TapTarget.forView(btnCart,"Giỏ hàng", "Bỏ vào đây món đồ bạn muốn mua")
+                            .outerCircleColor(R.color.gami2)
+                            .outerCircleAlpha(0.96f)
+                            .targetCircleColor(R.color.white)
+                            .titleTextSize(18)
+                            .titleTextColor(R.color.white)
+                            .descriptionTextColor(R.color.white)
+                            .descriptionTextSize(16)
+                            .textColor(R.color.white)
+                            .textTypeface(Typeface.SANS_SERIF)
+                            .dimColor(R.color.black)
+                            .drawShadow(true)
+                            .cancelable(false)
+                            .tintTarget(true)
+                            .transparentTarget(true)
+                            .targetRadius(60),
+                    TapTarget.forView(btnChat,"Trò chuyện với GaMi", "Trò chuyện trực tiếp cùng đội ngũ siêu cute")
+                            .outerCircleColor(R.color.gami2)
+                            .outerCircleAlpha(0.96f)
+                            .targetCircleColor(R.color.white)
+                            .titleTextSize(18)
+                            .titleTextColor(R.color.white)
+                            .descriptionTextColor(R.color.white)
+                            .descriptionTextSize(16)
+                            .textColor(R.color.white)
+                            .textTypeface(Typeface.SANS_SERIF)
+                            .dimColor(R.color.black)
+                            .drawShadow(true)
+                            .cancelable(false)
+                            .tintTarget(true)
+                            .transparentTarget(true)
+                            .targetRadius(60)).listener(new TapTargetSequence.Listener() {
+                @Override
+                public void onSequenceFinish() {
+                    Toast.makeText(HomeActivity.this, "Hướng dẫn hoàn tất", Toast.LENGTH_SHORT).show();
+                }
 
+                @Override
+                public void onSequenceStep(TapTarget lastTarget, boolean targetClicked) {
+
+                }
+
+                @Override
+                public void onSequenceCanceled(TapTarget lastTarget) {
+
+                }
+            }).start();
+            SharedPreferences prefs = getSharedPreferences("prefs", MODE_PRIVATE);
+            SharedPreferences.Editor editor = prefs.edit();
+            editor.putBoolean("firstStart",false);
+            editor.apply();
+        }
 
 
 

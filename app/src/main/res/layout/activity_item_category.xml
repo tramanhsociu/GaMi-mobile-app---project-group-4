@@ -12,10 +12,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         >
+
         <ImageView
             android:id="@+id/btnBack"
             android:layout_width="20dp"
             android:layout_height="20dp"
+            android:layout_marginStart="8dp"
             android:src="@drawable/ic_back"
             app:layout_constraintBottom_toBottomOf="@+id/edtSearch"
             app:layout_constraintStart_toStartOf="parent"
@@ -28,7 +30,7 @@
             android:layout_width="250dp"
             android:layout_height="30dp"
             android:layout_gravity="center_vertical"
-            android:layout_marginStart="24dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:background="@drawable/custom_search"
             android:drawableStart="@drawable/ic_baseline_search_24"
@@ -37,7 +39,7 @@
             android:fontFamily="@font/sourcesanspro_regular"
             android:hint="Bạn muốn tìm gì ?"
             android:textSize="15sp"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnBack"
             app:layout_constraintTop_toTopOf="parent">
 
         </EditText>

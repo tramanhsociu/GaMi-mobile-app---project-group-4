@@ -35,7 +35,7 @@
                     android:textColor="@color/gami3"
                     android:textSize="18sp"
                     android:layout_marginStart="42dp"
-                    app:layout_constraintStart_toStartOf="parent"
+                    android:fontFamily="@font/sourcesanspro_regular" app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"/>
                 <Switch
                     android:id="@+id/swtBell"
@@ -71,7 +71,7 @@
                     android:textColor="@color/gami3"
                     android:textSize="18sp"
                     android:layout_marginStart="42dp"
-                    app:layout_constraintStart_toStartOf="parent"
+                    android:fontFamily="@font/sourcesanspro_regular" app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -80,6 +80,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Thông báo của tôi"
+        android:fontFamily="@font/sourcesanspro_regular"
         android:textColor="#38000000"
         android:textSize="13sp"
         android:layout_marginTop="10dp"
@@ -113,6 +114,7 @@
                 android:textSize="18sp"
                 android:layout_marginStart="42dp"
                 app:layout_constraintStart_toStartOf="parent"
+                android:fontFamily="@font/sourcesanspro_regular"
                 app:layout_constraintTop_toTopOf="parent"/>
             <Switch
                 android:id="@+id/swtUdt"
@@ -149,6 +151,7 @@
                 android:textSize="18sp"
                 android:layout_marginStart="42dp"
                 app:layout_constraintStart_toStartOf="parent"
+                android:fontFamily="@font/sourcesanspro_regular"
                 app:layout_constraintTop_toTopOf="parent"/>
             <Switch
                 android:id="@+id/swtChat"
@@ -185,6 +188,7 @@
                 android:textSize="18sp"
                 android:layout_marginStart="42dp"
                 app:layout_constraintStart_toStartOf="parent"
+                android:fontFamily="@font/sourcesanspro_regular"
                 app:layout_constraintTop_toTopOf="parent"/>
             <Switch
                 android:id="@+id/swtSale"
@@ -217,6 +221,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Bài viết"
+                android:fontFamily="@font/sourcesanspro_regular"
                 android:textColor="@color/gami3"
                 android:textSize="18sp"
                 android:layout_marginStart="42dp"

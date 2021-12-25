@@ -18,6 +18,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <ImageView
+            android:id="@+id/imvBack"
+            android:layout_width="7dp"
+            android:layout_height="14dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <ImageButton
             android:id="@+id/btnCard"
             android:layout_width="25dp"
@@ -50,6 +60,7 @@
             android:id="@+id/imvThumb"
             android:layout_width="280dp"
             android:layout_height="280dp"
+            android:layout_marginTop="24dp"
             android:src="@drawable/dochoi_10"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -191,18 +202,26 @@
 
     </LinearLayout>
 
-    <ImageView
+    <TextView
         android:id="@+id/btnAddCart"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/cart_button"
         android:elevation="3dp"
-        android:src="@drawable/ic_addcart"
+        android:fontFamily="@font/sourcesanspro_bold"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="THÊM"
+        android:textColor="@color/white"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout">
 
-    </ImageView>
+    </TextView>
 
 
 

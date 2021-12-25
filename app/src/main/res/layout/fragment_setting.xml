@@ -19,6 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="10dp"
             android:text="Làm sao để mua hàng/ Đặt hàng trên ứng dụng GaMi"
+            android:fontFamily="@font/sourcesanspro_bold"
             android:textColor="@color/gami3"
             android:textSize="19sp"
             android:textStyle="bold"
@@ -42,6 +43,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="22dp"
             android:text="GaMi chỉ hỗ trợ đặt và giao hàng cho những người mua có địa chỉ tại Việt Nam."
+            android:fontFamily="@font/sourcesanspro_bold"
             android:textColor="@color/gami2"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -57,6 +59,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="19dp"
             android:text="Trước tiên, bạn cần xác minh số điện thoại cho tài khoản của mình để có thể đặt hàng thành công."
+            android:fontFamily="@font/sourcesanspro_regular"
             android:textColor="@color/gami3"
             android:textSize="14sp"
             android:layout_marginHorizontal="10dp"
@@ -70,7 +73,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="Bước 1: Tìm kiếm sản phẩm bạn cần mua bằng một trong những cách sau:"
-
+            android:fontFamily="@font/sourcesanspro_bold"
             android:textColor="@color/gami3"
             android:textSize="14sp"
             android:textStyle="bold"
@@ -101,6 +104,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp"
                 android:text="Gõ từ khóa"
+                android:fontFamily="@font/sourcesanspro_regular"
                 android:textColor="@color/gami4" />
         </LinearLayout>
 
@@ -127,6 +131,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp"
                 android:text="Các mục hiển thị tại trang mua sắm"
+                android:fontFamily="@font/sourcesanspro_regular"
                 android:textAlignment="center"
                 android:textColor="@color/gami4" />
         </LinearLayout>
@@ -137,6 +142,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="19dp"
             android:text="Bước 2: Tham khảo và lựa chọn sản phẩm phù hợp"
+            android:fontFamily="@font/sourcesanspro_bold"
             android:textColor="@color/gami3"
             android:textSize="14sp"
             android:textStyle="bold"
@@ -155,6 +161,7 @@ Hình ảnh, tên sản phẩm
 Giá sản phẩm (giá gốc/ giá ưu đãi)
 Đánh giá sản phẩm
 Mô tả sản phẩm"
+            android:fontFamily="@font/sourcesanspro_regular"
             android:textColor="@color/gami3"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -173,6 +180,7 @@ Mô tả sản phẩm"
             android:textColor="@color/gami3"
             android:textSize="14sp"
             android:textStyle="bold"
+            android:fontFamily="@font/sourcesanspro_bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/txtinfo"
             app:layout_constraintEnd_toEndOf="parent"/>
@@ -195,7 +203,8 @@ Mô tả sản phẩm"
                 android:layout_marginTop="5dp"
                 android:text="Chọn biểu tượng"
                 android:textColor="@color/gami3"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                android:fontFamily="@font/sourcesanspro_regular"/>
 
             <ImageView
                 android:id="@+id/imvCart"
@@ -211,7 +220,8 @@ Mô tả sản phẩm"
                 android:layout_marginTop="5dp"
                 android:text="để bỏ sản phẩm vào giỏ hàng."
                 android:textColor="@color/gami3"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                android:fontFamily="@font/sourcesanspro_regular"/>
 
         </LinearLayout>
 
@@ -226,6 +236,7 @@ Mô tả sản phẩm"
             android:textColor="@color/gami3"
             android:textSize="14sp"
             android:textStyle="bold"
+            android:fontFamily="@font/sourcesanspro_bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtStep3info"
             app:layout_constraintEnd_toEndOf="parent"/>
@@ -237,6 +248,7 @@ Mô tả sản phẩm"
             android:layout_marginHorizontal="10dp"
             android:layout_marginTop="6dp"
             android:text="Trong trường hợp nếu bạn có mã giảm giá của GaMi, đừng quên áp dụng vào đơn hàng của mình."
+            android:fontFamily="@font/sourcesanspro_regular"
             android:textColor="@color/gami3"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -250,6 +262,7 @@ Mô tả sản phẩm"
             android:layout_marginHorizontal="10dp"
             android:layout_marginTop="16dp"
             android:text="Bước 5: Kiểm tra và thanh toán"
+            android:fontFamily="@font/sourcesanspro_bold"
             android:textColor="@color/gami3"
             android:textSize="14sp"
             android:textStyle="bold"
@@ -264,6 +277,7 @@ Mô tả sản phẩm"
             android:layout_marginTop="6dp"
             android:text="Xem lại địa chỉ nhận hàng, đơn vị vận chuyển, phương thức thanh toán trước khi nhấn nút ĐẶT HÀNG.
 Nếu có yêu cầu đặc biệt gì cho GaMi, bạn có thể nhấn vào nút “Tin nhắn”."
+            android:fontFamily="@font/sourcesanspro_regular"
             android:textColor="@color/gami3"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -278,6 +292,7 @@ Nếu có yêu cầu đặc biệt gì cho GaMi, bạn có thể nhấn vào nú
             android:text="Sau khi đọc hướng dẫn, hãy trở lại ứng dụng GaMi để bắt đầu hành trình mua sắm bất tận bạn nhé!"
             android:textColor="@color/gami2"
             android:textStyle="bold"
+            android:fontFamily="@font/sourcesanspro_bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtStep5info" />
 
@@ -288,6 +303,7 @@ Nếu có yêu cầu đặc biệt gì cho GaMi, bạn có thể nhấn vào nú
             android:layout_marginHorizontal="10dp"
             android:layout_marginTop="15dp"
             android:text="Bài viết này có hữu ích cho bạn không?"
+            android:fontFamily="@font/sourcesanspro_bold"
             android:textColor="@color/gami3"
             android:textSize="14sp"
             android:textStyle="bold"
@@ -318,7 +334,8 @@ Nếu có yêu cầu đặc biệt gì cho GaMi, bạn có thể nhấn vào nú
                 android:layout_marginStart="10dp"
                 android:text="Vâng"
                 android:textColor="#4D000000"
-                android:textSize="11dp" />
+                android:textSize="11dp"
+                android:fontFamily="@font/sourcesanspro_regular"/>
         </FrameLayout>
 
         <FrameLayout
@@ -345,7 +362,8 @@ Nếu có yêu cầu đặc biệt gì cho GaMi, bạn có thể nhấn vào nú
                 android:layout_marginStart="10dp"
                 android:text="Không"
                 android:textColor="#4D000000"
-                android:textSize="11dp" />
+                android:textSize="11dp"
+                android:fontFamily="@font/sourcesanspro_regular"/>
         </FrameLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

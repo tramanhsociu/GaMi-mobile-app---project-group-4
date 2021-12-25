@@ -10,20 +10,24 @@ import android.widget.RatingBar;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.example.helper.ManagementCard;
 import com.example.model.Products;
 
 public class ShowDetailActivity extends AppCompatActivity{
-    TextView txtNumOrder, txtName,txtPrice,txtDescription;
-    ImageView imvPlus, imvMinus,btnAddtoCard,imvThumb;
+    TextView txtNumOrder, txtName,txtPrice,txtDescription,btnAddtoCard;
+    ImageView imvPlus, imvMinus,imvThumb;
     RatingBar ratingBar;
     Products products;
     int numberOrder = 1;
+
+    private ManagementCard managementCard;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_detail);
+        managementCard = new ManagementCard(this);
         linkView();
         getBundle();
     }
@@ -57,6 +61,8 @@ public class ShowDetailActivity extends AppCompatActivity{
         btnAddtoCard.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
+                products.setNumberInCard(numberOrder);
+                managementCard.insertProduct(products);
 
             }
         });
