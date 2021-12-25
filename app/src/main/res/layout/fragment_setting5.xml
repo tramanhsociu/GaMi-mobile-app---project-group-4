@@ -23,7 +23,8 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:fontFamily="@font/sourcesanspro_bold"/>
 
         <ImageView
             android:id="@+id/imvLine"
@@ -45,7 +46,8 @@
             android:layout_marginHorizontal="10dp"
             app:layout_constraintTop_toBottomOf="@+id/txtAccount"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"/>
+            app:layout_constraintStart_toStartOf="parent"
+            android:fontFamily="@font/sourcesanspro_regular"/>
 
         <TextView
             android:id="@+id/txtline1"
@@ -58,7 +60,8 @@
             android:layout_marginHorizontal="10dp"
             app:layout_constraintTop_toBottomOf="@+id/txtDes"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"/>
+            app:layout_constraintStart_toStartOf="parent"
+            android:fontFamily="@font/sourcesanspro_regular"/>
 
         <TextView
             android:id="@+id/txtline2"
@@ -71,7 +74,8 @@
             android:layout_marginHorizontal="10dp"
             app:layout_constraintTop_toBottomOf="@+id/txtline1"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"/>
+            app:layout_constraintStart_toStartOf="parent"
+            android:fontFamily="@font/sourcesanspro_regular"/>
         <LinearLayout
             android:id="@+id/Luuy"
             android:layout_width="match_parent"
@@ -97,13 +101,15 @@
                 android:text="Lưu ý:"
                 android:textColor="@color/gami2"
                 android:textSize="14sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:fontFamily="@font/sourcesanspro_bold"/>
         </LinearLayout>
         <TextView
             android:id="@+id/txtline1luuy"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="- Khi tài khoản của bạn bị khóa/bị giới hạn, bạn sẽ nhận được thông báo khi thực hiện đăng nhập vào tài khoản hoặc một giao dịch nào đó liên quan trên GaMi"
+            android:fontFamily="@font/sourcesanspro_regular"
             android:textSize="14sp"
             android:textColor="@color/gami3"
             android:layout_marginTop="10dp"
@@ -116,6 +122,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="- Tài khoản của bạn sẽ bị khóa vĩnh viễn nếu:"
+            android:fontFamily="@font/sourcesanspro_regular"
             android:textSize="14sp"
             android:textColor="@color/gami3"
             android:layout_marginTop="10dp"
@@ -128,6 +135,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text=". Bạn không đưa ra yêu cầu khôi phục tài khoản phù hợp trong vòng 30 ngày kể từ thời điểm lần đầu tiên bạn nhận được thông báo về việc tài khoản bị khóa/bị giới hạn"
+            android:fontFamily="@font/sourcesanspro_regular"
             android:textSize="14sp"
             android:textColor="@color/gami3"
             android:layout_marginTop="10dp"
@@ -140,6 +148,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text=". Yêu cầu khôi phục của bạn không được chấp thuận bởi bộ phận Quản lý rủi ro"
+            android:fontFamily="@font/sourcesanspro_regular"
             android:textSize="14sp"
             android:textColor="@color/gami3"
             android:layout_marginTop="10dp"
@@ -154,6 +163,7 @@
             android:layout_marginHorizontal="10dp"
             android:layout_marginTop="15dp"
             android:text="Bài viết này có hữu ích cho bạn không?"
+            android:fontFamily="@font/sourcesanspro_bold"
             android:textColor="@color/gami3"
             android:textSize="14sp"
             android:textStyle="bold"
@@ -184,7 +194,8 @@
                 android:layout_marginStart="10dp"
                 android:text="Vâng"
                 android:textColor="#4D000000"
-                android:textSize="11dp" />
+                android:textSize="11dp"
+                android:fontFamily="@font/sourcesanspro_regular"/>
         </FrameLayout>
 
         <FrameLayout
@@ -211,7 +222,8 @@
                 android:layout_marginStart="10dp"
                 android:text="Không"
                 android:textColor="#4D000000"
-                android:textSize="11dp" />
+                android:textSize="11dp"
+                android:fontFamily="@font/sourcesanspro_regular"/>
         </FrameLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
