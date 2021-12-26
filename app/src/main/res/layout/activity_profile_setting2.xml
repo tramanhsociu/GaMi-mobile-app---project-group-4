@@ -74,7 +74,7 @@
                     <TextView
                         android:layout_weight="0"
                         android:fontFamily="@font/sourcesanspro_regular"
-                        android:text="Họ và tện: "
+                        android:text="Họ và tên: "
                         android:textColor="#93766E"
                         android:textSize="18sp" />
 
@@ -135,18 +135,20 @@
         </LinearLayout>
     </ScrollView>
 
-    <Button
+    <TextView
         android:id="@+id/btnDone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/cart_button"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
-        android:backgroundTint="#DE816F"
         android:elevation="8dp"
         android:fontFamily="@font/sourcesanspro_bold"
         android:padding="10dp"
         android:text="HOÀN THÀNH"
+        android:textColor="@color/white"
+        android:gravity="center"
         android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

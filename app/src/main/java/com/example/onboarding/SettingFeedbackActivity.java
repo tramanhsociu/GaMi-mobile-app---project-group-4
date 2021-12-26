@@ -24,7 +24,7 @@ public class SettingFeedbackActivity extends AppCompatActivity {
     ImageView imvdoggo, imvBack, imvConfetti;
     String answerValue;
     Animation charanim, aniconfetti, btt;
-    FeedbackAppDB DB;
+    FeedbackAppDB DB = new FeedbackAppDB(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +32,7 @@ public class SettingFeedbackActivity extends AppCompatActivity {
         setContentView(R.layout.activity_setting_feedback);
         linkViews();
         addEvents();
+
     }
 
     private void linkViews() {
@@ -41,7 +42,7 @@ public class SettingFeedbackActivity extends AppCompatActivity {
         imvdoggo = findViewById(R.id.imvdoggo);
         imvConfetti = findViewById(R.id.imvConfetti);
         imvBack = findViewById(R.id.imvBack);
-        DB = new FeedbackAppDB(this);
+
     }
 
     private void addEvents() {

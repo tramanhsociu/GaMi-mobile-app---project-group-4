@@ -333,7 +333,7 @@
 
 
             <TextView
-                android:id="@+id/btnBuy"
+                android:id="@+id/txtBuy"
                 android:layout_width="200dp"
                 android:layout_height="52dp"
                 android:background="@drawable/cart_button"

@@ -73,6 +73,7 @@ public class CartActivity extends AppCompatActivity {
         txtTotalFee.setText(managementCard.getTotalFee() + "VND");
         txtDeliveryFee.setText(delivery + "VND");
         txtTotalPayment.setText(total+ "VND");
+
     }
 
     private void linkViews() {

@@ -45,20 +45,13 @@ public class CartDB{
     }
 
 
-    /**
-     * Get String value from SharedPreferences at 'key'. If key not found, return ""
-     * @param key SharedPreferences key
-     * @return String value at 'key' or "" (empty String) if key not found
-     */
-//    public String getString(String key) {
-//        return preferences.getString(key, "");
-//    }
 
-    /**
-     * Get parsed ArrayList of String from SharedPreferences at 'key'
-     * @param key SharedPreferences key
-     * @return ArrayList of String
-     */
+
+
+//            * Nhận ArrayList of String được phân tích cú pháp từ SharedPreferences tại 'key'
+//            * Khóa @param Khóa SharedPreferences
+
+
     public ArrayList<String> getListString(String key) {
         return new ArrayList<String>(Arrays.asList(TextUtils.split(preferences.getString(key, ""), "‚‗‚")));
     }
@@ -82,21 +75,20 @@ public class CartDB{
 
 
 
-    /**
-     * Put String value into SharedPreferences with 'key' and save
-     * @param key SharedPreferences key
-     * @param value String value to be added
-     */
+
+//           * Đặt giá trị Chuỗi vào SharedPreferences bằng 'key' và lưu
+//      * Khóa @param Khóa SharedPreferences
+
+
     public void putString(String key, String value) {
         checkForNullKey(key); checkForNullValue(value);
         preferences.edit().putString(key, value).apply();
     }
 
-    /**
-     * Put ArrayList of String into SharedPreferences with 'key' and save
-     * @param key SharedPreferences key
-     * @param stringList ArrayList of String to be added
-     */
+//
+//          * Đặt ArrayList of String vào SharedPreferences bằng 'key' và lưu
+//      * @param stringList Array Danh sách chuỗi sẽ được thêm vào
+//
     public void putListString(String key, ArrayList<String> stringList) {
         checkForNullKey(key);
         String[] myStringList = stringList.toArray(new String[stringList.size()]);
@@ -105,11 +97,10 @@ public class CartDB{
 
 
 
-    /**
-     * Put ObJect any type into SharedPrefrences with 'key' and save
-     * @param key SharedPreferences key
-     * @param obj is the Object you want to put
-     */
+//
+//          * Đặt ObJect bất kỳ loại nào vào SharedPrefrences bằng 'key' và lưu
+//      * @param obj là Đối tượng bạn muốn đặt
+//
     public void putObject(String key, Object obj){
     	checkForNullKey(key);
     	Gson gson = new Gson();
@@ -126,10 +117,6 @@ public class CartDB{
         putListString(key, objStrings);
     }
 
-    /**
-     * Remove SharedPreferences item with 'key'
-     * @param key SharedPreferences key
-     */
     public void remove(String key) {
         preferences.edit().remove(key).apply();
     }
@@ -140,21 +127,14 @@ public class CartDB{
 
 
 
+//            * null key sẽ làm hỏng tệp pref được chia sẻ và khiến chúng không thể đọc được, đây là một biện pháp phòng ngừa
 
-
-    /**
-     * null keys would corrupt the shared pref file and make them unreadable this is a preventive measure
-     * @param key the pref key to check
-     */
     private void checkForNullKey(String key){
         if (key == null){
             throw new NullPointerException();
         }
     }
-    /**
-     * null keys would corrupt the shared pref file and make them unreadable this is a preventive measure
-     * @param value the pref value to check
-     */
+
     private void checkForNullValue(String value){
         if (value == null){
             throw new NullPointerException();

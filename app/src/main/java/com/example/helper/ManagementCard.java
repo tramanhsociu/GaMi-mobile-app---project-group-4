@@ -65,4 +65,12 @@ public class ManagementCard{
         }
         return fee;
     }
+    public Integer getCount() {
+        ArrayList<Products> listProduct3 = getListCard();
+        int count = 0;
+        for (int i = 0; i < listProduct3.size(); i++) {
+            count = count + (listProduct3.get(i).getNumberInCard());
+        }
+        return count;
+    }
 }

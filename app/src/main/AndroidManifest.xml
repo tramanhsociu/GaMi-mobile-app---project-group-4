@@ -11,17 +11,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Onboarding">
+        <activity android:name=".CommentBlog"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".PaymentSuccessActivity"
+            android:exported="true" >
+
+        </activity>
         <activity
             android:name=".CartActivity"
-            android:exported="true" >
+            android:exported="true">
 
         </activity>
         <activity
             android:name=".SettingFeedbackActivity"
             android:exported="true" />
-        <activity
-            android:name=".CategoryActivity"
-            android:exported="true" />
+
         <activity
             android:name=".SettingPaymentActivity"
             android:exported="true" />
@@ -33,23 +40,13 @@
             android:exported="true" />
         <activity
             android:name=".SettingActivity"
-            android:exported="true">
-
-        </activity>
-
-        <activity android:name=".CommentBlog"
-            android:exported="true">
-
-        </activity>
-        <activity android:name=".ItemCategoryActivity"
-            android:exported="true">
-
-        </activity>
-       
+            android:exported="true" />
+        <activity
+            android:name=".ItemCategoryActivity"
+            android:exported="true"></activity>
         <activity
             android:name=".HomeActivity"
             android:exported="true">
-
 
 
 
@@ -63,17 +60,39 @@
         <activity
             android:name=".RegisterActivity"
             android:exported="true" />
+
+
         <activity
             android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
-        <activity android:name=".ShowDetailActivity"
+        <activity
+            android:name=".ShowDetailActivity"
             android:exported="true">
         </activity>
-        <activity android:name=".SearchActivity"
+        <activity
+            android:name=".SearchActivity"
+            android:exported="true"></activity>
+        <activity android:name=".PaymentActivity"
+            android:exported="true">
+        </activity>
+        <activity android:name=".ProfileSettingActivity"
+            android:exported="true">
+        </activity>
+        <activity android:name=".PrivacyPolicyActivity"
+            android:exported="true">
+        </activity>
+        <activity android:name=".ExchangePolicyActivity"
+            android:exported="true">
+        </activity>
+        <activity android:name=".DeliveryPolicy"
+            android:exported="true">
+        </activity>
+        <activity android:name=".PolicyActivity"
             android:exported="true">
         </activity>
 

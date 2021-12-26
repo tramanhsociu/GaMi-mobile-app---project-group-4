@@ -29,7 +29,7 @@
         android:background="@drawable/custom_search"
         android:drawableStart="@drawable/ic_baseline_search_24"
         android:drawablePadding="10dp"
-        android:elevation="3dp"
+
         android:fontFamily="@font/sourcesanspro_regular"
         android:hint="Bạn muốn tìm gì ?"
         android:textSize="15sp"

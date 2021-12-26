@@ -27,6 +27,7 @@ import android.widget.Toast;
 
 import com.example.database.ProfileDatabase;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
+import com.mikhaellopez.circularimageview.CircularImageView;
 
 import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
@@ -38,11 +39,11 @@ import java.io.OutputStream;
 public class ProfileSettingActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     //private Spinner spinnerGioiTinh;
     ImageView imvAvatar;
-    Button btnEditAvatar, btnDone;
+    Button btnEditAvatar;
     EditText edtName, edtNumberPhone, edtAddress;
     Spinner spiner_gioitinh;
 
-    TextView txtCamera, txtGallery;
+    TextView txtCamera, txtGallery, btnDone;
 
     BottomSheetDialog sheetDialog;
 
@@ -50,7 +51,7 @@ public class ProfileSettingActivity extends AppCompatActivity implements Adapter
 
     boolean IsCamera;
 
-    ProfileDatabase db;
+    public static ProfileDatabase db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +61,7 @@ public class ProfileSettingActivity extends AppCompatActivity implements Adapter
         linkViews();
         addEvents();
         createBottomSheet();
+
 
         db= new ProfileDatabase(this);
 
@@ -148,11 +150,16 @@ public class ProfileSettingActivity extends AppCompatActivity implements Adapter
                 if(!name.equals("") && !gender.equals("") && !address.equals("") && !phone.equals("") ){
                    boolean flag =db.insertData(name, gender, phone, address, convertPhoto());
                    if(flag){
-                       Toast.makeText(ProfileSettingActivity.this, "Success!", Toast.LENGTH_SHORT).show();
 
+                       Toast.makeText(ProfileSettingActivity.this, "Cập nhật thông tin thành công", Toast.LENGTH_SHORT).show();
+                       //Intent intent= new Intent(ProfileSettingActivity.this, ProfileFragment.class);
+                       //startActivity(intent);
                    }else {
                        Toast.makeText(ProfileSettingActivity.this, "Fail!", Toast.LENGTH_SHORT).show();
+
                    }
+                }else {
+                    Toast.makeText(ProfileSettingActivity.this, "Bạn cần nhập đầy đủ thông tin", Toast.LENGTH_SHORT).show();
                 }
             }
         });
