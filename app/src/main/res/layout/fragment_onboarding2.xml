@@ -42,7 +42,7 @@
 
     <FrameLayout
         android:id="@+id/btnRegis"
-        android:layout_width="342dp"
+        android:layout_width="wrap_content"
         android:layout_height="44dp"
         android:layout_marginTop="570dp"
         android:background="@drawable/regis_button"
@@ -56,6 +56,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
+            android:layout_gravity="center"
             android:text="@string/Register"
             android:textColor="@color/white"
             android:textSize="18sp"
@@ -64,7 +65,7 @@
 
     <FrameLayout
         android:id="@+id/btnLogin"
-        android:layout_width="342dp"
+        android:layout_width="wrap_content"
         android:layout_height="44dp"
         android:layout_marginTop="640dp"
         android:background="@drawable/round_button"
@@ -78,6 +79,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
+            android:layout_gravity="center"
             android:text="@string/logn"
             android:textColor="@color/white"
             android:textSize="18sp"

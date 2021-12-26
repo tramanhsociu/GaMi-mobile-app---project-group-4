@@ -65,8 +65,9 @@ public class RegisterActivity extends AppCompatActivity {
                     if(checkemail==false){
                        boolean insertData = DB.insertData(name,email,pass);
                        if(insertData==true){
-                           Intent intent = new Intent(RegisterActivity.this, RegisSucessActivity.class);
-                           startActivity(intent);
+                           Intent in = new Intent(RegisterActivity.this, RegisSucessActivity.class);
+                           in.putExtra("email",email);
+                           startActivity(in);
                        }else{
                            Toast.makeText(RegisterActivity.this, "Đăng ký không thành công", Toast.LENGTH_SHORT).show();
                        }

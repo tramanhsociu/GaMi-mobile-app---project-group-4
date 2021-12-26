@@ -3,6 +3,7 @@ package com.example.onboarding;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
@@ -13,6 +14,9 @@ import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.database.AccountDB;
+import com.example.database.FeedbackAppDB;
+
 public class SettingFeedbackActivity extends AppCompatActivity {
     RatingBar rtBar;
     FrameLayout btnFeedback;
@@ -20,6 +24,8 @@ public class SettingFeedbackActivity extends AppCompatActivity {
     ImageView imvdoggo, imvBack, imvConfetti;
     String answerValue;
     Animation charanim, aniconfetti, btt;
+    FeedbackAppDB DB;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,12 +35,13 @@ public class SettingFeedbackActivity extends AppCompatActivity {
     }
 
     private void linkViews() {
-        rtBar=findViewById(R.id.rtBar);
-        btnFeedback=findViewById(R.id.btnFeedback);
-        txtresultRate=findViewById(R.id.txtresultRate);
-        imvdoggo=findViewById(R.id.imvdoggo);
-        imvConfetti=findViewById(R.id.imvConfetti);
-        imvBack=findViewById(R.id.imvBack);
+        rtBar = findViewById(R.id.rtBar);
+        btnFeedback = findViewById(R.id.btnFeedback);
+        txtresultRate = findViewById(R.id.txtresultRate);
+        imvdoggo = findViewById(R.id.imvdoggo);
+        imvConfetti = findViewById(R.id.imvConfetti);
+        imvBack = findViewById(R.id.imvBack);
+        DB = new FeedbackAppDB(this);
     }
 
     private void addEvents() {
@@ -47,8 +54,18 @@ public class SettingFeedbackActivity extends AppCompatActivity {
         btnFeedback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(SettingFeedbackActivity.this, SettingActivity.class));
-                Toast.makeText(SettingFeedbackActivity.this, "Đánh giá của bạn đã lưu", Toast.LENGTH_SHORT).show();
+//                Intent in = getIntent();
+//                Bundle bundle = in.getExtras();
+//                String email = bundle.getString("email");
+//                String feedback = txtresultRate.getText().toString();
+//                boolean insertData = DB.insertData(email, feedback);
+//                if(insertData == true){
+                    startActivity(new Intent(SettingFeedbackActivity.this, SettingActivity.class));
+                    Toast.makeText(SettingFeedbackActivity.this, "Đánh giá của bạn đã lưu", Toast.LENGTH_SHORT).show();
+//                }else{
+//                    Toast.makeText(SettingFeedbackActivity.this, "Đánh giá không được lưu thành công", Toast.LENGTH_SHORT).show();
+//                }
+
             }
         });
 
@@ -67,7 +84,7 @@ public class SettingFeedbackActivity extends AppCompatActivity {
             @Override
             public void onRatingChanged(RatingBar ratingBar, float v, boolean b) {
                 answerValue = String.valueOf((int) (rtBar.getRating()));
-                if(answerValue.equals("1")){
+                if (answerValue.equals("1")) {
                     imvdoggo.setImageResource(R.drawable.ic_terrible);
 
                     imvdoggo.startAnimation(charanim);
@@ -75,7 +92,7 @@ public class SettingFeedbackActivity extends AppCompatActivity {
                     btnFeedback.startAnimation(btt);
 
                     txtresultRate.setText("Rất tệ lun á");
-                }else if(answerValue.equals("2")){
+                } else if (answerValue.equals("2")) {
                     imvdoggo.setImageResource(R.drawable.ic_bad);
 
                     imvdoggo.startAnimation(charanim);
@@ -83,7 +100,7 @@ public class SettingFeedbackActivity extends AppCompatActivity {
                     btnFeedback.startAnimation(btt);
 
                     txtresultRate.setText("Hơi tồi");
-                }else if(answerValue.equals("3")){
+                } else if (answerValue.equals("3")) {
                     imvdoggo.setImageResource(R.drawable.ic_okay);
 
                     imvdoggo.startAnimation(charanim);
@@ -91,7 +108,7 @@ public class SettingFeedbackActivity extends AppCompatActivity {
                     btnFeedback.startAnimation(btt);
 
                     txtresultRate.setText("Cũng ổn");
-                }else if(answerValue.equals("4")){
+                } else if (answerValue.equals("4")) {
                     imvdoggo.setImageResource(R.drawable.ic_good);
 
                     imvdoggo.startAnimation(charanim);
@@ -100,7 +117,7 @@ public class SettingFeedbackActivity extends AppCompatActivity {
                     btnFeedback.startAnimation(btt);
 
                     txtresultRate.setText("Tốt!!");
-                }else if(answerValue.equals("5")){
+                } else if (answerValue.equals("5")) {
                     imvdoggo.setImageResource(R.drawable.ic_great);
 
                     imvdoggo.startAnimation(charanim);
@@ -109,7 +126,7 @@ public class SettingFeedbackActivity extends AppCompatActivity {
                     btnFeedback.startAnimation(btt);
 
                     txtresultRate.setText("Tuyệt vời GaMi ơi");
-                }else{
+                } else {
                     Toast.makeText(SettingFeedbackActivity.this, "No Point", Toast.LENGTH_SHORT).show();
                 }
 
