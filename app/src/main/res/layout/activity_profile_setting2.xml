@@ -74,7 +74,7 @@
                     <TextView
                         android:layout_weight="0"
                         android:fontFamily="@font/sourcesanspro_regular"
-                        android:text="Họ và tện: "
+                        android:text="Họ và tên: "
                         android:textColor="#93766E"
                         android:textSize="18sp" />
 
