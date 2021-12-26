@@ -18,9 +18,9 @@ import im.crisp.client.ChatActivity;
 import im.crisp.client.Crisp;
 
 public class ShowDetailActivity extends AppCompatActivity{
-    TextView txtNumOrder, txtName,txtPrice,txtDescription,btnAddtoCard;
-    ImageView imvPlus, imvMinus,imvThumb;
-    ImageButton btnCart,btnChat;
+    TextView txtNumOrder, txtName,txtPrice,txtDescription,btnAddtoCard,txtBadge;
+    ImageView imvPlus, imvMinus,imvThumb,btnCart;
+    ImageButton btnChat;
     RatingBar ratingBar;
     Products products;
     int numberOrder = 1;
@@ -46,6 +46,10 @@ public class ShowDetailActivity extends AppCompatActivity{
         txtPrice.setText(products.getPrice()+ " VND");
         txtDescription.setText(products.getDescription());
         txtNumOrder.setText(String.valueOf(numberOrder));
+        txtBadge.setText(String.valueOf(managementCard.getCount()));
+
+
+
 
         imvPlus.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -69,6 +73,10 @@ public class ShowDetailActivity extends AppCompatActivity{
 
                 products.setNumberInCard(numberOrder);
                 managementCard.insertProduct(products);
+
+
+
+
                 // animation
 
 
@@ -89,6 +97,7 @@ public class ShowDetailActivity extends AppCompatActivity{
         ratingBar = findViewById(R.id.ratingBar);
         btnCart = findViewById(R.id.btnCart);
         btnChat = findViewById(R.id.btnChat);
+        txtBadge = findViewById(R.id.txtBadgeCart);
         Crisp.configure(getApplicationContext(), "e4983e6a-06f0-42ca-b683-b7723850abc0");
 
         btnChat.setOnClickListener(new View.OnClickListener(){
