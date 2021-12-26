@@ -73,7 +73,7 @@ public class PaymentActivity extends AppCompatActivity implements PaymentResultL
         txtTotalFee = findViewById(R.id.txtTotalFee);
         txtTotalPayment = findViewById(R.id.txtTotalPayment);
         txtDeliveryFee = findViewById(R.id.txtDeliveryFee);
-        txtBuy=findViewById(R.id.btnCheckOut);
+        txtBuy=findViewById(R.id.txtBuy);
         radCod = findViewById(R.id.radCod);
         radOther = findViewById(R.id.radOthers);
         radPaymentMethod = findViewById(R.id.radPaymentMethod);
@@ -86,6 +86,14 @@ public class PaymentActivity extends AppCompatActivity implements PaymentResultL
                 startActivity(crispIntent);
             }
         });
+        txtBuy.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(PaymentActivity.this, PaymentSuccessActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
 
     }
