@@ -10,9 +10,11 @@ import android.view.View;
 import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.Adapter.CategoryRCVAdapter;
 import com.example.Adapter.DynamicRCVAdapter;
+import com.example.helper.ManagementCard;
 import com.example.model.Category;
 import com.example.model.Products;
 
@@ -32,7 +34,10 @@ public class ItemCategoryActivity extends AppCompatActivity {
     ArrayList<Products> dynamic;
     DynamicRCVAdapter dynamicRCVAdapter;
 
-    ImageButton btnChat,btnCart;
+    ImageButton btnChat;
+    ImageView btnCart;
+    TextView txtBadge;
+    private ManagementCard managementCard;
 
 
 
@@ -40,6 +45,7 @@ public class ItemCategoryActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_item_category);
+        managementCard = new ManagementCard(this);
         linkViews();
 
         initDataCategory();
@@ -57,6 +63,8 @@ public class ItemCategoryActivity extends AppCompatActivity {
         rcvDynamic = findViewById(R.id.rcvCategory2);
         btnCart = findViewById(R.id.btnCart);
         btnChat = findViewById(R.id.btnChat);
+        txtBadge = findViewById(R.id.txtBadgeCart);
+        txtBadge.setText(String.valueOf(managementCard.getCount()));
         //chat
         Crisp.configure(getApplicationContext(), "1b4d03b2-db60-4da9-b658-bcf6eceac6f1");
         btnChat.setOnClickListener(new View.OnClickListener() {

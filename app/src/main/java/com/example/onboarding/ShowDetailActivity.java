@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.helper.ManagementCard;
+import com.example.interfaces.ChangeNumberItemListener;
 import com.example.model.Products;
 
 import im.crisp.client.ChatActivity;
@@ -35,6 +36,8 @@ public class ShowDetailActivity extends AppCompatActivity{
         managementCard = new ManagementCard(this);
         linkView();
         getBundle();
+
+
     }
 
     private void getBundle() {
@@ -67,6 +70,7 @@ public class ShowDetailActivity extends AppCompatActivity{
 
             }
         });
+        int i = managementCard.getCount();
         btnAddtoCard.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
@@ -74,6 +78,7 @@ public class ShowDetailActivity extends AppCompatActivity{
                 products.setNumberInCard(numberOrder);
                 managementCard.insertProduct(products);
 
+                txtBadge.setText(String.valueOf(i+numberOrder));
 
 
 
@@ -81,7 +86,10 @@ public class ShowDetailActivity extends AppCompatActivity{
 
 
             }
+
         });
+
+
 
     }
 
@@ -116,6 +124,9 @@ public class ShowDetailActivity extends AppCompatActivity{
                 startActivity(intent);
             }
         });
+
+
+
 
 
     }

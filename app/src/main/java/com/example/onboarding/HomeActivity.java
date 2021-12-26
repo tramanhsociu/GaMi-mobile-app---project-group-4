@@ -22,11 +22,13 @@ import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.Adapter.BannerAdapter;
 import com.example.Adapter.CategoryAdapter;
 import com.example.Adapter.PopularAdapter;
+import com.example.helper.ManagementCard;
 import com.example.model.Banner;
 import com.example.model.Category;
 import com.getkeepsafe.taptargetview.TapTarget;
@@ -51,14 +53,20 @@ public class HomeActivity extends AppCompatActivity{
     BottomNavigationView navigationView;
     ImageButton btnChat;
     ImageView btnCart;
+    TextView txtBadge;
+    private ManagementCard managementCard;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        managementCard = new ManagementCard(this);
         navigationView = findViewById(R.id.menu_navigation);
         btnChat = findViewById(R.id.btnChat);
         btnCart = findViewById(R.id.btnCart);
+        txtBadge = findViewById(R.id.txtBadgeCart);
+        txtBadge.setText(String.valueOf(managementCard.getCount()));
+
 
         //chat
         Crisp.configure(getApplicationContext(), "e4983e6a-06f0-42ca-b683-b7723850abc0");
