@@ -12,5 +12,15 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+
+    </style>
+    <style name="ratingBar">
+        <item name="colorControlNormal">@color/gami4</item>
+        <item name="colorControlActivated">@color/gami2</item>
+    </style>
+
+    <style name="SearchAutoCompleteTextView" >
+        <item name="android:textColor">@color/gami4</item>
+        <item name="android:textColorHint">@color/gami4</item>
     </style>
 </resources>

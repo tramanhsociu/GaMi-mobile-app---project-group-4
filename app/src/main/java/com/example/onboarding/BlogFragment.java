@@ -1,5 +1,10 @@
 package com.example.onboarding;
 
+import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffColorFilter;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,6 +12,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -22,6 +29,7 @@ public class BlogFragment extends Fragment{
     ListView lvBlog;
     ArrayList<Blog> blog;
     BlogAdapter adapter;
+    ImageView imvReact, imvCmt;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -31,9 +39,16 @@ public class BlogFragment extends Fragment{
 
         lvBlog=view.findViewById(R.id.lvBlog);
         txtContent=view.findViewById(R.id.txtContent);
+        imvReact=view.findViewById(R.id.imv_ic_tim);
+        imvCmt=view.findViewById(R.id.imv_ic_cmt);
+
         initData();
         initAdapter();
+
+        addEvent();
         return view;
+
+
     }
 
     private void initData() {
@@ -47,5 +62,26 @@ public class BlogFragment extends Fragment{
     private void initAdapter() {
         adapter=new BlogAdapter(getContext(),R.layout.item_blog,blog);
         lvBlog.setAdapter(adapter);
+    }
+
+
+    private void addEvent() {
+
+//    lvBlog.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//        @Override
+//        public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+//            imvReact.setSelected(!imvReact.isSelected());
+//            if(imvReact.isSelected()){
+//                imvReact.setImageResource(R.drawable.ic_like);
+//            }else{
+//                imvReact.setImageResource(R.drawable.ic_unlike);
+//            }
+//            imvCmt.setSelected(!imvCmt.isSelected());
+//            if (imvCmt.isSelected()){
+//               Intent intent= new Intent(view.getContext(),CommentBlog.class);
+//               view.getContext().startActivity(intent);
+//            }
+//        }
+//    });
     }
 }

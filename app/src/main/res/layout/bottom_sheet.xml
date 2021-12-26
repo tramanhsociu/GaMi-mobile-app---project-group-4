@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="#F6F2F1">
+    <TextView
+        android:id="@+id/txtCamera"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Chụp ảnh"
+        android:textColor="#897069"
+        android:textSize="18sp"
+        android:fontFamily="@font/sourcesanspro_regular"
+        android:gravity="center"/>
+    <TextView
+        android:id="@+id/txtGallery"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Chọn ảnh có sẵn"
+        android:textColor="#897069"
+        android:textSize="18sp"
+        android:fontFamily="@font/sourcesanspro_regular"
+        android:gravity="center"/>
+
+</LinearLayout>

@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SettingActivity"
-    android:background="@color/kem">
+    android:background="@color/kem"
+    android:id="@+id/Setting">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/header_container"
         android:layout_width="match_parent"
@@ -34,7 +35,8 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:fontFamily="@font/sourcesanspro_bold"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ListView
@@ -63,6 +65,7 @@
             android:text="@string/logout"
             android:textColor="@color/white"
             android:textStyle="bold"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:fontFamily="@font/sourcesanspro_bold"/>
     </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

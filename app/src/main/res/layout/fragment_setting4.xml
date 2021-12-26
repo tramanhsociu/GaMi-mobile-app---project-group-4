@@ -1,0 +1,278 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/kem"
+    android:fillViewport="true"
+    android:padding="10dp"
+    tools:context="com.example.fragment.SettingFragment4">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="150dp">
+
+        <TextView
+            android:id="@+id/txtCancelord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:text="Tôi có thể hủy đơn hàng không?"
+            android:textColor="@color/gami3"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:fontFamily="@font/sourcesanspro_bold"/>
+
+        <ImageView
+            android:id="@+id/imvLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13.5dp"
+            android:src="@drawable/ic_line"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtCancelord" />
+
+        <TextView
+            android:id="@+id/txtno1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="30dp"
+            android:text="1. Người mua chỉ có thể hủy đơn khi:"
+            android:textColor="@color/gami2"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtCancelord"
+            android:fontFamily="@font/sourcesanspro_bold"/>
+
+        <TextView
+            android:id="@+id/txtline1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:text="- Trên hệ thống hiển thị nút hủy đơn hàng và GaMi đồng ý cho bạn hủy đơn."
+            android:textColor="@color/gami3"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtno1"
+            android:fontFamily="@font/sourcesanspro_regular"/>
+
+        <TextView
+            android:id="@+id/txtline2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:text="- Khi đơn hàng ở trạng thái chờ xác nhận (GaMi đang đóng gói và chuẩn bị giao cho đơn vị vận chuyển), yêu cầu này cần được GaMi chấp thuận để đảm bảo giữ quyền lợi cho GaMi"
+            android:textColor="@color/gami3"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtline1"
+            android:fontFamily="@font/sourcesanspro_regular"/>
+
+        <TextView
+            android:id="@+id/txtno2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="20dp"
+            android:text="2. Người mua không thể hủy đơn nếu:"
+            android:textColor="@color/gami2"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtline2"
+            android:fontFamily="@font/sourcesanspro_bold"/>
+
+        <TextView
+            android:id="@+id/txtline1no2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:text="- Đơn hàng đang giao"
+            android:textColor="@color/gami3"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtno2"
+            android:fontFamily="@font/sourcesanspro_regular"/>
+
+        <TextView
+            android:id="@+id/txtline2no2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:text="- Hệ thống không hiển thị nút hủy đơn hàng"
+            android:fontFamily="@font/sourcesanspro_regular"
+            android:textColor="@color/gami3"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtline1no2" />
+
+        <LinearLayout
+            android:id="@+id/Luuy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtline2no2">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:src="@drawable/ic_baseline_warning_24" />
+
+            <TextView
+                android:id="@+id/txtno3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Lưu ý:"
+                android:textColor="@color/gami2"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/sourcesanspro_bold"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/txtline1luuy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:text="- Người mua chỉ có thể hủy đơn hàng hoặc rút lại yêu cầu hủy đơn hàng duy nhất 1 lần cho mỗi đơn hàng"
+            android:textColor="@color/gami3"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Luuy"
+            android:fontFamily="@font/sourcesanspro_regular"/>
+        <TextView
+            android:id="@+id/txtline2luuy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:text="- Nếu yêu cầu hủy đơn của bạn bị từ chối bạn sẽ không thể tiếp tục đưa ra yêu cầu hủy đơn cho đơn hàng này"
+            android:fontFamily="@font/sourcesanspro_regular"
+            android:textColor="@color/gami3"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtline1luuy" />
+        <TextView
+            android:id="@+id/txtline3luuy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:text="- Sau khi hủy đơn thành công, tiền hàng sẽ được hoàn lại cho bạn theo Chính sách của GaMi tùy thuộc vào phương thức thanh toán mà bạn đã lựa chọn"
+            android:fontFamily="@font/sourcesanspro_regular"
+            android:textColor="@color/gami3"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtline2luuy" />
+        <TextView
+            android:id="@+id/txtline4luuy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:text="- Nếu đơn hàng bị hủy không cập nhật đúng trạng thái, vui lòng liên hệ với GaMi qua Trò chuyện với GaMi hoặc qua Tổng đài CSKH để được tư vấn và hỗ trợ."
+            android:fontFamily="@font/sourcesanspro_regular"
+            android:textColor="@color/gami3"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtline3luuy" />
+        <TextView
+            android:id="@+id/txtNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="15dp"
+            android:text="Bài viết này có hữu ích cho bạn không?"
+            android:textColor="@color/gami3"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtline4luuy"
+            android:fontFamily="@font/sourcesanspro_bold"/>
+
+        <FrameLayout
+            android:id="@+id/btnLike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/like_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtNote">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="4dp"
+                android:src="@drawable/ic_like" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:text="Vâng"
+                android:textColor="#4D000000"
+                android:textSize="11dp"
+                android:fontFamily="@font/sourcesanspro_regular"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/btnUnlike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="39dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/like_button"
+            app:layout_constraintStart_toEndOf="@+id/btnLike"
+            app:layout_constraintTop_toBottomOf="@+id/txtNote">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="4dp"
+                android:src="@drawable/ic_unlike" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:text="Không"
+                android:textColor="#4D000000"
+                android:textSize="11dp"
+                android:fontFamily="@font/sourcesanspro_regular"/>
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

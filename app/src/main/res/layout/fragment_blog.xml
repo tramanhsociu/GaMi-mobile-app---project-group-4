@@ -5,8 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BlogFragment"
-    android:background="@color/hongnhat">
+    tools:context=".BlogFragment">
 
     <EditText
         android:id="@+id/edtSearch"
@@ -27,34 +26,6 @@
 
     </EditText>
 
-    <ImageButton
-        android:id="@+id/btnCard"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:layout_marginEnd="16dp"
-        android:background="#00000000"
-        android:scaleType="fitXY"
-        android:src="@drawable/ic_giohang"
-        app:layout_constraintBottom_toBottomOf="@+id/btnChat"
-        app:layout_constraintEnd_toStartOf="@+id/btnChat"
-        app:layout_constraintTop_toTopOf="@+id/btnChat">
-
-    </ImageButton>
-
-    <ImageButton
-        android:id="@+id/btnChat"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:background="#00000000"
-        android:scaleType="fitXY"
-        android:src="@drawable/ic_chat"
-        app:layout_constraintBottom_toBottomOf="@+id/edtSearch"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-    </ImageButton>
 
     <ListView
         android:id="@+id/lvBlog"

@@ -5,9 +5,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.CategoryActivity"
+    tools:context=".CategoryActivity"
     android:id="@+id/categogy_container"
-    android:padding="8dp"
+    android:padding="4dp"
     android:orientation="vertical">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -15,9 +15,10 @@
 
         <ImageView
             android:id="@+id/imageButton"
-            android:scaleType="centerCrop"
             android:layout_width="10dp"
             android:layout_height="20dp"
+            android:layout_marginStart="4dp"
+            android:scaleType="centerCrop"
             android:src="@drawable/ic_back"
             app:layout_constraintBottom_toBottomOf="@+id/edtSearch"
             app:layout_constraintStart_toStartOf="parent"
@@ -31,7 +32,8 @@
             android:layout_width="250dp"
             android:layout_height="30dp"
             android:layout_gravity="center_vertical"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
             android:background="@drawable/custom_search"
             android:drawableStart="@drawable/ic_baseline_search_24"
             android:drawablePadding="10dp"
@@ -74,16 +76,24 @@
 
         </ImageButton>
 
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_categogy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:isScrollContainer="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent">
+
+        </com.google.android.material.tabs.TabLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <GridView
-        android:id="@+id/gvItemCategory"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:numColumns="2"
-        android:layout_marginTop="8dp">
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
 
-    </GridView>
-
+   </LinearLayout>
 
 </LinearLayout>
