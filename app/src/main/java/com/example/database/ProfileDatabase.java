@@ -13,7 +13,7 @@ public class ProfileDatabase extends SQLiteOpenHelper {
     private static final int DB_VERSION =1;
     private static final String DB_NAME ="customers.sqlite";
 
-    private static final String TBL_NAME = "Profile";
+    public static final String TBL_NAME = "Profile";
 
     private static final String COL_P_ID ="P_Id";
     private static final String COL_P_NAME ="P_Name";
