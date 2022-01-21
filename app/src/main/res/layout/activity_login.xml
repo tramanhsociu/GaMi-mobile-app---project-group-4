@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,7 +7,9 @@
     tools:context=".LoginActivity"
     android:background="@color/kem"
     android:id="@+id/Login">
-
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/header"
         android:layout_width="match_parent"
@@ -18,15 +20,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/imvBack"
-            android:layout_width="7dp"
-            android:layout_height="14dp"
-            android:src="@drawable/back"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginLeft="30dp"/>
+<!--        <ImageView-->
+<!--            android:id="@+id/imvBack"-->
+<!--            android:layout_width="7dp"-->
+<!--            android:layout_height="14dp"-->
+<!--            android:src="@drawable/back"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            android:layout_marginLeft="30dp"/>-->
 
         <TextView
             android:id="@+id/txtHeaderRegis"
@@ -39,7 +41,8 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:fontFamily="@font/sourcesanspro_bold"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -63,7 +66,8 @@
             android:textSize="14sp"
             android:layout_marginStart="10dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:fontFamily="@font/sourcesanspro_regular"/>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/Email"
@@ -101,7 +105,8 @@
             android:textColor="@color/gami3"
             android:textSize="14dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/Email" />
+            app:layout_constraintTop_toBottomOf="@id/Email"
+            android:fontFamily="@font/sourcesanspro_regular"/>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/Pass"
@@ -131,15 +136,17 @@
 
         <CheckBox
             android:id="@+id/chkRemember"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
             android:text="@string/remember"
             android:textColor="#4A000000"
             android:textSize="11sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginRight="170dp"
-            app:layout_constraintTop_toBottomOf="@id/Pass" />
+
+            app:layout_constraintTop_toBottomOf="@id/Pass"
+            android:fontFamily="@font/sourcesanspro_regular"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -197,18 +204,41 @@
 <!--            app:layout_constraintEnd_toEndOf="parent"-->
 <!--            app:layout_constraintTop_toTopOf="parent" />-->
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <TextView
-        android:id="@+id/txtForgotPass"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/text"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/forgotpass"
-        android:textColor="#4A000000"
-        android:textSize="11sp"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LinearSocial"
-        android:layout_marginTop="20dp"/>
+        app:layout_constraintTop_toBottomOf="@+id/LinearSocial">
+        <TextView
+            android:id="@+id/txtForgotPass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/forgotpass"
+            android:textColor="#4A000000"
+            android:textSize="11sp"
+            android:layout_marginStart="50dp"
+            android:fontFamily="@font/sourcesanspro_regular"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/txtRegister"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/txtRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="50dp"
+            android:fontFamily="@font/sourcesanspro_regular"
+            android:text="@string/dangky"
+            android:textColor="#4A000000"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txtForgotPass"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     <FrameLayout
         android:id="@+id/btnLogin"
@@ -219,7 +249,7 @@
         android:background="@drawable/regis_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtForgotPass"
+        app:layout_constraintTop_toBottomOf="@+id/text"
         android:layout_marginTop="20dp"
         android:elevation="5dp">
 
@@ -230,7 +260,8 @@
             android:text="@string/logn"
             android:textColor="@color/white"
             android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:fontFamily="@font/sourcesanspro_bold"/>
     </FrameLayout>
 
     <ImageView
@@ -238,11 +269,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_paw2"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="203dp"/>
+        android:layout_marginTop="150dp"/>
 
     <ImageView
         android:id="@+id/imvPaw1"
@@ -256,7 +288,7 @@
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="490dp"/>
 
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>

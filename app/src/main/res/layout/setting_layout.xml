@@ -21,7 +21,8 @@
             android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginLeft="30dp"/>
+            android:layout_marginLeft="30dp"
+            android:fontFamily="@font/sourcesanspro_regular"/>
 
         <ImageView
             android:id="@+id/imvNext"

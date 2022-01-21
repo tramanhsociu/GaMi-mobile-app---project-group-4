@@ -2,20 +2,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/kem"
+    android:padding="10dp"
+    tools:context="com.example.fragment.SettingFragment"
+    android:fillViewport="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/kem"
-        android:orientation="vertical"
-        tools:context="com.example.fragment.SettingFragment">
+        android:paddingBottom="150dp">
 
         <TextView
             android:id="@+id/txtCommonQuestion"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
             android:text="Làm sao để mua hàng/ Đặt hàng trên ứng dụng GaMi"
+            android:fontFamily="@font/sourcesanspro_bold"
             android:textColor="@color/gami3"
             android:textSize="19sp"
             android:textStyle="bold"
@@ -35,45 +39,57 @@
 
         <TextView
             android:id="@+id/txtInstruction"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="22dp"
             android:text="GaMi chỉ hỗ trợ đặt và giao hàng cho những người mua có địa chỉ tại Việt Nam."
+            android:fontFamily="@font/sourcesanspro_bold"
             android:textColor="@color/gami2"
             android:textSize="18sp"
             android:textStyle="bold"
+
+            android:layout_marginHorizontal="10dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imvLine" />
+            app:layout_constraintTop_toBottomOf="@+id/imvLine"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
         <TextView
             android:id="@+id/txtRefund"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="19dp"
             android:text="Trước tiên, bạn cần xác minh số điện thoại cho tài khoản của mình để có thể đặt hàng thành công."
+            android:fontFamily="@font/sourcesanspro_regular"
             android:textColor="@color/gami3"
             android:textSize="14sp"
+            android:layout_marginHorizontal="10dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtInstruction" />
+            app:layout_constraintTop_toBottomOf="@+id/txtInstruction"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
         <TextView
             android:id="@+id/txtStep1"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="Bước 1: Tìm kiếm sản phẩm bạn cần mua bằng một trong những cách sau:"
+            android:fontFamily="@font/sourcesanspro_bold"
             android:textColor="@color/gami3"
             android:textSize="14sp"
             android:textStyle="bold"
+            android:layout_marginHorizontal="10dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtRefund" />
+            app:layout_constraintTop_toBottomOf="@+id/txtRefund"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
         <LinearLayout
+            android:id="@+id/Gotukhoa"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="100dp"
+
             android:layout_marginTop="19dp"
             android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@+id/layout_list"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtStep1">
 
@@ -88,6 +104,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp"
                 android:text="Gõ từ khóa"
+                android:fontFamily="@font/sourcesanspro_regular"
                 android:textColor="@color/gami4" />
         </LinearLayout>
 
@@ -95,10 +112,12 @@
             android:id="@+id/layout_list"
             android:layout_width="87dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
             android:layout_marginTop="19dp"
-            android:layout_marginEnd="100dp"
             android:orientation="vertical"
+
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/Gotukhoa"
             app:layout_constraintTop_toBottomOf="@+id/txtStep1">
 
             <ImageView
@@ -112,59 +131,70 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp"
                 android:text="Các mục hiển thị tại trang mua sắm"
+                android:fontFamily="@font/sourcesanspro_regular"
+                android:textAlignment="center"
                 android:textColor="@color/gami4" />
         </LinearLayout>
 
         <TextView
             android:id="@+id/txtStep2"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="19dp"
             android:text="Bước 2: Tham khảo và lựa chọn sản phẩm phù hợp"
+            android:fontFamily="@font/sourcesanspro_bold"
             android:textColor="@color/gami3"
             android:textSize="14sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/layout_list" />
+            app:layout_constraintTop_toBottomOf="@id/layout_list"
+            android:layout_marginHorizontal="10dp"/>
 
         <TextView
             android:id="@+id/txtinfo"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
-
+            android:layout_marginHorizontal="10dp"
             android:text="Một số thông tin sản phẩm cần biết khi chọn sản phẩm:
 Hình ảnh, tên sản phẩm
 Giá sản phẩm (giá gốc/ giá ưu đãi)
 Đánh giá sản phẩm
 Mô tả sản phẩm"
+            android:fontFamily="@font/sourcesanspro_regular"
             android:textColor="@color/gami3"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/txtStep2" />
+            app:layout_constraintTop_toBottomOf="@id/txtStep2"
+            />
 
         <!--    Bước 3-->
         <TextView
             android:id="@+id/txtStep3"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
             android:layout_marginTop="16dp"
             android:text="Bước 3: Chọn sản phẩm"
             android:textColor="@color/gami3"
             android:textSize="14sp"
             android:textStyle="bold"
+            android:fontFamily="@font/sourcesanspro_bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/txtinfo" />
+            app:layout_constraintTop_toBottomOf="@id/txtinfo"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
         <LinearLayout
             android:id="@+id/txtStep3info"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
             android:layout_marginTop="5dp"
             android:orientation="horizontal"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/txtStep3">
+            app:layout_constraintTop_toBottomOf="@id/txtStep3"
+            app:layout_constraintEnd_toEndOf="parent">
 
             <TextView
                 android:id="@+id/txtChoose"
@@ -173,7 +203,8 @@ Mô tả sản phẩm"
                 android:layout_marginTop="5dp"
                 android:text="Chọn biểu tượng"
                 android:textColor="@color/gami3"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                android:fontFamily="@font/sourcesanspro_regular"/>
 
             <ImageView
                 android:id="@+id/imvCart"
@@ -189,41 +220,49 @@ Mô tả sản phẩm"
                 android:layout_marginTop="5dp"
                 android:text="để bỏ sản phẩm vào giỏ hàng."
                 android:textColor="@color/gami3"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                android:fontFamily="@font/sourcesanspro_regular"/>
 
         </LinearLayout>
 
         <!--    Bước 4-->
         <TextView
             android:id="@+id/txtStep4"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:layout_marginHorizontal="10dp"
             android:text="Bước 4: Sử dụng mã giảm giá"
             android:textColor="@color/gami3"
             android:textSize="14sp"
             android:textStyle="bold"
+            android:fontFamily="@font/sourcesanspro_bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtStep3info" />
+            app:layout_constraintTop_toBottomOf="@+id/txtStep3info"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
         <TextView
             android:id="@+id/txtStep4info"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
             android:layout_marginTop="6dp"
             android:text="Trong trường hợp nếu bạn có mã giảm giá của GaMi, đừng quên áp dụng vào đơn hàng của mình."
+            android:fontFamily="@font/sourcesanspro_regular"
             android:textColor="@color/gami3"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtStep4" />
-<!--        Bước 5-->
+        <!--        Bước 5-->
         <TextView
             android:id="@+id/txtStep5"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
             android:layout_marginTop="16dp"
             android:text="Bước 5: Kiểm tra và thanh toán"
+            android:fontFamily="@font/sourcesanspro_bold"
             android:textColor="@color/gami3"
             android:textSize="14sp"
             android:textStyle="bold"
@@ -232,36 +271,42 @@ Mô tả sản phẩm"
 
         <TextView
             android:id="@+id/txtStep5info"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="6dp"
             android:text="Xem lại địa chỉ nhận hàng, đơn vị vận chuyển, phương thức thanh toán trước khi nhấn nút ĐẶT HÀNG.
 Nếu có yêu cầu đặc biệt gì cho GaMi, bạn có thể nhấn vào nút “Tin nhắn”."
+            android:fontFamily="@font/sourcesanspro_regular"
             android:textColor="@color/gami3"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtStep5"
-            android:layout_marginTop="6dp"/>
+            app:layout_constraintTop_toBottomOf="@+id/txtStep5" />
 
         <TextView
             android:id="@+id/txtfinal"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="5dp"
             android:text="Sau khi đọc hướng dẫn, hãy trở lại ứng dụng GaMi để bắt đầu hành trình mua sắm bất tận bạn nhé!"
             android:textColor="@color/gami2"
             android:textStyle="bold"
-            android:layout_marginTop="5dp"
+            android:fontFamily="@font/sourcesanspro_bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtStep5info" />
 
         <TextView
             android:id="@+id/txtNotice"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="15dp"
             android:text="Bài viết này có hữu ích cho bạn không?"
+            android:fontFamily="@font/sourcesanspro_bold"
             android:textColor="@color/gami3"
-            android:textStyle="bold"
-            android:layout_marginTop="29dp"
             android:textSize="14sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtfinal" />
 
@@ -269,50 +314,56 @@ Nếu có yêu cầu đặc biệt gì cho GaMi, bạn có thể nhấn vào nú
             android:id="@+id/btnLike"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
             android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
             android:background="@drawable/like_button"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtNotice">
+
             <ImageView
                 android:layout_width="15dp"
                 android:layout_height="15dp"
                 android:layout_gravity="center_vertical"
                 android:layout_marginStart="4dp"
-                android:src="@drawable/ic_like"/>
+                android:src="@drawable/ic_like" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Vâng"
-                android:textSize="11dp"
-                android:textColor="#4D000000"
+                android:layout_gravity="center"
                 android:layout_marginStart="10dp"
-                android:layout_gravity="center"/>
+                android:text="Vâng"
+                android:textColor="#4D000000"
+                android:textSize="11dp"
+                android:fontFamily="@font/sourcesanspro_regular"/>
         </FrameLayout>
 
         <FrameLayout
             android:id="@+id/btnUnlike"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
             android:layout_marginStart="39dp"
+            android:layout_marginTop="12dp"
             android:background="@drawable/like_button"
             app:layout_constraintStart_toEndOf="@+id/btnLike"
             app:layout_constraintTop_toBottomOf="@+id/txtNotice">
+
             <ImageView
                 android:layout_width="15dp"
                 android:layout_height="15dp"
                 android:layout_gravity="center_vertical"
                 android:layout_marginStart="4dp"
-                android:src="@drawable/ic_unlike"/>
+                android:src="@drawable/ic_unlike" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Không"
-                android:textSize="11dp"
-                android:textColor="#4D000000"
+                android:layout_gravity="center"
                 android:layout_marginStart="10dp"
-                android:layout_gravity="center"/>
+                android:text="Không"
+                android:textColor="#4D000000"
+                android:textSize="11dp"
+                android:fontFamily="@font/sourcesanspro_regular"/>
         </FrameLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

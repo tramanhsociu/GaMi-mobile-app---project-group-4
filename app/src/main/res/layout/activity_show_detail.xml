@@ -4,6 +4,251 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ShowDetailActivity">
+    tools:context=".ShowDetailActivity"
+    android:background="@color/background_setting_noti">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imvBack"
+            android:layout_width="7dp"
+            android:layout_height="14dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:focusable="true"
+            android:padding="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/btnChat"
+            app:layout_constraintEnd_toStartOf="@+id/btnChat"
+            app:layout_constraintTop_toTopOf="@+id/btnChat">
+
+            <ImageView
+                android:id="@+id/btnCart"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_giohang">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/txtBadgeCart"
+                style="@style/TextAppearance.MaterialComponents.Caption"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_gravity="top|end"
+                android:layout_marginTop="-4dp"
+                android:layout_marginEnd="-4dp"
+                android:background="@drawable/badge_bg"
+                android:gravity="center"
+                android:text="5"
+                android:textColor="@color/white">
+
+            </TextView>
+
+
+        </FrameLayout>
+
+        <ImageButton
+            android:id="@+id/btnChat"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:background="#00000000"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_chat"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </ImageButton>
+
+        <ImageView
+            android:id="@+id/imvThumb"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_marginTop="32dp"
+            android:src="@drawable/dochoi_10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/sourcesanspro_bold"
+            android:text="Đồ chơi"
+            android:textSize="30dp"
+            app:layout_constraintBottom_toTopOf="@+id/txtPrice"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imvThumb">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/txtPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="40000"
+            android:textColor="@color/dodam"
+            android:textSize="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+        </TextView>
+
+        <RatingBar
+            android:id="@id/ratingBar"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_marginEnd="16dp"
+            android:numStars="5"
+            android:progressTint="@color/chu"
+            android:rating="4.5"
+            android:secondaryProgressTint="@color/chu"
+            app:layout_constraintBottom_toBottomOf="@+id/txtPrice"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txtName">
+
+        </RatingBar>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="#19CBC0BC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraintLayout3" />
+
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/sourcesanspro_bold"
+        android:text="Mô tả sản phẩm"
+        android:textColor="@color/chu"
+        android:textSize="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/txtDes"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_marginTop="16dp"
+        android:text="Mô tả chi tiết sản phẩm dành cho chó mèo"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+    </TextView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="24dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/imvMinus"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_tru">
+
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/txtNumOder"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:fontFamily="@font/sourcesanspro_bold"
+            android:gravity="center"
+            android:text="1"
+            android:textSize="16dp">
+
+        </TextView>
+
+        <ImageView
+            android:id="@+id/imvPlus"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_cong">
+
+
+        </ImageView>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/btnAddCart"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/cart_button"
+        android:elevation="3dp"
+        android:fontFamily="@font/sourcesanspro_bold"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="THÊM"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout">
+
+    </TextView>
+
+
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

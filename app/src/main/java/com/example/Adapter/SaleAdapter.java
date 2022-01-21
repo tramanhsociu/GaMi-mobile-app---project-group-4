@@ -1,6 +1,4 @@
 package com.example.Adapter;
-
-import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,32 +6,29 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import com.example.model.Khuyenmai;
+import com.example.model.Sale;
 import com.example.onboarding.R;
-
-import java.util.List;
-
+import java.util.ArrayList;
 public class SaleAdapter extends BaseAdapter {
 
-    Activity context;
+    Context context;
     int item_layout;
-    List<Khuyenmai> salelist;
+    ArrayList<Sale> sales;
 
-    public SaleAdapter(Activity context, int item_layout, List<Khuyenmai> salelist) {
+    public SaleAdapter(Context context, int item_layout, ArrayList<Sale> sales) {
         this.context = context;
         this.item_layout = item_layout;
-        this.salelist = salelist;
+        this.sales = sales;
     }
 
     @Override
     public int getCount() {
-        return salelist.size();
+        return sales.size();
     }
 
     @Override
     public Object getItem(int i) {
-        return salelist.get(i);
+        return sales.get(i);
     }
 
     @Override
@@ -57,15 +52,15 @@ public class SaleAdapter extends BaseAdapter {
             holder= (ViewHolder) view.getTag();
         }
 
-        Khuyenmai k= salelist.get(i);
-        holder.imvThumb.setImageResource(k.getSaleThumb());
-        holder.txtName.setText(k.getSaleName());
-        holder.txtContent.setText(k.getSaleContent());
+        Sale s= sales.get(i);
+        holder.imvThumb.setImageResource(s.getSaleThumb());
+        holder.txtName.setText(s.getSaleName());
+        holder.txtContent.setText(s.getSaleContent());
         return view;
     }
 
     public static class ViewHolder {
-        ImageView imvThumb;
+        ImageView imvThumb, showInfo;
         TextView txtName,txtContent;
     }
 }

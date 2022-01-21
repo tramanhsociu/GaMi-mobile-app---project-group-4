@@ -2,6 +2,9 @@ package com.example.onboarding;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.app.Dialog;
 import android.content.Intent;
@@ -69,7 +72,6 @@ public class SettingActivity extends AppCompatActivity {
         listData = new ArrayList<Section>();
         listData.add(new Section("Thông báo", R.drawable.ic_baseline_arrow_forward_ios_24));
         listData.add(new Section("Hỗ trợ", R.drawable.ic_baseline_arrow_forward_ios_24));
-        listData.add(new Section("Thanh toán", R.drawable.ic_baseline_arrow_forward_ios_24));
         listData.add(new Section("Đánh giá", R.drawable.ic_baseline_arrow_forward_ios_24));
     }
 
@@ -88,20 +90,18 @@ public class SettingActivity extends AppCompatActivity {
                 }else if(position == 1){
                     //hỗ trợ
                     startActivity(new Intent(SettingActivity.this, SettingSupportActivity.class));
-                }else if(position == 2){
-                    //thanh toán
-                    startActivity(new Intent(SettingActivity.this, SettingPaymentActivity.class));
                 }else{
-                    //đánh giá ứng dụng
+                    //đánh giá
                     startActivity(new Intent(SettingActivity.this, SettingFeedbackActivity.class));
-
                 }
             }
         });
         imvBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(SettingActivity.this, ProfileActivity.class));
+//             replaceFragment(new ProfileFragment());
+                startActivity(new Intent(SettingActivity.this, HomeActivity.class));
+
             }
         });
         btnLogout.setOnClickListener(new View.OnClickListener() {
@@ -133,7 +133,13 @@ public class SettingActivity extends AppCompatActivity {
                     }
                 });
     }
-    //mở đánh giá ứng dụng
+
+    private void replaceFragment(Fragment fragment) {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.Setting, fragment);
+        fragmentTransaction.commit();
+    }
 
 
 }

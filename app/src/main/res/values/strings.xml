@@ -42,5 +42,14 @@
     <string name="payment">Thanh toán</string>
     <string name="rate_des">Mỗi đánh giá của bạn là 1 viên gạch giúp ngôi nhà GaMi tối hơn.</string>
     <string name="rate_us">Đánh giá GaMi tụi mình</string>
+    <string name="cart">Giỏ hàng</string>
+    <string name="bill">Tổng thanh toán</string>
+    <string name="dangky"><u>Đăng ký nếu chưa có tài khoản</u></string>
+
+    <string-array name="gioitinh">
+        <item>Nam</item>
+        <item>Nữ</item>
+        <item>Khác</item>
+    </string-array>
 
 </resources>

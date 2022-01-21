@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/cardView"
+    android:layout_width="120dp"
+    android:layout_height="65dp"
+    android:layout_marginTop="8dp"
+    android:outlineAmbientShadowColor="@color/chu"
+    android:outlineSpotShadowColor="@color/chu"
+    android:background="@drawable/category_rcv_bg"
+    app:cardElevation="5dp"
+    app:cardCornerRadius="23dp"
+    android:layout_marginLeft="10dp">
+    <LinearLayout
+android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp">
+        <ImageView
+            android:id="@+id/imvThumb"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_doan"
+            android:layout_gravity="center_horizontal">
+
+        </ImageView>
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_marginLeft="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+            android:text="Đồ ăn"
+            android:textSize="14sp"
+            android:textColor="@color/chu"
+            >
+
+        </TextView>
+    </LinearLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

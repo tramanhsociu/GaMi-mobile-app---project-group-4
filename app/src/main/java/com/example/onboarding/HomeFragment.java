@@ -1,5 +1,6 @@
 package com.example.onboarding;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -11,14 +12,18 @@ import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.EditText;
 import android.widget.GridView;
 
 import com.example.Adapter.BannerAdapter;
 import com.example.Adapter.CategoryAdapter;
+import com.example.Adapter.CategoryRCVAdapter;
+import com.example.Adapter.DynamicRCVAdapter;
 import com.example.Adapter.PopularAdapter;
 import com.example.model.Banner;
 import com.example.model.Category;
-import com.example.model.Popular;
+import com.example.model.Products;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,15 +32,17 @@ import me.relex.circleindicator.CircleIndicator3;
 
 
 public class HomeFragment extends Fragment{
+    EditText edtSearch;
+
     ViewPager2 viewPager2;
     CircleIndicator3 circleIndicator3;
     ArrayList<Banner> banners;
-
     BannerAdapter bannerAdapter;
 
-    RecyclerView rcvPopular;
+    RecyclerView rcvPopular,rcvSale;
     PopularAdapter popularAdapter;
-    ArrayList<Popular> popular;
+    ArrayList<Products> popular;
+    ArrayList<Products> sale;
 
 
     GridView gvCategory;
@@ -60,25 +67,48 @@ public class HomeFragment extends Fragment{
 
     private void initDataPopular() {
         popular = new ArrayList<>();
-        popular.add(new Popular(R.drawable.dochoi_1,"name","Đồ chơi dành cho chó và mèo ","200000",20.000));
-        popular.add(new Popular(R.drawable.dochoi_2,"name","20000","30000",40.000));
-        popular.add(new Popular(R.drawable.dochoi_3,"name","20000","200000",20.000));
-        popular.add(new Popular(R.drawable.dochoi_4,"name","20000","200000",30.000));
-        popular.add(new Popular(R.drawable.dochoi_1,"name","20000","200000",50.000));
+        popular.add(new Products(R.drawable.phukien_1,"Dây đeo cổ","Đồ chơi dành cho chó và mèo ",5,20.000,"đồ chơi",1));
+        popular.add(new Products(R.drawable.phukien_2,"Dây bánh bèo","Đồ chơi dành cho chó và mèo ",3,20.000,"đồ chơi",1));
+        popular.add(new Products(R.drawable.phukien_3,"Phụ kiện dây","Đồ chơi dành cho chó và mèo ",5,20.000,"đồ chơi",1));
+        popular.add(new Products(R.drawable.phukien_4,"Dây chuyền","Đồ chơi dành cho chó và mèo ",45,20.000,"đồ chơi",1));
+
         popularAdapter = new PopularAdapter(getContext(),popular);
         rcvPopular.setAdapter(popularAdapter);
 
+        sale = new ArrayList<>();
+        sale.add(new Products(R.drawable.dochoi_6,"name","Đồ chơi dành cho chó và mèo ",5,50.000,"đồ chơi",1));
+        sale.add(new Products(R.drawable.dochoi_7,"name","Đồ chơi dành cho chó và mèo ",3,90.000,"đồ chơi",1));
+        sale.add(new Products(R.drawable.dochoi_8,"name","Đồ chơi dành cho chó và mèo ",5,30.000,"đồ chơi",1));
+        sale.add(new Products(R.drawable.dochoi_9,"name","Đồ chơi dành cho chó và mèo ",45,20.000,"đồ chơi",1));
+        popularAdapter = new PopularAdapter(getContext(),sale);
+        rcvSale.setAdapter(popularAdapter);
+
+
+
     }
 
-    private void recyclerViewPopular() {
-        LinearLayoutManager layoutManager = new LinearLayoutManager(getContext(),RecyclerView.HORIZONTAL,false);
-        rcvPopular.setLayoutManager(layoutManager);
+    private void recyclerView() {
+        LinearLayoutManager layoutManager1 = new LinearLayoutManager(getContext(),RecyclerView.HORIZONTAL,false);
+        rcvPopular.setLayoutManager(layoutManager1);
+
+        LinearLayoutManager layoutManager2 = new LinearLayoutManager(getContext(),RecyclerView.HORIZONTAL,false);
+        rcvSale.setLayoutManager(layoutManager2);
+
+
 
     }
 
     private void initAdapterCate() {
         categoryAdapter = new CategoryAdapter(getContext(),R.layout.item_category_layout,initDataCategory());
         gvCategory.setAdapter(categoryAdapter);
+        gvCategory.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(getActivity(),ItemCategoryActivity.class);
+                startActivity(intent);
+
+            }
+        });
     }
 
     private ArrayList<Category> initDataCategory() {
@@ -130,26 +160,41 @@ public class HomeFragment extends Fragment{
         gvCategory = view.findViewById(R.id.gvCategory);
 
         rcvPopular = view.findViewById(R.id.rcvPopular);
+        rcvSale = view.findViewById(R.id.rcvSale);
+
+        edtSearch = view.findViewById(R.id.edtSearch);
+        edtSearch.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(),SearchActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+
 
         // banner
         initData();
         initAdapter();
-//        // category
+       // category
         initDataCategory();
         initAdapterCate();
         //popular
-        recyclerViewPopular();
+        recyclerView();
         initDataPopular();
-
 
         return view;
     }
+
+
+
+
     @Override
     public void onPause() {
         super.onPause();
         handler.removeCallbacks(runnable);
     }
-
     @Override
     public void onResume() {
         super.onResume();

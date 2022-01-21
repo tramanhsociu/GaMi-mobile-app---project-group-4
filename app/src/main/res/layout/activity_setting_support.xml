@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/kem"
-    tools:context=".SettingSupportActivity">
+    tools:context=".SettingSupportActivity"
+    >
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/header_container"
@@ -14,7 +15,8 @@
         android:layout_marginTop="37dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        >
 
         <ImageView
             android:id="@+id/imvBack"
@@ -39,119 +41,54 @@
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/edtSearch"
-        android:layout_width="369dp"
-        android:layout_height="48dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="24dp"
-        app:boxStrokeWidth="0dp"
-        app:boxStrokeWidthFocused="0dp"
-        app:hintEnabled="false"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/header_container"
-        app:passwordToggleTint="@color/gami4"
 
-        app:startIconDrawable="@drawable/ic_baseline_search_24"
-        app:startIconTint="#4D000000">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:background="@drawable/search_bar"
-            android:hint="@string/keyword"
-            android:inputType="textEmailAddress"
-            android:paddingTop="8dp"
-            android:textColor="@color/gami4"
-            android:textSize="15sp" />
-    </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/post_support"
-        android:layout_width="369dp"
-        android:layout_height="567dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="23dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtSearch">
+        app:layout_constraintTop_toBottomOf="@+id/header_container">
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchView"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
 
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/search_bar"
+            app:iconifiedByDefault="true"
+            app:queryHint="Nhập từ khóa..."
+            app:searchIcon="@drawable/ic_baseline_search_24"
+            app:layout_constraintTop_toTopOf="parent"
+            android:theme="@style/SearchAutoCompleteTextView"
+            />
         <TextView
             android:id="@+id/txtCommonQuestion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
             android:text="CÂU HỎI THƯỜNG GẶP"
             android:textColor="#38000000"
             android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@id/lvSettingsuport"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/searchView" />
 
-        <TextView
-            android:id="@+id/txtInstruction"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="21dp"
-            android:text="@string/sp1"
-            android:textColor="@color/gami3"
-            android:textSize="14sp"
+        <ListView
+            android:id="@+id/lvSettingsuport"
+            android:layout_width="match_parent"
+            android:layout_height="590dp"
+
+            android:layout_marginTop="20dp"
+
+            android:divider="@color/kem"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtCommonQuestion" />
 
-        <TextView
-            android:id="@+id/txtRefund"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="35dp"
-            android:text="@string/sp2"
-            android:textColor="@color/gami3"
-            android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtInstruction" />
-
-        <TextView
-            android:id="@+id/txtFollowOrd"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="35dp"
-            android:text="@string/sp3"
-            android:textColor="@color/gami3"
-            android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtRefund" />
-
-        <TextView
-            android:id="@+id/txtFreeShip"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="35dp"
-            android:text="@string/sp4"
-            android:textColor="@color/gami3"
-            android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtFollowOrd" />
-
-        <TextView
-            android:id="@+id/txtCancelOrd"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="35dp"
-            android:text="@string/sp5"
-            android:textColor="@color/gami3"
-            android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtFreeShip" />
-
-        <TextView
-            android:id="@+id/txtAccount"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="35dp"
-            android:text="@string/sp6"
-            android:textColor="@color/gami3"
-            android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtCancelOrd" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 

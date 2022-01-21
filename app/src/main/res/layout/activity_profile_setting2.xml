@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_profile_setting"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="-16dp"
+        tools:layout_editor_absoluteY="221dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+                <TextView
+                    android:id="@+id/txtTLTK"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:gravity="center"
+                    android:text="Thiết lập tài khoản"
+                    android:textColor="#93766E"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@drawable/shape">
+
+                <ImageView
+                    android:id="@+id/imvAvatar"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_avatar"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/btnEditAvatar"
+                    android:layout_width="60dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="#E24E31"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:text="Sửa"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imvAvatar" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="15dp">
+                <TableRow>
+                    <TextView
+                        android:layout_weight="0"
+                        android:fontFamily="@font/sourcesanspro_regular"
+                        android:text="Họ và tên: "
+                        android:textColor="#93766E"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/edtName"
+                        android:layout_weight="9"
+                        android:fontFamily="@font/sourcesanspro_regular"
+                        android:textColor="@color/black"
+                        android:textSize="17dp" />
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_weight="0"
+                        android:fontFamily="@font/sourcesanspro_regular"
+                        android:text="Giới tính: "
+                        android:textColor="#93766E"
+                        android:textSize="18sp" />
+                    <Spinner
+                        android:id="@+id/spiner_gioitinh"
+                        android:layout_width="wrap_content"
+                        android:spinnerMode="dropdown"
+                        />
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_weight="0"
+                        android:fontFamily="@font/sourcesanspro_regular"
+                        android:text="Số điện thoại: "
+                        android:textColor="#93766E"
+                        android:textSize="18sp" />
+                    <EditText
+                        android:id="@+id/edtNumberPhone"
+                        android:layout_weight="9"
+                        android:fontFamily="@font/sourcesanspro_regular"
+                        android:textColor="@color/black"
+                        android:textSize="17dp" />
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_weight="0"
+                        android:fontFamily="@font/sourcesanspro_regular"
+                        android:text="Địa chỉ: "
+                        android:textColor="#93766E"
+                        android:textSize="18sp" />
+                    <EditText
+                        android:id="@+id/edtAddress"
+                        android:layout_weight="9"
+                        android:fontFamily="@font/sourcesanspro_regular"
+                        android:textColor="@color/black"
+                        android:textSize="17dp" />
+                </TableRow>
+
+            </TableLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/btnDone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cart_button"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:elevation="8dp"
+        android:fontFamily="@font/sourcesanspro_bold"
+        android:padding="10dp"
+        android:text="HOÀN THÀNH"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

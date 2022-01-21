@@ -1,61 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ob2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".onboardingFragment"
-    android:id="@+id/ob2">
+    >
 
     <ImageView
         android:id="@+id/imvCircle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="170dp"
         android:src="@drawable/ic_circle"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="170dp"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imvPetshop"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_animate"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="180dp"/>
+<!--    <ImageView-->
+<!--        android:id="@+id/imvPetshop"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="180dp"-->
+<!--        android:src="@drawable/ic_animate"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/dog"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        app:lottie_rawRes="@raw/selfie"
+        android:layout_marginTop="175dp"
+        app:lottie_autoPlay="true"
+        app:lottie_repeatCount="100"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
     <FrameLayout
         android:id="@+id/btnRegis"
-        android:layout_width="342dp"
+        android:layout_width="wrap_content"
         android:layout_height="44dp"
-        android:background="@drawable/regis_button"
-        android:elevation="25dp"
         android:layout_marginTop="570dp"
-        android:layout_gravity="center_horizontal">
+        android:background="@drawable/regis_button"
+        android:elevation="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
         <TextView
             android:id="@+id/txtRegis"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_gravity="center"
             android:text="@string/Register"
             android:textColor="@color/white"
             android:textSize="18sp"
-            android:textStyle="bold"
-            android:gravity="center"/>
+            android:textStyle="bold" />
     </FrameLayout>
+
     <FrameLayout
         android:id="@+id/btnLogin"
-        android:layout_width="342dp"
+        android:layout_width="wrap_content"
         android:layout_height="44dp"
-        android:background="@drawable/round_button"
-        android:elevation="25dp"
         android:layout_marginTop="640dp"
-        android:layout_gravity="center_horizontal">
+        android:background="@drawable/round_button"
+        android:elevation="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
         <TextView
             android:id="@+id/txtLog"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_gravity="center"
             android:text="@string/logn"
             android:textColor="@color/white"
             android:textSize="18sp"
-            android:textStyle="bold"
-            android:gravity="center"/>
+            android:textStyle="bold" />
     </FrameLayout>
 
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
