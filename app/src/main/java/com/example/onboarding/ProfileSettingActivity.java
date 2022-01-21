@@ -170,6 +170,7 @@ public class ProfileSettingActivity extends AppCompatActivity implements Adapter
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         bitmap.compress(Bitmap.CompressFormat.PNG, 100, outputStream);
         return outputStream.toByteArray();
+//        test
     }
 
     private void linkViews() {
