@@ -171,6 +171,7 @@ public class ProfileSettingActivity extends AppCompatActivity implements Adapter
         bitmap.compress(Bitmap.CompressFormat.PNG, 100, outputStream);
         return outputStream.toByteArray();
 //        test
+//        123
     }
 
     private void linkViews() {
