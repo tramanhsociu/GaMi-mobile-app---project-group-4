@@ -27,6 +27,7 @@ public class onboardingFragment2 extends Fragment {
            public void onClick(View view) {
                Intent intent =new Intent(getActivity(), RegisterActivity.class);
                getActivity().startActivity(intent);
+//               test
            }
        });
        btnLogin.setOnClickListener(new View.OnClickListener() {
